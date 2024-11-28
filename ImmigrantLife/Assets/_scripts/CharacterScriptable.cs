@@ -5,11 +5,4 @@ public class CharacterScriptable : ScriptableObject
 {
 //char info
     public string name;
-
-
-
-
-
-
-
 }

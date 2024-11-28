@@ -16,9 +16,6 @@ public class CharEnum : MonoBehaviour
 }
 public enum characters
 {
-
     char1,
     char2,
-
-
 }

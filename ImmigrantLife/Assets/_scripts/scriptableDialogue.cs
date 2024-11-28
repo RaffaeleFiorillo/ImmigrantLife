@@ -5,28 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "scriptableDialogue", menuName = "Scriptable Objects/scriptableDialogue")]
 public class scriptableDialogue : ScriptableObject
 {
-
-
     //Class com dialogo e quem diz
     [System.Serializable]
-   public class dialogue
+    public class Dialogue
     {
-        public CharacterScriptable charInfo;
-   
-
-
+        public CharacterScriptable Speaker;
 
         [TextArea(2,20)]
-        public string theDialogue;
-
-
-
+        public string Sentence;
     }
 
-
     //lista de dialogos por cena
-    public List<dialogue> dialogueList = new List<dialogue>();
-
-
-    
+    public List<Dialogue> dialogueList = new List<Dialogue>();   
 }
