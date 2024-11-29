@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d43fd573f6f2e049a9bab545a4a6743, type: 3}
   m_Name: scriptableDialogue
   m_EditorClassIdentifier: 
-  dialogueList: []
+  dialogueList:
+  - Speaker: {fileID: 11400000, guid: fbe522b74a378744ab8290dbe123a485, type: 2}
+    Sentence: yes funcionou

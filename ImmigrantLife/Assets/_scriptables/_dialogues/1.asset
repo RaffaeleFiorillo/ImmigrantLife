@@ -13,12 +13,9 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   dialogueList:
-  - charInfo: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    enumChar: 0
-    theDialogue: "ola o meu nome \xE9 jacob eu gosto de ananas."
-  - charInfo: {fileID: 11400000, guid: fbe522b74a378744ab8290dbe123a485, type: 2}
-    enumChar: 1
-    theDialogue: "ola o meu nome \xE9 monkey eu gosto de bananas."
-  - charInfo: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    enumChar: 0
-    theDialogue: ha ok.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: "ghjghjhgjh fghj fgihj f\t"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: gfdgfd hgjh h fodughd g
+  - Speaker: {fileID: 11400000, guid: fbe522b74a378744ab8290dbe123a485, type: 2}
+    Sentence: gdf gfdss gdfg fdg fdgdf gfd gdfgfdg dfgdfggfdgd
