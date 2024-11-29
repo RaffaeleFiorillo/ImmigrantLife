@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: Eveent1
+  m_EditorClassIdentifier: 
+  dialogueList:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: ola boa tarde eu sou um evento
+  dinheiro: 0
+  anciedade: 0
+  eventosPossiveis:
+  - {fileID: 11400000, guid: b66904b04a112f9458d4c1cbb1d7c74c, type: 2}
+  - {fileID: 11400000, guid: 76223b3edd4b8e74da83535e6b69f3f3, type: 2}

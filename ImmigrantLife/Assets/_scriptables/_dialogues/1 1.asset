@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 1 1
   m_EditorClassIdentifier: 
   dialogueList:
-  - charInfo: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    theDialogue: dsfadfasfd
-  - charInfo: {fileID: 11400000, guid: fbe522b74a378744ab8290dbe123a485, type: 2}
-    theDialogue: fasdfasdfasdfsadfsdfs
-  - charInfo: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    theDialogue: asfasdfasdfasdfsd
+  - Speaker: {fileID: 11400000, guid: fbe522b74a378744ab8290dbe123a485, type: 2}
+    Sentence: ty fhgddhfg hfghh fdhg hfg
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: hhfdg h fgh fgh fghhf dghfgd
+  - Speaker: {fileID: 11400000, guid: fbe522b74a378744ab8290dbe123a485, type: 2}
+    Sentence: ' hfgdhfg hfghfh fgghh fdhfdg'
