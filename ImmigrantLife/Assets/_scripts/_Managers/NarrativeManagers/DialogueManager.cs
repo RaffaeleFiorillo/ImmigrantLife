@@ -84,9 +84,16 @@ public class DialogueManager : BaseNarrativeEventManager
     {
         CurrentDialogueEvent = (DialogueEvent)narrativeEvent;  // atribuiri o evento narrativo de diálogo a ser tratado.
         CurrentSentenceIndex = 0; // indicar que deve-se iniciar da primeira frase.
+        
         // Iniciar automaticamente o tratamento da primeira frases do díalogo
         // O restante das frases é mostrado quando o jogador clicar no devido botão 
         GoToNextSentence();
+    }
+
+    private void GoToNextNarrativeEvent()
+    {
+        EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
+        EventManager.ManageCurrentEvent();
     }
 
     public void GoToNextSentence()
@@ -103,8 +110,10 @@ public class DialogueManager : BaseNarrativeEventManager
 
         if (CurrentDialogueEvent.DialogueBlocks.Count == CurrentSentenceIndex)
         {
+            Invoke("GoToNextNarrativeEvent", 0.1f);
             return;
         }
+
         DialogueTextBox.name = CurrentSpeakerName;
         SetCharacterSpeed(true);
         StartCoroutine(WriteSentence());  // começa a escrever a frase
@@ -129,7 +138,6 @@ public class DialogueManager : BaseNarrativeEventManager
         IsWritingSentence = false;
         CurrentSentenceIndex++;  // passar à frase seguinte
     }
-
 
     /// <summary>
     /// Método para alterar a velocidade de display dos caracteres;
