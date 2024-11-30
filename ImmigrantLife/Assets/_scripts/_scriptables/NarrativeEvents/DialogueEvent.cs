@@ -5,13 +5,13 @@ using UnityEngine;
 /// <summary>
 /// Classe que representa um Diálogo entre pelo menos duas Personagens.
 /// </summary>
-[CreateAssetMenu(fileName = "ScriptableDialogue", menuName = "Scriptable Objects/ScriptableDialogue")]
+[CreateAssetMenu(fileName = "ScriptableDialogue", menuName = "Scriptable Objects/NarrativeEvents/DialogueEvent")]
 public class DialogueEvent : NarrativeEvent
 {
     /// <summary>
     /// Lista de componentes (Bloco) do diálogo. Cada bloco contém: - A frase a ser dita; - A personagem que diz a frase;
     /// </summary>
-    public List<DialogueBlock> DialogueBlocks { get; private set; }
+    public List<DialogueBlock> DialogueBlocks;
 
     public override EventType Type { get => EventType.Dialogue; }
 }
