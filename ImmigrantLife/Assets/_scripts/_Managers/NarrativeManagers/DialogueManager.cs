@@ -19,6 +19,9 @@ public class DialogueManager : BaseNarrativeEventManager
     [SerializeField]
     TextMeshProUGUI DialogueTextBoxName;
 
+    [SerializeField] 
+    GameObject DialogBox;
+
     /// <summary>
     /// QUANDO A VELOCIDADE É NORMAL: Este é o intervalo de tempo entre um caracter ser mostrado e o próximo, durante a fase de escrita de uma frase.
     /// A unidade de medida é Milissegundos.
@@ -84,14 +87,17 @@ public class DialogueManager : BaseNarrativeEventManager
     {
         CurrentDialogueEvent = (DialogueEvent)narrativeEvent;  // atribuiri o evento narrativo de diálogo a ser tratado.
         CurrentSentenceIndex = 0; // indicar que deve-se iniciar da primeira frase.
-        
+
         // Iniciar automaticamente o tratamento da primeira frases do díalogo
         // O restante das frases é mostrado quando o jogador clicar no devido botão 
+
+        DialogBox.SetActive(true);
         GoToNextSentence();
     }
 
     private void GoToNextNarrativeEvent()
     {
+        DialogBox.SetActive(false);
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
         EventManager.ManageCurrentEvent();
     }
@@ -114,7 +120,7 @@ public class DialogueManager : BaseNarrativeEventManager
             return;
         }
 
-        DialogueTextBox.name = CurrentSpeakerName;
+        DialogueTextBoxName.text = CurrentSpeakerName;
         SetCharacterSpeed(true);
         StartCoroutine(WriteSentence());  // começa a escrever a frase
     }

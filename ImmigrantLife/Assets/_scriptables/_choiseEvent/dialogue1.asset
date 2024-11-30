@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
   m_Name: dialogue1
   m_EditorClassIdentifier: 
-  NextEvent: {fileID: 0}
+  NextEvent: {fileID: 11400000, guid: d74099f005be6c1489cdc20c21f5bfbd, type: 2}
   DialogueBlocks:
-  - Speaker: {fileID: 0}
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     Sentence: dfsdfjhsdjfs
