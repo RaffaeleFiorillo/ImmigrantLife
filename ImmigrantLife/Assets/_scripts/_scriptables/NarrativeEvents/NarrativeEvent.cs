@@ -7,7 +7,7 @@ public enum EventType
     Animation,
 }
 
-[CreateAssetMenu(fileName = "NarrativeEvent", menuName = "Scriptable Objects/NarrativeEvent")]
+[CreateAssetMenu(fileName = "NarrativeEvent", menuName = "Scriptable Objects/NarrativeEvents/NarrativeEvents")]
 public abstract class NarrativeEvent : ScriptableObject
 {
     /// <summary>

@@ -25,7 +25,7 @@ public class EventManager : MonoBehaviour
     /// Evento Narrativo atual.
     /// </summary>
     [SerializeField]
-    NarrativeEvent CurrentNarrativeEvent { get; set; }
+    NarrativeEvent CurrentNarrativeEvent;
 
     /// <summary>
     /// No inicio, são obtidas as referencias para os managers.
