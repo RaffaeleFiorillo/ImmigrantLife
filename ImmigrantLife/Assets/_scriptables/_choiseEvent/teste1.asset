@@ -16,21 +16,13 @@ MonoBehaviour:
   Choices:
   - Money: 0
     Anxiety: 0
-    choiceName: instancia 1
+    Description: "este \xE9 o primeiro"
     NextEvent: {fileID: 11400000, guid: f0a15cc64a216e642bceb064addfd137, type: 2}
   - Money: 0
     Anxiety: 0
-    choiceName: instancia 2
-    NextEvent: {fileID: 0}
+    Description: "este \xE9 o segundo"
+    NextEvent: {fileID: 11400000, guid: e24fc52e7d02d704a978437ee355b77f, type: 2}
   - Money: 0
     Anxiety: 0
-    choiceName: instancia 3
-    NextEvent: {fileID: 0}
-  - Money: 0
-    Anxiety: 0
-    choiceName: instancia 4
-    NextEvent: {fileID: 0}
-  - Money: 0
-    Anxiety: 0
-    choiceName: instancia 5
-    NextEvent: {fileID: 0}
+    Description: terceiro
+    NextEvent: {fileID: 11400000, guid: 70170372c6041b84684fb3550b94016e, type: 2}

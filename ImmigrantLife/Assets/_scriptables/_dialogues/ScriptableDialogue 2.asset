@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d43fd573f6f2e049a9bab545a4a6743, type: 3}
-  m_Name: oi yeah
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: ScriptableDialogue 2
   m_EditorClassIdentifier: 
-  dialogueList:
+  NextEvent: {fileID: 11400000, guid: d74099f005be6c1489cdc20c21f5bfbd, type: 2}
+  DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: fbe522b74a378744ab8290dbe123a485, type: 2}
-    Sentence: oh yeah
+    Sentence: "ola esta \xE9 a branche numero 2"

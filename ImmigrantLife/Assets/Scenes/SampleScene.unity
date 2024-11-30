@@ -215,7 +215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &479408458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ RectTransform:
   m_GameObject: {fileID: 479408457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6187, y: 1.6187, z: 1.6187}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1929503583}
@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.1394, y: -114.1791}
+  m_AnchoredPosition: {x: 11.1394, y: -127.37}
   m_SizeDelta: {x: 671.8235, y: 142.7011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &479408459
@@ -880,10 +880,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -947,7 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbc9aa9c4f05c4419a2e16de57ac619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentNarrativeEvent: {fileID: 11400000, guid: d74099f005be6c1489cdc20c21f5bfbd, type: 2}
+  CurrentNarrativeEvent: {fileID: 11400000, guid: 76223b3edd4b8e74da83535e6b69f3f3, type: 2}
 --- !u!114 &1936125848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,6 +962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueTextBox: {fileID: 609972348}
   DialogueTextBoxName: {fileID: 1929503581}
+  DialogBox: {fileID: 479408457}
   NormalCharacterDisplaySpeed: 4
   FastCharacterDisplaySpeed: 1
 --- !u!114 &1936125849
@@ -976,8 +977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92423b0da796f74cba60ad0c274dabb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonBox: {fileID: 666163949}
-  choisePrefab: {fileID: 3913778210232306545, guid: 19c587ce070444d469836d1f38d899e0, type: 3}
+  ButtonBox: {fileID: 666163949}
+  ChoicePrefab: {fileID: 3913778210232306545, guid: 19c587ce070444d469836d1f38d899e0, type: 3}
 --- !u!1 &2098466648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,19 +1037,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1936125848}
           m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: StartDialogue
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1936125847}
-          m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
-          m_MethodName: chooseDialog
+          m_MethodName: GoToNextSentence
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1062,17 +1051,17 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1936125847}
-          m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
-          m_MethodName: chooseDialog
-          m_Mode: 1
+        - m_Target: {fileID: 1936125848}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: SetCharacterSpeed
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!114 &2098466651
 MonoBehaviour:
