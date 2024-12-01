@@ -137,7 +137,7 @@ public class DialogueManager : BaseNarrativeEventManager
         for (int i = 0; i < CurrentSentence.Length; i++)
         {
             DialogueTextBox.text += CurrentSentence[i]; // Adicionar os caracteres aos poucos (nesse caso um a um)
-            yield return new WaitForSecondsRealtime(CharacterDelaySpeed);
+            yield return new WaitForSeconds(CharacterDelaySpeed);
         }
 
         // A frase terminou de ser escrita
