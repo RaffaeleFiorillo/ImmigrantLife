@@ -31,7 +31,7 @@ public class ChoiceManager : BaseNarrativeEventManager
             GameObject choiceButton = Instantiate(ChoicePrefab, ButtonBox.transform);
             ChoiceButtons.Add(choiceButton);
             choiceButton.GetComponent<Button>().onClick.AddListener(() => ApplyChoiceEffects(cIndex));  // Funcionamento do botão
-            choiceButton.GetComponentInChildren<TextMeshProUGUI>().text = CurrentChoiceEvent.Choices[cIndex].Description; // adicionar o texto do botão
+            choiceButton.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = CurrentChoiceEvent.Choices[cIndex].Description; // adicionar o texto do botão
         }
     }
 
