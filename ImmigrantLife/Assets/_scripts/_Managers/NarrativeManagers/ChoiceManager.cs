@@ -15,6 +15,13 @@ public class ChoiceManager : BaseNarrativeEventManager
 
     List<GameObject> ChoiceButtons = new List<GameObject>();
 
+    private Vector2 GetTextPreferredSize(TextMeshProUGUI textComponent)
+    {
+        textComponent.ForceMeshUpdate(); // Ensure the text mesh is up-to-date
+        var textBounds = textComponent.textBounds;
+        return new Vector2(textBounds.size.x, textBounds.size.y);
+    }
+
     /// <summary>
     /// Este método gere um evento narrativo de escolha. Disponibiliza as escolhas ao jogador.
     /// </summary>
@@ -25,13 +32,22 @@ public class ChoiceManager : BaseNarrativeEventManager
   
         for(int i = 0; i<CurrentChoiceEvent.Choices.Count; i++)
         {
-            int cIndex = i;  // atribuição necessária para que o valor do índice seja o correto quando for usado na lambda function.
+            int cIndex = i; // atribuição necessária para que o valor do índice seja o correto quando for usado na lambda function.
 
             // Criar um botão para a escolha
             GameObject choiceButton = Instantiate(ChoicePrefab, ButtonBox.transform);
             ChoiceButtons.Add(choiceButton);
-            choiceButton.GetComponent<Button>().onClick.AddListener(() => ApplyChoiceEffects(cIndex));  // Funcionamento do botão
-            choiceButton.GetComponentInChildren<TextMeshProUGUI>().text = CurrentChoiceEvent.Choices[cIndex].Description; // adicionar o texto do botão
+
+            // Set up the button's functionality and text
+            Button buttonComponent = choiceButton.GetComponent<Button>();
+            buttonComponent.onClick.AddListener(() => ApplyChoiceEffects(cIndex)); // Funcionamento do botão
+            TextMeshProUGUI buttonText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = CurrentChoiceEvent.Choices[cIndex].Description; // adicionar o texto do botão
+
+            // Adjust the button size based on the text length
+            RectTransform buttonRectTransform = choiceButton.GetComponent<RectTransform>();
+            Vector2 preferredSize = GetTextPreferredSize(buttonText);
+            buttonRectTransform.sizeDelta = new Vector2(preferredSize.x + 20f, buttonRectTransform.sizeDelta.y); // Add padding to width
         }
     }
 
