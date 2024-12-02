@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: Cena 5.1.3
+  m_EditorClassIdentifier: 
+  NextEvent: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: "(Turismo seria perfeito, n\xE9? Todo mundo fala que \xE9 bom dinheiro.
+      Mas... Como eu vou me virar sem ingl\xEAs? S\xF3 de pensar nisso, j\xE1 sinto
+      minha cabe\xE7a rodar. Ser\xE1 que d\xE1 pra aprender r\xE1pido?)"

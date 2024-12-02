@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
-  m_Name: Cena 1  Quartp
+  m_Name: Cena 3
   m_EditorClassIdentifier: 
-  NextEvent: {fileID: 0}
+  NextEvent: {fileID: 11400000, guid: 66aa08b2a4f659c45be020b671f0fa46, type: 2}
   DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: 4ac9643bffc1dc340bb2317b6ef085b7, type: 2}
+    Sentence: "Um r\xE1pido corte de Xavier em diferentes empregos \u2013 empacotador,
+      bartender, motoboy \u2013 com um calend\xE1rio mostrando os anos passando.\r\n"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    Sentence: (Nunca pensei que chegaria a esse ponto.
+    Sentence: (Cinco anos. )
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    Sentence: "Eu me vejo aqui, na casa onde cresci, e s\xF3 consigo pensar em como
-      as coisas mudaram."
+    Sentence: "(Cinco anos juntando cada centavo, vivendo com o m\xEDnimo, s\xF3
+      para chegar l\xE1. )"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    Sentence: " Meu pai continua acordando \xE0s quatro da manh\xE3 para ir \xE0
-      padaria, minha m\xE3e quase n\xE3o consegue trabalhar mais com essas dores
-      nas costas, e minha irm\xE3 ainda \xE9 t\xE3o jovem... "
+    Sentence: "(Mas e se eu fracassar? E se eu n\xE3o conseguir ajudar minha fam\xEDlia?)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    Sentence: " Ela tem tantos sonhos, mas como vamos realiz\xE1-los?)"
+    Sentence: ...

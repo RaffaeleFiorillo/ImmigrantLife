@@ -33,6 +33,7 @@ public class Choice
     /// <summary>
     /// Descrição que vai ser apresentada no botão da escolha.
     /// </summary>
+    [TextArea(5,10)]
     public string Description;
 
     /// <summary>

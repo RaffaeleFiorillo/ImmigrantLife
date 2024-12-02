@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: cena 2.1.2
+  m_EditorClassIdentifier: 
+  NextEvent: {fileID: 11400000, guid: f0351ca1e7d61fb438f94082d2b50771, type: 2}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: "(Coragem? \xC9 isso que eu preciso? Ou ser\xE1 que estou tentando
+      fugir?)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: "( Essa ideia n\xE3o sai da minha cabe\xE7a desde que ele come\xE7ou
+      a falar. Mas fugir pra onde? E por qu\xEA?)"

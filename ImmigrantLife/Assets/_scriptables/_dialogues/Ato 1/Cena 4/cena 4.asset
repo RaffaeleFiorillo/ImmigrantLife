@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: cena 4
+  m_EditorClassIdentifier: 
+  NextEvent: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: 4ac9643bffc1dc340bb2317b6ef085b7, type: 2}
+    Sentence: "*Xavier chega ao aeroporto, sua mala \xE9 simples e pesada. Ele embarca
+      no metr\xF4 pela primeira vez. O som das rodas de metal nas linhas ecoa, e
+      ele olha ao redor, surpreso e inquieto.*"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: "(Isso \xE9 t\xE3o estranho. Tanta gente junta e, ao mesmo tempo, ningu\xE9m
+      parece me notar. Esses rostos s\xE9rios, olhos fixos no celular ou no nada...
+      Ser\xE1 que eu vou ficar assim tamb\xE9m? .)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: "(E esse cheiro... Ferro e algo queimado. Acho que \xE9 s\xF3 coisa
+      de cidade grande. Ser\xE1 que algu\xE9m percebe que eu sou novo aqui? Que eu
+      n\xE3o sei como tudo funciona?...)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: (...)
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    Sentence: "Bem-vindo, Xavier. O quarto \xE9 pequeno, mas \xE9 confort\xE1vel."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: "(Pequeno?Isso \xE9 min\xFAsculo!) "
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    Sentence: "(\xC9 menor do que o quarto da minha irm\xE3. Acho que n\xE3o tem
+      problema. N\xE3o \xE9 para sempre. Eu s\xF3 preciso de um lugar para dormir
+      e guardar minhas coisas. Mas... Isso vai mesmo funcionar? Ser\xE1 que fiz a
+      escolha certa?) "
+  - Speaker: {fileID: 11400000, guid: 4ac9643bffc1dc340bb2317b6ef085b7, type: 2}
+    Sentence: "Xavier coloca a foto da fam\xEDlia na parede. O sil\xEAncio do quarto
+      contrasta com o barulho constante da cidade. Ele respira fundo e decide organizar
+      suas coisas.\r\n"
