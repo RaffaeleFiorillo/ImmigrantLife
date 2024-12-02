@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 /// <summary>
 /// Classe que representa um Diálogo entre pelo menos duas Personagens.
 /// </summary>
@@ -28,7 +29,7 @@ public class DialogueBlock
     /// Personagem que representa o emissor da Frase ao qual este Bloco se refere.
     /// </summary>
     public CharacterScriptable Speaker;
-
+  public  Sprite backGround;
     /// <summary>
     /// A Frase (texto) que é dita neste Bloco.
     /// </summary>

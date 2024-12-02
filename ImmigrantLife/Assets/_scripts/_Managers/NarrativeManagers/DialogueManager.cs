@@ -6,7 +6,7 @@ using TMPro;
 public class DialogueManager : BaseNarrativeEventManager
 {
     #region Campos Serializados
-
+    BackgroundManager backgroundManager;
     /// <summary>
     /// Parte do UI onde é mostrado o texto dos dialogos.
     /// </summary>
@@ -68,7 +68,7 @@ public class DialogueManager : BaseNarrativeEventManager
     /// Frase atual a ser dita do diálogo.
     /// É atualizado automaticamente ao alterar o <see cref="CurrentSentenceIndex"/>
     /// </summary>
-    private string CurrentSentence { get=> CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Sentence; }
+    private string CurrentSentence { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Sentence;  }
 
     /// <summary>
     /// Nome da personagem que diz a frase atualmente sendo escrita.
@@ -77,10 +77,15 @@ public class DialogueManager : BaseNarrativeEventManager
     private string CurrentSpeakerName { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker.name; }
 
     #endregion Propriedades
-
+    private void Awake()
+    {
+        backgroundManager= GetComponent<BackgroundManager>();
+        
+    }
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
+        
     }
 
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
@@ -92,11 +97,17 @@ public class DialogueManager : BaseNarrativeEventManager
         // O restante das frases é mostrado quando o jogador clicar no devido botão 
 
         DialogBox.SetActive(true);
+
+        //envia o current dialog que tem o background
+        backgroundManager.reiceiveDialogEvent(CurrentDialogueEvent);
+
         GoToNextSentence();
+
     }
 
     private void GoToNextNarrativeEvent()
-    {
+    {  
+          
         DialogBox.SetActive(false);
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
         EventManager.ManageCurrentEvent();
@@ -119,7 +130,8 @@ public class DialogueManager : BaseNarrativeEventManager
             Invoke("GoToNextNarrativeEvent", 0.1f);
             return;
         }
-
+        //altera o background(eu sei que aqui n é o melhor sitio mas ya )
+        backgroundManager.ChangeBackGround(CurrentSentenceIndex);
         DialogueTextBoxName.text = CurrentSpeakerName;
         SetCharacterSpeed(true);
         StartCoroutine(WriteSentence());  // começa a escrever a frase
@@ -143,6 +155,9 @@ public class DialogueManager : BaseNarrativeEventManager
         // A frase terminou de ser escrita
         IsWritingSentence = false;
         CurrentSentenceIndex++;  // passar à frase seguinte
+
+        
+
     }
 
     /// <summary>

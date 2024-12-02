@@ -15,23 +15,31 @@ MonoBehaviour:
   NextEvent: {fileID: 11400000, guid: 94feec57ff4833a44897be8735f70d07, type: 2}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: 4ac9643bffc1dc340bb2317b6ef085b7, type: 2}
+    backGround: {fileID: -3652899604995583919, guid: 98cabe430b4d8ea4b94d9fc7c4863963, type: 3}
     Sentence: "Um pequeno quarto na casa de sua fam\xEDlia em uma cidade no interior
       de S\xE3o Paulo. A luz do sol entra pelas cortinas gastas, iluminando as paredes
       decoradas com fotos da fam\xEDlia e p\xF4steres antigos."
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    backGround: {fileID: 0}
     Sentence: (Nunca pensei que chegaria a esse ponto.)
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    backGround: {fileID: -5448976902791224015, guid: b55c459cad4aeec43a5c4203d9015068, type: 3}
     Sentence: "(Eu me vejo aqui, na casa onde cresci, e s\xF3 consigo pensar em como
       as coisas mudaram.)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    backGround: {fileID: 0}
     Sentence: " (Meu pai continua acordando \xE0s quatro da manh\xE3 para ir \xE0
       padaria, minha m\xE3e quase n\xE3o consegue trabalhar mais com essas dores
       nas costas, e minha irm\xE3 ainda \xE9 t\xE3o jovem... )"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    backGround: {fileID: 0}
     Sentence: "(Ela tem tantos sonhos, mas como vamos realiz\xE1-los?)"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    backGround: {fileID: 0}
     Sentence: Xavier. Xavier. Xavier.
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    backGround: {fileID: 0}
     Sentence: "Vai falar com seu primo. Ele t\xE1 na sala, veio da Europa, lembra?"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    backGround: {fileID: 0}
     Sentence: "Xavier, ele t\xE1 contando umas hist\xF3rias incr\xEDveis! Vem logo!"
