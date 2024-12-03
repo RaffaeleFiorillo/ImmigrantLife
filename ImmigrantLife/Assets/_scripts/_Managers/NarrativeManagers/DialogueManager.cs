@@ -92,7 +92,12 @@ public class DialogueManager : BaseNarrativeEventManager
     {
         if (!IsWritingSentence)
             return;
+        timer();
+        
+    }
 
+    void timer()
+    {
         if (CurrentSentenceCharacterIndex == CurrentSentence.Length)
         {
             IsWritingSentence = false;
@@ -102,12 +107,14 @@ public class DialogueManager : BaseNarrativeEventManager
         }
 
         TimeWaited += Time.deltaTime;
-        if( TimeWaited >= CharacterDelaySpeed)
+        if (TimeWaited >= CharacterDelaySpeed)
         {
             TimeWaited = 0;
             DialogueTextBox.text += CurrentSentence[CurrentSentenceCharacterIndex];
             CurrentSentenceCharacterIndex++;
         }
+
+
     }
 
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
@@ -127,7 +134,7 @@ public class DialogueManager : BaseNarrativeEventManager
     private void GoToNextNarrativeEvent()
     {  
           
-        DialogBox.SetActive(false);
+        //DialogBox.SetActive(false);
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
         EventManager.ManageCurrentEvent();
     }
@@ -156,6 +163,7 @@ public class DialogueManager : BaseNarrativeEventManager
         }
 
         //altera o background(eu sei que aqui n é o melhor sitio mas ya )
+        DialogueTextBox.text = "";
         EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
         DialogueTextBoxName.text = CurrentSpeakerName;
         SetCharacterSpeed(true);
