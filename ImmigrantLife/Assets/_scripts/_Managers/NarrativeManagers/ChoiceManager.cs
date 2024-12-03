@@ -13,8 +13,27 @@ public class ChoiceManager : BaseNarrativeEventManager
     [SerializeField] 
     GameObject ChoicePrefab;
 
-    List<GameObject> ChoiceButtons = new List<GameObject>();
+    //nova box para a question
+    [SerializeField] GameObject QuestionBox;
+    TextMeshProUGUI QuestionText;
 
+<<<<<<< Updated upstream
+=======
+
+    List<GameObject> ChoiceButtons = new List<GameObject>();
+    private void Start()
+    {
+        //chamar a text box dentro da caixa
+        QuestionText=QuestionBox.GetComponentInChildren<TextMeshProUGUI>();
+    }
+    private Vector2 GetTextPreferredSize(TextMeshProUGUI textComponent)
+    {
+        textComponent.ForceMeshUpdate(); // Ensure the text mesh is up-to-date
+        var textBounds = textComponent.textBounds;
+        return new Vector2(textBounds.size.x, textBounds.size.y);
+    }
+
+>>>>>>> Stashed changes
     /// <summary>
     /// Este método gere um evento narrativo de escolha. Disponibiliza as escolhas ao jogador.
     /// </summary>
@@ -22,7 +41,10 @@ public class ChoiceManager : BaseNarrativeEventManager
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
     {
         CurrentChoiceEvent = (ChoiceEvent)narrativeEvent;
-  
+
+        //liga a question box
+        QuestionBox.SetActive(true);
+        QuestionText.text = CurrentChoiceEvent.question;
         for(int i = 0; i<CurrentChoiceEvent.Choices.Count; i++)
         {
             int cIndex = i;  // atribuição necessária para que o valor do índice seja o correto quando for usado na lambda function.
@@ -44,7 +66,7 @@ public class ChoiceManager : BaseNarrativeEventManager
         Choice playerChoice = CurrentChoiceEvent.Choices[playerChoiceIndex];
 
         // Aplicar os efeitos da escolha às estatisticas do Personagem
-
+        QuestionBox.SetActive(false) ;
         // Destruir os elementos de UI relativamente a este Evento Narrativo
         foreach (GameObject choiceButton in ChoiceButtons)
             Destroy(choiceButton);
@@ -52,6 +74,8 @@ public class ChoiceManager : BaseNarrativeEventManager
 
         // Passar ao evento seguinte
         EventManager.CurrentNarrativeEvent = playerChoice.NextEvent;
-        EventManager.ManageCurrentEvent();
+
+        //indica quansdo a funçao ja acabou
+        EventManager.changeEvent();
     }
 }

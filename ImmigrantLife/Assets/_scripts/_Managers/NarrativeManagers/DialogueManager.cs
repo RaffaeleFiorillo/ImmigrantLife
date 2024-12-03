@@ -13,6 +13,9 @@ public class DialogueManager : BaseNarrativeEventManager
     [SerializeField]
     TextMeshProUGUI DialogueTextBox;
 
+    [SerializeField]
+    GameObject toPassText;
+
     /// <summary>
     /// Nome da Caixa de texto de dialogo. Aparece no UI, em cima do <see cref="DialogueTextBox"/>.
     /// </summary>
@@ -81,6 +84,41 @@ public class DialogueManager : BaseNarrativeEventManager
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
+<<<<<<< Updated upstream
+=======
+        
+    }
+
+    private void Update()
+    {
+        if (!IsWritingSentence)
+            return;
+        timer();
+        
+    }
+
+ private  void timer()
+    {
+        if (CurrentSentenceCharacterIndex == CurrentSentence.Length)
+        {
+            IsWritingSentence = false;
+            CurrentSentenceCharacterIndex = 0;
+            CurrentSentenceIndex++;
+            toPassText.SetActive(true);
+            return;
+        }
+
+        TimeWaited += Time.deltaTime;
+        if (TimeWaited >= CharacterDelaySpeed)
+        {
+            TimeWaited = 0;
+            DialogueTextBox.text += CurrentSentence[CurrentSentenceCharacterIndex];
+            CurrentSentenceCharacterIndex++;
+           
+        }
+
+
+>>>>>>> Stashed changes
     }
 
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
@@ -96,18 +134,43 @@ public class DialogueManager : BaseNarrativeEventManager
     }
 
     private void GoToNextNarrativeEvent()
+<<<<<<< Updated upstream
     {
+=======
+    {  
+          
+>>>>>>> Stashed changes
         DialogBox.SetActive(false);
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        EventManager.ManageCurrentEvent();
+        EventManager.changeEvent();
     }
 
     public void GoToNextSentence()
     {
+<<<<<<< Updated upstream
         // se já estiver falando, acelera-se o texto
         if (IsWritingSentence)
         {
             SetCharacterSpeed(setToNormalSpeed:false);
+=======
+
+
+
+
+        if (CurrentDialogueEvent == null)
+            return;
+
+        // se já estiver falando, acelera-se o texto
+        if (IsWritingSentence)
+        {
+            // SetCharacterSpeed(setToNormalSpeed:false);
+            DialogueTextBox.text = ""; // Clear the text box initially
+            DialogueTextBox.text = CurrentSentence;
+            toPassText.SetActive(true);
+            IsWritingSentence = false;
+            CurrentSentenceCharacterIndex = 0;
+            CurrentSentenceIndex++;
+>>>>>>> Stashed changes
             return;
         }
 
@@ -120,15 +183,23 @@ public class DialogueManager : BaseNarrativeEventManager
             return;
         }
 
+<<<<<<< Updated upstream
+=======
+        //altera o background(eu sei que aqui n é o melhor sitio mas ya )
+        toPassText.SetActive(false);
+        DialogueTextBox.text = "";
+        EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
+>>>>>>> Stashed changes
         DialogueTextBoxName.text = CurrentSpeakerName;
         SetCharacterSpeed(true);
         StartCoroutine(WriteSentence());  // começa a escrever a frase
     }
-
+/*Ienumerator desligado
     /// <summary>
     /// Escrever a atual frase do Dialogo na Caixa de Texto.
     /// </summary>
     /// <returns></returns>
+
     private IEnumerator WriteSentence()
     {
         IsWritingSentence = true;
@@ -143,7 +214,7 @@ public class DialogueManager : BaseNarrativeEventManager
         // A frase terminou de ser escrita
         IsWritingSentence = false;
         CurrentSentenceIndex++;  // passar à frase seguinte
-    }
+    }*/
 
     /// <summary>
     /// Método para alterar a velocidade de display dos caracteres;

@@ -10,6 +10,7 @@ public  class ChoiceEvent : NarrativeEvent
     /// <summary>
     /// Lista de escolhas possíveis que podem ser feitas durante este evento.
     /// </summary>
+    public string question;
     [SerializeField]
     public List<Choice> Choices;
 }
@@ -23,6 +24,7 @@ public class Choice
     /// <summary>
     /// Valor a ser adicionado à estatistica do Personagem relativamente ao seu dinheiro.
     /// </summary>
+    /// 
     public float Money;
 
     /// <summary>
@@ -33,8 +35,12 @@ public class Choice
     /// <summary>
     /// Descrição que vai ser apresentada no botão da escolha.
     /// </summary>
+<<<<<<< Updated upstream
     /// 
     [TextArea(10,20)]
+=======
+  
+>>>>>>> Stashed changes
     public string Description;
 
     /// <summary>

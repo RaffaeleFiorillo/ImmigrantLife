@@ -28,8 +28,21 @@ public class EventManager : MonoBehaviour
     public NarrativeEvent CurrentNarrativeEvent;
 
     /// <summary>
+<<<<<<< Updated upstream
     /// No inicio, são obtidas as referencias para os managers.
     /// </summary>
+=======
+    /// Imagem apresentada no Background durante o jogo.
+    /// </summary>
+    [SerializeField]
+    private Image BackgroundImage;
+
+
+    bool eventOccurring;
+        /// <summary>
+        /// No inicio, são obtidas as referencias para os managers.
+        /// </summary>
+>>>>>>> Stashed changes
     void Start()
     {
         BaseNarrativeEventManager.GetEventManagerReference(this);
@@ -38,6 +51,32 @@ public class EventManager : MonoBehaviour
         ManageCurrentEvent();
     }
 
+<<<<<<< Updated upstream
+=======
+    /// <summary>
+    /// Alterar a imagem de background apresentada no jogo.
+    /// </summary>
+    /// <param name="newBackgroundImage"></param>
+    public void ChangeBackGround(Sprite newBackgroundSprite)
+    {
+        if (newBackgroundSprite != null)
+            BackgroundImage.sprite = newBackgroundSprite;
+    }
+    private void Update()
+    {
+        if (eventOccurring)
+            return;
+        //coloquei aqui pq assim ele ativa quando a bool ta off e n da aquele problema
+        ManageCurrentEvent();
+    }
+    public void changeEvent()
+    {//quando ativada religa a bool 
+        eventOccurring = false;
+
+
+
+    }
+>>>>>>> Stashed changes
     public void ManageCurrentEvent()
     {
         if (CurrentNarrativeEvent == null)
@@ -47,6 +86,10 @@ public class EventManager : MonoBehaviour
         }
 
         // Gerir o evento narrativo de acordo com a sua tipologia
+
+        
+        //ativa a bool para desligar multiplos loops
+        eventOccurring = true;
         switch (CurrentNarrativeEvent.Type)
         {
             case EventType.Dialogue:
