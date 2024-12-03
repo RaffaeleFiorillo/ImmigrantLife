@@ -34,9 +34,15 @@ public class EventManager : MonoBehaviour
     [SerializeField]
     private Image BackgroundImage;
 
+    //bool para saber quando um evento é ativo
+    private bool eventOccuring { get; set; }
+
+
     /// <summary>
     /// No inicio, são obtidas as referencias para os managers.
     /// </summary>
+    /// 
+
     void Start()
     {
         BaseNarrativeEventManager.GetEventManagerReference(this);
@@ -55,6 +61,21 @@ public class EventManager : MonoBehaviour
             BackgroundImage.sprite = newBackgroundSprite;
     }
 
+    public void changeEventOccurence()
+    {
+
+        eventOccuring = false;
+
+    }
+
+    private void Update()
+    {
+        if (eventOccuring)
+            return;
+
+        eventOccuring = true;
+        ManageCurrentEvent();
+    }
     public void ManageCurrentEvent()
     {
         if (CurrentNarrativeEvent == null)

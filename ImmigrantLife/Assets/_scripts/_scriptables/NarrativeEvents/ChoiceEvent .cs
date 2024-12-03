@@ -9,6 +9,7 @@ public  class ChoiceEvent : NarrativeEvent
     /// <summary>
     /// Lista de escolhas possíveis que podem ser feitas durante este evento.
     /// </summary>
+    public string Question;
     [SerializeField]
     public List<Choice> Choices;
 }

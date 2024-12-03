@@ -82,6 +82,8 @@ public class DialogueManager : BaseNarrativeEventManager
 
     #endregion Propriedades
 
+
+    [SerializeField] GameObject skipIndicator;
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
@@ -103,6 +105,7 @@ public class DialogueManager : BaseNarrativeEventManager
             IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
             CurrentSentenceIndex++;
+            skipIndicator.SetActive(true);
             return;
         }
 
@@ -134,9 +137,12 @@ public class DialogueManager : BaseNarrativeEventManager
     private void GoToNextNarrativeEvent()
     {  
           
-        //DialogBox.SetActive(false);
+        DialogBox.SetActive(false);
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        EventManager.ManageCurrentEvent();
+        //  EventManager.ManageCurrentEvent();
+
+
+        EventManager.changeEventOccurence();
     }
 
     public void GoToNextSentence()
@@ -153,6 +159,7 @@ public class DialogueManager : BaseNarrativeEventManager
             IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
             CurrentSentenceIndex++;
+            skipIndicator.SetActive(true);
             return;
         }
 
@@ -163,6 +170,7 @@ public class DialogueManager : BaseNarrativeEventManager
         }
 
         //altera o background(eu sei que aqui n é o melhor sitio mas ya )
+        skipIndicator.SetActive(false);
         DialogueTextBox.text = "";
         EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
         DialogueTextBoxName.text = CurrentSpeakerName;
@@ -175,6 +183,8 @@ public class DialogueManager : BaseNarrativeEventManager
     /// Escrever a atual frase do Dialogo na Caixa de Texto.
     /// </summary>
     /// <returns></returns>
+    /// 
+    /* IenumeratorOff
     private IEnumerator WriteSentence()
     {
         IsWritingSentence = true;
@@ -189,7 +199,7 @@ public class DialogueManager : BaseNarrativeEventManager
         // A frase terminou de ser escrita
         IsWritingSentence = false;
         CurrentSentenceIndex++;  // passar à frase seguinte
-    }
+    }*/
 
     /// <summary>
     /// Método para alterar a velocidade de display dos caracteres;

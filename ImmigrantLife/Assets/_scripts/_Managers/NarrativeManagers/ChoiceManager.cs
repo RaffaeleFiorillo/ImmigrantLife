@@ -13,8 +13,17 @@ public class ChoiceManager : BaseNarrativeEventManager
     [SerializeField] 
     GameObject ChoicePrefab;
 
+    [SerializeField] GameObject questionBox;
+   TextMeshProUGUI questionText;
+
     List<GameObject> ChoiceButtons = new List<GameObject>();
 
+
+    private void Start()
+    {
+        questionText = questionBox.GetComponentInChildren<TextMeshProUGUI>();
+
+    }
     private Vector2 GetTextPreferredSize(TextMeshProUGUI textComponent)
     {
         textComponent.ForceMeshUpdate(); // Ensure the text mesh is up-to-date
@@ -29,6 +38,9 @@ public class ChoiceManager : BaseNarrativeEventManager
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
     {
         CurrentChoiceEvent = (ChoiceEvent)narrativeEvent;
+        questionBox.SetActive(true);
+        questionText.text = CurrentChoiceEvent.Question;
+
   
         for(int i = 0; i<CurrentChoiceEvent.Choices.Count; i++)
         {
@@ -65,9 +77,11 @@ public class ChoiceManager : BaseNarrativeEventManager
         foreach (GameObject choiceButton in ChoiceButtons)
             Destroy(choiceButton);
         ChoiceButtons.Clear(); // Esvaziar a lista para usos futuros
-
+        questionBox.SetActive(false);
         // Passar ao evento seguinte
         EventManager.CurrentNarrativeEvent = playerChoice.NextEvent;
-        EventManager.ManageCurrentEvent();
+        //  EventManager.ManageCurrentEvent();
+
+        EventManager.changeEventOccurence();
     }
 }
