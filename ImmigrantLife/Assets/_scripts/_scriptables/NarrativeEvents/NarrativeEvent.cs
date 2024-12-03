@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public enum EventType 
 {
@@ -19,4 +20,5 @@ public abstract class NarrativeEvent : ScriptableObject
     /// </summary>
     [SerializeField]
     public NarrativeEvent NextEvent;
+   public AudioResource musica;
 }

@@ -84,6 +84,9 @@ public class DialogueManager : BaseNarrativeEventManager
 
 
     [SerializeField] GameObject skipIndicator;
+
+    //onde irá haver o output dos sons
+    [SerializeField] AudioSource soundPlayer;
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
@@ -171,6 +174,17 @@ public class DialogueManager : BaseNarrativeEventManager
 
         //altera o background(eu sei que aqui n é o melhor sitio mas ya )
         skipIndicator.SetActive(false);
+
+
+        //implementação do som
+        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som != null)
+        {
+            
+        soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
+
+            soundPlayer.Play();
+        }
+
         DialogueTextBox.text = "";
         EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
         DialogueTextBoxName.text = CurrentSpeakerName;

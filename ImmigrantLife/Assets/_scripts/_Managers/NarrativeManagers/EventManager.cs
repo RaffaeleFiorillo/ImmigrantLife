@@ -28,6 +28,8 @@ public class EventManager : MonoBehaviour
     [SerializeField]
     public NarrativeEvent CurrentNarrativeEvent;
 
+    //onde irá haver o output da musica
+    [SerializeField]  AudioSource musicPlayer;
     /// <summary>
     /// Imagem apresentada no Background durante o jogo.
     /// </summary>
@@ -83,7 +85,12 @@ public class EventManager : MonoBehaviour
             // Colcar aqui a lógica de quando chegar ao fim da execução dos eventos narrativos.
             return;
         }
+        if(CurrentNarrativeEvent.musica != null) {
 
+        musicPlayer.Stop();
+            musicPlayer.resource = CurrentNarrativeEvent.musica;
+            musicPlayer.Play();
+        }
         // Gerir o evento narrativo de acordo com a sua tipologia
         switch (CurrentNarrativeEvent.Type)
         {

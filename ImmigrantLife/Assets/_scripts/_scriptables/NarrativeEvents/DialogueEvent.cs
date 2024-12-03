@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 
 /// <summary>
 /// Classe que representa um Diálogo entre pelo menos duas Personagens.
@@ -34,7 +34,7 @@ public class DialogueBlock
     /// Imagem que aparece no Background quando este bloco de diálogo é apresentado.
     /// </summary>
     public Sprite BackgroundImage;
-
+    public AudioResource som;
     /// <summary>
     /// A Frase (texto) que é dita neste Bloco.
     /// </summary>
