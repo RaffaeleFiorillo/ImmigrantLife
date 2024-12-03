@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: cena 2 choice1
   m_EditorClassIdentifier: 
   NextEvent: {fileID: 0}
+  Question: N sei o que pensar
   Choices:
   - Money: 0
     Anxiety: 0
