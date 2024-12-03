@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 
 /// <summary>
@@ -28,6 +29,12 @@ public class EventManager : MonoBehaviour
     public NarrativeEvent CurrentNarrativeEvent;
 
     /// <summary>
+    /// Imagem apresentada no Background durante o jogo.
+    /// </summary>
+    [SerializeField]
+    private Image BackgroundImage;
+
+    /// <summary>
     /// No inicio, são obtidas as referencias para os managers.
     /// </summary>
     void Start()
@@ -36,6 +43,16 @@ public class EventManager : MonoBehaviour
         DialogueManager = GetComponent<DialogueManager>();
         ChoiceManager = GetComponent<ChoiceManager>();
         ManageCurrentEvent();
+    }
+
+    /// <summary>
+    /// Alterar a imagem de background apresentada no jogo.
+    /// </summary>
+    /// <param name="newBackgroundImage"></param>
+    public void ChangeBackGround(Sprite newBackgroundSprite)
+    {
+        if (newBackgroundSprite != null)
+            BackgroundImage.sprite = newBackgroundSprite;
     }
 
     public void ManageCurrentEvent()
