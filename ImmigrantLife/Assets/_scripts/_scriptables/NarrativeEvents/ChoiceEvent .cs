@@ -23,6 +23,7 @@ public class Choice
     /// <summary>
     /// Valor a ser adicionado à estatistica do Personagem relativamente ao seu dinheiro.
     /// </summary>
+    /// 
     public float Money;
 
     /// <summary>

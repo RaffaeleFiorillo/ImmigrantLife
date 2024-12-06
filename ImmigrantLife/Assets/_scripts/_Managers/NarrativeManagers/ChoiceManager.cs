@@ -16,13 +16,18 @@ public class ChoiceManager : BaseNarrativeEventManager
     [SerializeField] GameObject questionBox;
    TextMeshProUGUI questionText;
 
+    //nova box para a question
+    [SerializeField] GameObject QuestionBox;
+    TextMeshProUGUI QuestionText;
+
+<<<<<<< Updated upstream
+=======
+
     List<GameObject> ChoiceButtons = new List<GameObject>();
-
-
     private void Start()
     {
-        questionText = questionBox.GetComponentInChildren<TextMeshProUGUI>();
-
+        //chamar a text box dentro da caixa
+        QuestionText=QuestionBox.GetComponentInChildren<TextMeshProUGUI>();
     }
     private Vector2 GetTextPreferredSize(TextMeshProUGUI textComponent)
     {
@@ -31,6 +36,7 @@ public class ChoiceManager : BaseNarrativeEventManager
         return new Vector2(textBounds.size.x, textBounds.size.y);
     }
 
+>>>>>>> Stashed changes
     /// <summary>
     /// Este método gere um evento narrativo de escolha. Disponibiliza as escolhas ao jogador.
     /// </summary>
@@ -38,10 +44,10 @@ public class ChoiceManager : BaseNarrativeEventManager
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
     {
         CurrentChoiceEvent = (ChoiceEvent)narrativeEvent;
-        questionBox.SetActive(true);
-        questionText.text = CurrentChoiceEvent.Question;
 
-  
+        //liga a question box
+        QuestionBox.SetActive(true);
+        QuestionText.text = CurrentChoiceEvent.question;
         for(int i = 0; i<CurrentChoiceEvent.Choices.Count; i++)
         {
             int cIndex = i; // atribuição necessária para que o valor do índice seja o correto quando for usado na lambda function.
@@ -49,17 +55,8 @@ public class ChoiceManager : BaseNarrativeEventManager
             // Criar um botão para a escolha
             GameObject choiceButton = Instantiate(ChoicePrefab, ButtonBox.transform);
             ChoiceButtons.Add(choiceButton);
-
-            // Set up the button's functionality and text
-            Button buttonComponent = choiceButton.GetComponent<Button>();
-            buttonComponent.onClick.AddListener(() => ApplyChoiceEffects(cIndex)); // Funcionamento do botão
-            TextMeshProUGUI buttonText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
-            buttonText.text = CurrentChoiceEvent.Choices[cIndex].Description; // adicionar o texto do botão
-
-            // Adjust the button size based on the text length
-            RectTransform buttonRectTransform = choiceButton.GetComponent<RectTransform>();
-            Vector2 preferredSize = GetTextPreferredSize(buttonText);
-            buttonRectTransform.sizeDelta = new Vector2(preferredSize.x + 20f, buttonRectTransform.sizeDelta.y); // Add padding to width
+            choiceButton.GetComponent<Button>().onClick.AddListener(() => ApplyChoiceEffects(cIndex));  // Funcionamento do botão
+            choiceButton.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = CurrentChoiceEvent.Choices[cIndex].Description; // adicionar o texto do botão
         }
     }
 
@@ -72,7 +69,7 @@ public class ChoiceManager : BaseNarrativeEventManager
         Choice playerChoice = CurrentChoiceEvent.Choices[playerChoiceIndex];
 
         // Aplicar os efeitos da escolha às estatisticas do Personagem
-
+        QuestionBox.SetActive(false) ;
         // Destruir os elementos de UI relativamente a este Evento Narrativo
         foreach (GameObject choiceButton in ChoiceButtons)
             Destroy(choiceButton);
@@ -80,8 +77,8 @@ public class ChoiceManager : BaseNarrativeEventManager
         questionBox.SetActive(false);
         // Passar ao evento seguinte
         EventManager.CurrentNarrativeEvent = playerChoice.NextEvent;
-        //  EventManager.ManageCurrentEvent();
 
-        EventManager.changeEventOccurence();
+        //indica quansdo a funçao ja acabou
+        EventManager.changeEvent();
     }
 }

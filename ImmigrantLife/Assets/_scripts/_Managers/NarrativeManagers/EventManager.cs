@@ -30,21 +30,20 @@ public class EventManager : MonoBehaviour
 
     //onde irá haver o output da musica
     [SerializeField]  AudioSource musicPlayer;
-    /// <summary>
+
+    /// No inicio, são obtidas as referencias para os managers.
+    /// </summary>
     /// Imagem apresentada no Background durante o jogo.
     /// </summary>
     [SerializeField]
     private Image BackgroundImage;
 
-    //bool para saber quando um evento é ativo
-    private bool eventOccuring { get; set; }
 
+    bool eventOccurring;
 
-    /// <summary>
-    /// No inicio, são obtidas as referencias para os managers.
-    /// </summary>
-    /// 
-
+        /// <summary>
+        /// No inicio, são obtidas as referencias para os managers.
+        /// </summary>
     void Start()
     {
         BaseNarrativeEventManager.GetEventManagerReference(this);
@@ -52,6 +51,7 @@ public class EventManager : MonoBehaviour
         ChoiceManager = GetComponent<ChoiceManager>();
         ManageCurrentEvent();
     }
+
 
     /// <summary>
     /// Alterar a imagem de background apresentada no jogo.
@@ -62,22 +62,21 @@ public class EventManager : MonoBehaviour
         if (newBackgroundSprite != null)
             BackgroundImage.sprite = newBackgroundSprite;
     }
-
-    public void changeEventOccurence()
-    {
-
-        eventOccuring = false;
-
-    }
-
     private void Update()
     {
-        if (eventOccuring)
+        if (eventOccurring)
             return;
-
-        eventOccuring = true;
+        //coloquei aqui pq assim ele ativa quando a bool ta off e n da aquele problema
         ManageCurrentEvent();
     }
+    public void changeEvent()
+    {//quando ativada religa a bool 
+        eventOccurring = false;
+
+
+
+    }
+
     public void ManageCurrentEvent()
     {
         if (CurrentNarrativeEvent == null)
@@ -92,6 +91,10 @@ public class EventManager : MonoBehaviour
             musicPlayer.Play();
         }
         // Gerir o evento narrativo de acordo com a sua tipologia
+
+        
+        //ativa a bool para desligar multiplos loops
+        eventOccurring = true;
         switch (CurrentNarrativeEvent.Type)
         {
             case EventType.Dialogue:

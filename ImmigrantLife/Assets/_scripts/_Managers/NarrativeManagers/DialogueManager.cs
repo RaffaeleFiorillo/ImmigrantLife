@@ -13,6 +13,9 @@ public class DialogueManager : BaseNarrativeEventManager
     [SerializeField]
     TextMeshProUGUI DialogueTextBox;
 
+    [SerializeField]
+    GameObject toPassText;
+
     /// <summary>
     /// Nome da Caixa de texto de dialogo. Aparece no UI, em cima do <see cref="DialogueTextBox"/>.
     /// </summary>
@@ -90,7 +93,6 @@ public class DialogueManager : BaseNarrativeEventManager
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
-        
     }
 
     private void Update()
@@ -101,14 +103,14 @@ public class DialogueManager : BaseNarrativeEventManager
         
     }
 
-    void timer()
+ private  void timer()
     {
         if (CurrentSentenceCharacterIndex == CurrentSentence.Length)
         {
             IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
             CurrentSentenceIndex++;
-            skipIndicator.SetActive(true);
+            toPassText.SetActive(true);
             return;
         }
 
@@ -118,8 +120,8 @@ public class DialogueManager : BaseNarrativeEventManager
             TimeWaited = 0;
             DialogueTextBox.text += CurrentSentence[CurrentSentenceCharacterIndex];
             CurrentSentenceCharacterIndex++;
+           
         }
-
 
     }
 
@@ -138,18 +140,21 @@ public class DialogueManager : BaseNarrativeEventManager
     }
 
     private void GoToNextNarrativeEvent()
-    {  
-          
+    {          
         DialogBox.SetActive(false);
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        //  EventManager.ManageCurrentEvent();
-
-
-        EventManager.changeEventOccurence();
+        EventManager.changeEvent();
     }
 
     public void GoToNextSentence()
     {
+        // se já estiver falando, acelera-se o texto
+        if (IsWritingSentence)
+        {
+            SetCharacterSpeed(setToNormalSpeed:false);
+
+
+
         if (CurrentDialogueEvent == null)
             return;
 
@@ -159,10 +164,10 @@ public class DialogueManager : BaseNarrativeEventManager
             // SetCharacterSpeed(setToNormalSpeed:false);
             DialogueTextBox.text = ""; // Clear the text box initially
             DialogueTextBox.text = CurrentSentence;
+            toPassText.SetActive(true);
             IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
             CurrentSentenceIndex++;
-            skipIndicator.SetActive(true);
             return;
         }
 
@@ -172,19 +177,9 @@ public class DialogueManager : BaseNarrativeEventManager
             return;
         }
 
+
         //altera o background(eu sei que aqui n é o melhor sitio mas ya )
-        skipIndicator.SetActive(false);
-
-
-        //implementação do som
-        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som != null)
-        {
-            
-        soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
-
-            soundPlayer.Play();
-        }
-
+        toPassText.SetActive(false);
         DialogueTextBox.text = "";
         EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
         DialogueTextBoxName.text = CurrentSpeakerName;
@@ -192,13 +187,12 @@ public class DialogueManager : BaseNarrativeEventManager
         IsWritingSentence = true;
         // StartCoroutine(WriteSentence());  // começa a escrever a frase
     }
-
+/*Ienumerator desligado
     /// <summary>
     /// Escrever a atual frase do Dialogo na Caixa de Texto.
     /// </summary>
     /// <returns></returns>
-    /// 
-    /* IenumeratorOff
+
     private IEnumerator WriteSentence()
     {
         IsWritingSentence = true;

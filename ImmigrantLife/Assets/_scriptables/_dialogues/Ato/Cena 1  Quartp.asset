@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
   m_Name: Cena 3
   m_EditorClassIdentifier: 
-<<<<<<<< HEAD:ImmigrantLife/Assets/_scriptables/_dialogues/Ato 1/Cena 3/Cena 3.asset
   NextEvent: {fileID: 11400000, guid: 66aa08b2a4f659c45be020b671f0fa46, type: 2}
-========
   NextEvent: {fileID: 11400000, guid: 7a669f9cae60b2847a816efc3d14b95e, type: 2}
->>>>>>>> origin/Testes:ImmigrantLife/Assets/_scriptables/_dialogues/Ato/Cena 1  Quartp.asset
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: 4ac9643bffc1dc340bb2317b6ef085b7, type: 2}
     Sentence: "Um r\xE1pido corte de Xavier em diferentes empregos \u2013 empacotador,
@@ -29,13 +26,10 @@ MonoBehaviour:
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     Sentence: "(Mas e se eu fracassar? E se eu n\xE3o conseguir ajudar minha fam\xEDlia?)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-<<<<<<<< HEAD:ImmigrantLife/Assets/_scriptables/_dialogues/Ato 1/Cena 3/Cena 3.asset
     Sentence: ...
-========
     Sentence: " Ela tem tantos sonhos, mas como vamos realiz\xE1-los?)"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
     Sentence: "Xavier, vai falar com seu primo. Ele t\xE1 na sala, veio da Europa,
       lembra?"
   - Speaker: {fileID: 11400000, guid: 8c8d0b2fac909124d859612920865e0e, type: 2}
     Sentence: "Xavier, ele t\xE1 contando umas hist\xF3rias incr\xEDveis! Vem logo!"
->>>>>>>> origin/Testes:ImmigrantLife/Assets/_scriptables/_dialogues/Ato/Cena 1  Quartp.asset
