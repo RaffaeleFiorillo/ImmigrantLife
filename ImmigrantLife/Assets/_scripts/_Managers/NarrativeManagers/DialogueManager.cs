@@ -148,7 +148,7 @@ public class DialogueManager : BaseNarrativeEventManager
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
         //  EventManager.ManageCurrentEvent();
 
-        EventManager.changeEventOccurence();
+        // EventManager.ChangeEventOccurence();
         DialogBox.SetActive(false);
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
         // EventManager.changeEvent();

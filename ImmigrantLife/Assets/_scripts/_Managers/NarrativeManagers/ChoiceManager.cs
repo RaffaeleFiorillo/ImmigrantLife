@@ -20,8 +20,6 @@ public class ChoiceManager : BaseNarrativeEventManager
     [SerializeField] GameObject QuestionBox;
     TextMeshProUGUI QuestionText;
 
-<<<<<<< Updated upstream
-=======
 
     List<GameObject> ChoiceButtons = new List<GameObject>();
     private void Start()
@@ -36,7 +34,6 @@ public class ChoiceManager : BaseNarrativeEventManager
         return new Vector2(textBounds.size.x, textBounds.size.y);
     }
 
->>>>>>> Stashed changes
     /// <summary>
     /// Este método gere um evento narrativo de escolha. Disponibiliza as escolhas ao jogador.
     /// </summary>
@@ -47,7 +44,7 @@ public class ChoiceManager : BaseNarrativeEventManager
 
         //liga a question box
         QuestionBox.SetActive(true);
-        QuestionText.text = CurrentChoiceEvent.question;
+        QuestionText.text = CurrentChoiceEvent.Question;
         for(int i = 0; i<CurrentChoiceEvent.Choices.Count; i++)
         {
             int cIndex = i; // atribuição necessária para que o valor do índice seja o correto quando for usado na lambda function.
