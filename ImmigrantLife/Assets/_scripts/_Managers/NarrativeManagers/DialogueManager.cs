@@ -97,12 +97,7 @@ public class DialogueManager : BaseNarrativeEventManager
     {
         if (!IsWritingSentence)
             return;
-        timer();
-        
-    }
 
-    void timer()
-    {
         if (CurrentSentenceCharacterIndex == CurrentSentence.Length)
         {
             IsWritingSentence = false;
@@ -113,14 +108,12 @@ public class DialogueManager : BaseNarrativeEventManager
         }
 
         TimeWaited += Time.deltaTime;
-        if (TimeWaited >= CharacterDelaySpeed)
+        if( TimeWaited >= CharacterDelaySpeed)
         {
             TimeWaited = 0;
             DialogueTextBox.text += CurrentSentence[CurrentSentenceCharacterIndex];
             CurrentSentenceCharacterIndex++;
         }
-
-
     }
 
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)

@@ -308,7 +308,6 @@ RectTransform:
   m_Children:
   - {fileID: 1929503583}
   - {fileID: 609972347}
-  - {fileID: 1190968620}
   m_Father: {fileID: 1936125846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -784,7 +783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -977,14 +976,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 94
-    m_Top: 162
+    m_Left: 16
+    m_Right: 0
+    m_Top: 128
     m_Bottom: 0
-  m_ChildAlignment: 2
+  m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 200, y: 50}
+  m_CellSize: {x: 703.3, y: 83.2}
   m_Spacing: {x: 84.5, y: 16.6}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -1511,8 +1510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentNarrativeEvent: {fileID: 11400000, guid: 1d357b1cf5a23554a914f5ae26d9c164, type: 2}
-  musicPlayer: {fileID: 1021383982}
-  BackgroundImage: {fileID: 911530135}
+  BackgroundImage: {fileID: 0}
 --- !u!4 &1484428688
 Transform:
   m_ObjectHideFlags: 0
@@ -1528,6 +1526,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1484428689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484428684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1f8182add52084f923c27e22c3f2c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1929503580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,7 +1794,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentNarrativeEvent: {fileID: 11400000, guid: 1d357b1cf5a23554a914f5ae26d9c164, type: 2}
-  musicPlayer: {fileID: 0}
   BackgroundImage: {fileID: 0}
 --- !u!114 &1936125848
 MonoBehaviour:
