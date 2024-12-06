@@ -89,7 +89,9 @@ public class DialogueManager : BaseNarrativeEventManager
     [SerializeField] GameObject skipIndicator;
 
     //onde irá haver o output dos sons
-    [SerializeField] AudioSource soundPlayer;
+    [SerializeField] 
+    AudioSource soundPlayer;
+
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
@@ -103,13 +105,15 @@ public class DialogueManager : BaseNarrativeEventManager
         
     }
 
- private  void timer()
+
+    private void timer()
     {
         if (CurrentSentenceCharacterIndex == CurrentSentence.Length)
         {
             IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
             CurrentSentenceIndex++;
+            skipIndicator.SetActive(true);
             toPassText.SetActive(true);
             return;
         }
@@ -122,7 +126,6 @@ public class DialogueManager : BaseNarrativeEventManager
             CurrentSentenceCharacterIndex++;
            
         }
-
     }
 
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
@@ -140,21 +143,19 @@ public class DialogueManager : BaseNarrativeEventManager
     }
 
     private void GoToNextNarrativeEvent()
-    {          
+    {    
         DialogBox.SetActive(false);
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        EventManager.changeEvent();
+        //  EventManager.ManageCurrentEvent();
+
+        EventManager.changeEventOccurence();
+        DialogBox.SetActive(false);
+        EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
+        // EventManager.changeEvent();
     }
 
     public void GoToNextSentence()
     {
-        // se já estiver falando, acelera-se o texto
-        if (IsWritingSentence)
-        {
-            SetCharacterSpeed(setToNormalSpeed:false);
-
-
-
         if (CurrentDialogueEvent == null)
             return;
 
@@ -164,11 +165,10 @@ public class DialogueManager : BaseNarrativeEventManager
             // SetCharacterSpeed(setToNormalSpeed:false);
             DialogueTextBox.text = ""; // Clear the text box initially
             DialogueTextBox.text = CurrentSentence;
-            toPassText.SetActive(true);
             IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
             CurrentSentenceIndex++;
-            return;
+            skipIndicator.SetActive(true);
         }
 
         if (CurrentDialogueEvent.DialogueBlocks.Count == CurrentSentenceIndex)
@@ -177,37 +177,30 @@ public class DialogueManager : BaseNarrativeEventManager
             return;
         }
 
+        //altera o background(eu sei que aqui n é o melhor sitio mas ya )
+        skipIndicator.SetActive(false);
+
+
+        //implementação do som
+        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som != null)
+        {  
+            soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
+            soundPlayer.Play();
+        }
+
+        DialogueTextBox.text = "";
+        EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
 
         //altera o background(eu sei que aqui n é o melhor sitio mas ya )
         toPassText.SetActive(false);
         DialogueTextBox.text = "";
         EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
+
         DialogueTextBoxName.text = CurrentSpeakerName;
         SetCharacterSpeed(true);
         IsWritingSentence = true;
         // StartCoroutine(WriteSentence());  // começa a escrever a frase
     }
-/*Ienumerator desligado
-    /// <summary>
-    /// Escrever a atual frase do Dialogo na Caixa de Texto.
-    /// </summary>
-    /// <returns></returns>
-
-    private IEnumerator WriteSentence()
-    {
-        IsWritingSentence = true;
-        DialogueTextBox.text = ""; // Clear the text box initially
-
-        for (int i = 0; i < CurrentSentence.Length; i++)
-        {
-            DialogueTextBox.text += CurrentSentence[i]; // Adicionar os caracteres aos poucos (nesse caso um a um)
-            yield return new WaitForSeconds(CharacterDelaySpeed);
-        }
-
-        // A frase terminou de ser escrita
-        IsWritingSentence = false;
-        CurrentSentenceIndex++;  // passar à frase seguinte
-    }*/
 
     /// <summary>
     /// Método para alterar a velocidade de display dos caracteres;
