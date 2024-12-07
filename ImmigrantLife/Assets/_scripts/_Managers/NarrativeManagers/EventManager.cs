@@ -44,7 +44,19 @@ public class EventManager : MonoBehaviour
     /// <summary>
     /// Flag que indica se o Evento Narrativo atual ainda está a ser executado.
     /// </summary>
-    private bool CurrentEventHasBeenManaged { get => CurrentNarrativeEvent.HasBeenManaged; }
+    private bool CurrentEventHasBeenManaged {
+        get
+        {
+            if (_IsFirstEvent)
+            {
+                _IsFirstEvent = false;
+                return true;
+            }
+
+            return CurrentNarrativeEvent.HasBeenManaged;
+        }
+    }
+    private bool _IsFirstEvent = true;
 
     #endregion Propriedades
 
@@ -108,6 +120,8 @@ public class EventManager : MonoBehaviour
         // Caso não houver uma música, mantém-se a música antiga
         if (CurrentNarrativeEvent.musica != null)
             ChangeMusic(CurrentNarrativeEvent.musica);
+
+        Debug.Log($"Event: {CurrentNarrativeEvent.GetType()}");
 
         // Gerir o evento narrativo de acordo com a sua tipologia
         switch (CurrentNarrativeEvent.Type)
