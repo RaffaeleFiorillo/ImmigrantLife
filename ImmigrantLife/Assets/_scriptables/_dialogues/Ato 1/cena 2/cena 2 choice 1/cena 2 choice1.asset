@@ -27,15 +27,3 @@ MonoBehaviour:
     Anxiety: 0
     Description: "Aceita\xE7\xE3o"
     NextEvent: {fileID: 11400000, guid: 0126933271050e74aa9db1d25a5b4ed0, type: 2}
-  - Money: 0
-    Anxiety: 0
-    Description: "Aceita\xE7\xE3o"
-    NextEvent: {fileID: 11400000, guid: 0126933271050e74aa9db1d25a5b4ed0, type: 2}
-  - Money: 0
-    Anxiety: 0
-    Description: "Aceita\xE7\xE3o"
-    NextEvent: {fileID: 11400000, guid: 0126933271050e74aa9db1d25a5b4ed0, type: 2}
-  - Money: 0
-    Anxiety: 0
-    Description: "Aceita\xE7\xE3o"
-    NextEvent: {fileID: 11400000, guid: 0126933271050e74aa9db1d25a5b4ed0, type: 2}

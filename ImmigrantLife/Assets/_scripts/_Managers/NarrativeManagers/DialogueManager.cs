@@ -101,13 +101,7 @@ public class DialogueManager : BaseNarrativeEventManager
     {
         if (!IsWritingSentence)
             return;
-        timer();
-        
-    }
 
-
-    private void timer()
-    {
         if (CurrentSentenceCharacterIndex == CurrentSentence.Length)
         {
             IsWritingSentence = false;
@@ -119,7 +113,7 @@ public class DialogueManager : BaseNarrativeEventManager
         }
 
         TimeWaited += Time.deltaTime;
-        if (TimeWaited >= CharacterDelaySpeed)
+        if( TimeWaited >= CharacterDelaySpeed)
         {
             TimeWaited = 0;
             DialogueTextBox.text += CurrentSentence[CurrentSentenceCharacterIndex];
@@ -143,12 +137,8 @@ public class DialogueManager : BaseNarrativeEventManager
     }
 
     private void GoToNextNarrativeEvent()
-    {    
-        DialogBox.SetActive(false);
-        EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        //  EventManager.ManageCurrentEvent();
-
-        EventManager.changeEventOccurence();
+    {  
+          
         DialogBox.SetActive(false);
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
         // EventManager.changeEvent();
@@ -178,17 +168,6 @@ public class DialogueManager : BaseNarrativeEventManager
         }
 
         //altera o background(eu sei que aqui n é o melhor sitio mas ya )
-        skipIndicator.SetActive(false);
-
-
-        //implementação do som
-        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som != null)
-        {  
-            soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
-            soundPlayer.Play();
-        }
-
-        DialogueTextBox.text = "";
         EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
 
         //altera o background(eu sei que aqui n é o melhor sitio mas ya )
