@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 
@@ -22,6 +23,8 @@ public class EventManager : MonoBehaviour
 
     #endregion Managers
 
+    #region Propriedades
+
     /// <summary>
     /// Evento Narrativo atual.
     /// </summary>
@@ -29,51 +32,67 @@ public class EventManager : MonoBehaviour
     public NarrativeEvent CurrentNarrativeEvent;
 
     //onde irá haver o output da musica
-    [SerializeField]  AudioSource musicPlayer;
+    [SerializeField]  
+    AudioSource musicPlayer;
 
-    /// No inicio, são obtidas as referencias para os managers.
-    /// </summary>
+    /// <summary>
     /// Imagem apresentada no Background durante o jogo.
     /// </summary>
     [SerializeField]
     private Image BackgroundImage;
 
+    /// <summary>
+    /// Flag que indica se o Evento Narrativo atual ainda está a ser executado.
+    /// </summary>
+    private bool CurrentEventHasBeenManaged { get => CurrentNarrativeEvent.HasBeenManaged; }
 
-    bool eventOccurring;
+    #endregion Propriedades
 
-        /// <summary>
-        /// No inicio, são obtidas as referencias para os managers.
-        /// </summary>
+    #region Métodos Unity
+
     void Start()
     {
         BaseNarrativeEventManager.GetEventManagerReference(this);
         DialogueManager = GetComponent<DialogueManager>();
         ChoiceManager = GetComponent<ChoiceManager>();
+    }
+
+    private void Update()
+    {
+        if (!CurrentEventHasBeenManaged)
+            return;
+
         ManageCurrentEvent();
     }
 
+    #endregion Métodos Unity
 
     /// <summary>
     /// Alterar a imagem de background apresentada no jogo.
     /// </summary>
-    /// <param name="newBackgroundImage"></param>
+    /// <param name="newBackgroundSprite"></param>
     public void ChangeBackGround(Sprite newBackgroundSprite)
     {
         if (newBackgroundSprite != null)
             BackgroundImage.sprite = newBackgroundSprite;
     }
-    private void Update()
+
+    /// <summary>
+    /// Alterar a música que está sendo reproduzida (em loop).
+    /// </summary>
+    /// <param name="music"></param>
+    public void ChangeMusic(AudioResource music)
     {
-        if (eventOccurring)
-            return;
-        //coloquei aqui pq assim ele ativa quando a bool ta off e n da aquele problema
-        ManageCurrentEvent();
+        musicPlayer.Stop();
+        musicPlayer.resource = music;
+        musicPlayer.Play();
     }
-    public void changeEvent()
-    {//quando ativada religa a bool 
-        eventOccurring = false;
 
-
+    /// <summary>
+    /// Colcar aqui a lógica de quando chegar ao fim da execução dos eventos narrativos.
+    /// </summary>
+    public void GameOver()
+    {
 
     }
 
@@ -81,20 +100,16 @@ public class EventManager : MonoBehaviour
     {
         if (CurrentNarrativeEvent == null)
         {
-            // Colcar aqui a lógica de quando chegar ao fim da execução dos eventos narrativos.
+            GameOver();
             return;
         }
-        if(CurrentNarrativeEvent.musica != null) {
 
-        musicPlayer.Stop();
-            musicPlayer.resource = CurrentNarrativeEvent.musica;
-            musicPlayer.Play();
-        }
+        // Se o Novo evento define uma música, esta é reproduzida
+        // Caso não houver uma música, mantém-se a música antiga
+        if (CurrentNarrativeEvent.musica != null)
+            ChangeMusic(CurrentNarrativeEvent.musica);
+
         // Gerir o evento narrativo de acordo com a sua tipologia
-
-        
-        //ativa a bool para desligar multiplos loops
-        eventOccurring = true;
         switch (CurrentNarrativeEvent.Type)
         {
             case EventType.Dialogue:

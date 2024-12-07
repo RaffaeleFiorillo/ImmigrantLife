@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -12,9 +10,6 @@ public class DialogueManager : BaseNarrativeEventManager
     /// </summary>
     [SerializeField]
     TextMeshProUGUI DialogueTextBox;
-
-    [SerializeField]
-    GameObject toPassText;
 
     /// <summary>
     /// Nome da Caixa de texto de dialogo. Aparece no UI, em cima do <see cref="DialogueTextBox"/>.
@@ -89,12 +84,11 @@ public class DialogueManager : BaseNarrativeEventManager
     [SerializeField] GameObject skipIndicator;
 
     //onde irá haver o output dos sons
-    [SerializeField] 
-    AudioSource soundPlayer;
-
+    [SerializeField] AudioSource soundPlayer;
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
+        
     }
 
     private void Update()
@@ -108,7 +102,6 @@ public class DialogueManager : BaseNarrativeEventManager
             CurrentSentenceCharacterIndex = 0;
             CurrentSentenceIndex++;
             skipIndicator.SetActive(true);
-            toPassText.SetActive(true);
             return;
         }
 
@@ -118,7 +111,6 @@ public class DialogueManager : BaseNarrativeEventManager
             TimeWaited = 0;
             DialogueTextBox.text += CurrentSentence[CurrentSentenceCharacterIndex];
             CurrentSentenceCharacterIndex++;
-           
         }
     }
 
@@ -137,11 +129,11 @@ public class DialogueManager : BaseNarrativeEventManager
     }
 
     private void GoToNextNarrativeEvent()
-    {  
-          
+    {     
         DialogBox.SetActive(false);
+
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        // EventManager.changeEvent();
+        CurrentDialogueEvent.HasBeenManaged = true;
     }
 
     public void GoToNextSentence()
@@ -159,6 +151,7 @@ public class DialogueManager : BaseNarrativeEventManager
             CurrentSentenceCharacterIndex = 0;
             CurrentSentenceIndex++;
             skipIndicator.SetActive(true);
+            return;
         }
 
         if (CurrentDialogueEvent.DialogueBlocks.Count == CurrentSentenceIndex)
@@ -168,17 +161,23 @@ public class DialogueManager : BaseNarrativeEventManager
         }
 
         //altera o background(eu sei que aqui n é o melhor sitio mas ya )
-        EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
+        skipIndicator.SetActive(false);
 
-        //altera o background(eu sei que aqui n é o melhor sitio mas ya )
-        toPassText.SetActive(false);
+
+        //implementação do som
+        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som != null)
+        {
+            
+        soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
+
+            soundPlayer.Play();
+        }
+
         DialogueTextBox.text = "";
         EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
-
         DialogueTextBoxName.text = CurrentSpeakerName;
         SetCharacterSpeed(true);
         IsWritingSentence = true;
-        // StartCoroutine(WriteSentence());  // começa a escrever a frase
     }
 
     /// <summary>
