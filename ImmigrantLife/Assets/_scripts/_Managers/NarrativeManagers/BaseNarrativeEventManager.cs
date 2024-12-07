@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 /// <summary>
 /// A Base para outras classes com o objetivo de gerir tipos específicos de eventos narrativos.

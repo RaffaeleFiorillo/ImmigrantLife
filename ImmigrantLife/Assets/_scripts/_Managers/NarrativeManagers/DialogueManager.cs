@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -131,14 +129,11 @@ public class DialogueManager : BaseNarrativeEventManager
     }
 
     private void GoToNextNarrativeEvent()
-    {  
-          
+    {     
         DialogBox.SetActive(false);
+
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        //  EventManager.ManageCurrentEvent();
-
-
-        EventManager.changeEventOccurence();
+        CurrentDialogueEvent.HasBeenManaged = true;
     }
 
     public void GoToNextSentence()
@@ -183,30 +178,7 @@ public class DialogueManager : BaseNarrativeEventManager
         DialogueTextBoxName.text = CurrentSpeakerName;
         SetCharacterSpeed(true);
         IsWritingSentence = true;
-        // StartCoroutine(WriteSentence());  // começa a escrever a frase
     }
-
-    /// <summary>
-    /// Escrever a atual frase do Dialogo na Caixa de Texto.
-    /// </summary>
-    /// <returns></returns>
-    /// 
-    /* IenumeratorOff
-    private IEnumerator WriteSentence()
-    {
-        IsWritingSentence = true;
-        DialogueTextBox.text = ""; // Clear the text box initially
-
-        for (int i = 0; i < CurrentSentence.Length; i++)
-        {
-            DialogueTextBox.text += CurrentSentence[i]; // Adicionar os caracteres aos poucos (nesse caso um a um)
-            yield return new WaitForSeconds(CharacterDelaySpeed);
-        }
-
-        // A frase terminou de ser escrita
-        IsWritingSentence = false;
-        CurrentSentenceIndex++;  // passar à frase seguinte
-    }*/
 
     /// <summary>
     /// Método para alterar a velocidade de display dos caracteres;
