@@ -6,6 +6,9 @@ public enum EventType
     Dialogue,
     Choice,
     Animation,
+    Random,
+    BranchEvent,
+    Minigame
 }
 
 public abstract class NarrativeEvent : ScriptableObject
@@ -18,7 +21,8 @@ public abstract class NarrativeEvent : ScriptableObject
     /// <summary>
     /// Flag que indica se o Evento Narrativo atual terminou de ser tratado (true) ou ainda está neste processo (false).
     /// </summary>
-    public bool HasBeenManaged { get; set; } = false;
+    public bool HasBeenManaged { get => _hasBeenManaged; set { _hasBeenManaged = value; } }
+    protected bool _hasBeenManaged = false;
 
     /// <summary>
     /// O Evento Narrativo que vem a seguir deste.

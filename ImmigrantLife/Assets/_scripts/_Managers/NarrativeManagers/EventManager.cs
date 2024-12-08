@@ -21,6 +21,12 @@ public class EventManager : MonoBehaviour
     /// </summary>
     private ChoiceManager ChoiceManager { get; set; }
 
+
+    /// <summary>
+    /// Componente responsável por gerir a apresentação de Eventos Random.
+    /// </summary>
+    private RandomManager RandomManager { get; set; }
+
     #endregion Managers
 
     #region Propriedades
@@ -67,6 +73,7 @@ public class EventManager : MonoBehaviour
         BaseNarrativeEventManager.GetEventManagerReference(this);
         DialogueManager = GetComponent<DialogueManager>();
         ChoiceManager = GetComponent<ChoiceManager>();
+        RandomManager = GetComponent<RandomManager>();
     }
 
     private void Update()
@@ -121,7 +128,7 @@ public class EventManager : MonoBehaviour
         if (CurrentNarrativeEvent.musica != null)
             ChangeMusic(CurrentNarrativeEvent.musica);
 
-        Debug.Log($"Event: {CurrentNarrativeEvent.GetType()}");
+        // Debug.Log($"Event Type: {CurrentNarrativeEvent.GetType()}");
 
         // Gerir o evento narrativo de acordo com a sua tipologia
         switch (CurrentNarrativeEvent.Type)
@@ -134,6 +141,11 @@ public class EventManager : MonoBehaviour
             case EventType.Choice:
             {
                 ChoiceManager.StartNarrativeEvent(CurrentNarrativeEvent);
+                break;
+            }
+            case EventType.Random: case EventType.BranchEvent:
+            {
+                RandomManager.StartNarrativeEvent(CurrentNarrativeEvent);
                 break;
             }
         }
