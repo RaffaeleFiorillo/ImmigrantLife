@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee2e26d45d2483c4b988962016bbd2bd, type: 3}
-  m_Name: Senhorio
+  m_Name: Pai
   m_EditorClassIdentifier: 
-  name: Senhorio
+  name: Pai

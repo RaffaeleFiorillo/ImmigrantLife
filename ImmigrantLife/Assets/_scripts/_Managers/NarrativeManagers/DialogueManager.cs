@@ -79,7 +79,7 @@ public class DialogueManager : BaseNarrativeEventManager
     private string CurrentSpeakerName { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker.name; }
 
     #endregion Propriedades
-
+BackgroundManager backgroundManager { get; set; }
 
     [SerializeField] GameObject skipIndicator;
 
@@ -88,7 +88,7 @@ public class DialogueManager : BaseNarrativeEventManager
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
-        
+        backgroundManager = GetComponent<BackgroundManager>();
     }
 
     private void Update()
@@ -133,7 +133,7 @@ public class DialogueManager : BaseNarrativeEventManager
         DialogBox.SetActive(false);
 
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        CurrentDialogueEvent.HasBeenManaged = true;
+        EventManager.CurrentNarrativeEvent.HasBeenManaged = true;
     }
 
     public void GoToNextSentence()
@@ -174,7 +174,11 @@ public class DialogueManager : BaseNarrativeEventManager
         }
 
         DialogueTextBox.text = "";
-        EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
+        // EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
+        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceCharacterIndex].BackgroundImage!=null)
+        backgroundManager.changeBackgound(CurrentDialogueEvent, CurrentSentenceIndex);
+
+
         DialogueTextBoxName.text = CurrentSpeakerName;
         SetCharacterSpeed(true);
         IsWritingSentence = true;

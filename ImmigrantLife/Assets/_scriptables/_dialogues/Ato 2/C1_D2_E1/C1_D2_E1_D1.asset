@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: C1_D2_E1_D1
+  m_EditorClassIdentifier: 
+  NextEvent: {fileID: 11400000, guid: 849110a811792ed48b4d67cc3b8346c0, type: 2}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Ah sabe ano passado, no churrasco de quando o primo Gabriel veio visitar
+      a gente?
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9 foi bom que ele conseguiu vir no brasil ano passado"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "J\xE1 fazia tempo que n\xF3s n\xE3o via ele"
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "E a fam\xEDlia toda reunida, foi muito bom. Mas porqu\xEA?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9 que nesse dia eu fiquei falando com ele sobre como estava correndo
+      a mudan\xE7a e tal e estava pensando que talvez eu pudesse fazer o mesmo."
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9 isso o que? O que voc\xEA est\xE1 querendo dizer?"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Ajudar a gente como? O que isso tem a ver com o seu primo?

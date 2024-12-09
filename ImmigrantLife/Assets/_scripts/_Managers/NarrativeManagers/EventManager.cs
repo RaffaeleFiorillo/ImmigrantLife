@@ -29,6 +29,8 @@ public class EventManager : MonoBehaviour
 
     #endregion Managers
 
+
+    
     #region Propriedades
 
     /// <summary>
@@ -74,13 +76,16 @@ public class EventManager : MonoBehaviour
         DialogueManager = GetComponent<DialogueManager>();
         ChoiceManager = GetComponent<ChoiceManager>();
         RandomManager = GetComponent<RandomManager>();
+        
     }
 
     private void Update()
     {
         if (!CurrentEventHasBeenManaged)
             return;
-
+        CurrentNarrativeEvent.HasBeenManaged = false;
+        
+        
         ManageCurrentEvent();
     }
 
@@ -94,6 +99,7 @@ public class EventManager : MonoBehaviour
     {
         if (newBackgroundSprite != null)
             BackgroundImage.sprite = newBackgroundSprite;
+           
     }
 
     /// <summary>

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d20f8241cbdac24cb0b714ece6aa097, type: 3}
+  m_Name: Cq_D2_E1
+  m_EditorClassIdentifier: 
+  NextEvent: {fileID: 0}
+  musica: {fileID: 0}
+  Question: 
+  Choices:
+  - Money: 0
+    Anxiety: 0
+    Description: Ser Direto
+    NextEvent: {fileID: 11400000, guid: ea16c30afd1024a49bae8c25ceaa104a, type: 2}
+  - Money: 0
+    Anxiety: 0
+    Description: Ser Indireto
+    NextEvent: {fileID: 11400000, guid: 5e692b7681a321d42b344c5cb9966407, type: 2}
