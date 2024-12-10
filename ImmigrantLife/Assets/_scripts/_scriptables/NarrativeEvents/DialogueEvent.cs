@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -30,6 +31,8 @@ public class DialogueBlock
     /// </summary>
     public CharacterScriptable Speaker;
 
+    
+    public int positionIndex;
     /// <summary>
     /// Imagem que aparece no Background quando este bloco de diálogo é apresentado.
     /// </summary>

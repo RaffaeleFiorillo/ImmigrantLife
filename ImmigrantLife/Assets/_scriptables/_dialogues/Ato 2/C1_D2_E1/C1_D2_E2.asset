@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextEvent: {fileID: 0}
   musica: {fileID: 0}
-  Question: 
+  Question: "Ok \xE9 agora que vou dizer..."
   Choices:
   - Money: 0
     Anxiety: 0

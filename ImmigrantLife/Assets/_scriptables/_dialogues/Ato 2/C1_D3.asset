@@ -16,32 +16,39 @@ MonoBehaviour:
   musica: {fileID: 0}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: '*Limpa a garganta*'
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Final desse m\xEAs eu irei para Portugal. J\xE1 comprei a passagem
       e tratei do visto tempor\xE1rio. \r\n"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Que voc\xEA est\xE1 falando de ir para Portugal?"
   - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "E como voc\xEA pensa em ir minino? Vai arranjar grana onde? Vai atravessar
       o oceano de uno?"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: Eu tenho junto alguma grana desde o ano passado.
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Lembra do churras de quando o primo Gabriel veio c\xE1 no Brasil?"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Ent\xE3o, eu falei com ele sobre como estava correndo a vida na europa.
@@ -49,84 +56,101 @@ MonoBehaviour:
       que foi na europa que tem conseguido boas oportunidades. Ele j\xE1 est\xE1
       comprando sua casa. E ele ainda consegue ajudar em casa.\r\n"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Ai eu pensei que poderia fazer o mesmo, procurar uma vida melhor,
       sabe? Tentar ajudar voc\xEAs de alguma forma tamb\xE9m?\r\n"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Mas voc\xEA n\xE3o \xE9 feliz aqui Xavier? Alguma vez deixamos faltar
       algo para voc\xEA?"
   - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Xavier, voc\xEA tem 26 anos. \xC9 adulto suficiente para tomar suas
       pr\xF3prias decis\xF5es. N\xF3s somos humildes, mas trabalhadores. Nunca lhe
       faltou comida, nem teto.\r\n"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Pai, eu sei que o senhor e a m\xE3e sempre se matam de trabalhar para
       pagar as contas. Eu sei que j\xE1 ajudo com o meu trampo, mas ali n\xE3o tenho
       futuro. Eu quero arriscar algo melhor, por mim e por todos n\xF3s.\r\n"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Mas porque n\xE3o nos contou antes?\r\n"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Tive medo da vossa rea\xE7\xE3o\u2026 Mas eu j\xE1 me decidi. Meu
       avi\xE3o \xE9 no dia 01 de Outubro."
   - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "E j\xE1 planejou onde vai ficar? Onde vai trabalhar? Quanta grana
       voc\xEA juntou?\r\n"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "\xC9\u2026 falei com um mo\xE7o que anunciou online um quarto dispon\xEDvel.
       Acho que \xE9 partilhado, ainda n\xE3o sei bem. Mas sei onde ficar.\r\n"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Trabalho ainda n\xE3o sei bem na verdade. Mas juntei 6500 reais ao
       longo desse \xFAltimo ano, espero que seja o suficiente para me manter por
       um tempo enquanto procuro trabalho.\r\n"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Se voc\xEA est\xE1 t\xE3o certo disso n\xF3s lhe desejamos boa sorte.\r\n"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: '*chorosa*'
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: 'Eu vou para o quarto, boa noite meninos.
 
 '
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "M\xE3e, a senhora est\xE1 bem?"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: Sim.
-  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Filho, pensa bem na sua decis\xE3o. Se \xE9 que o voc\xEA quer, n\xF3s
       apoiamos. Mas tenha certeza que \xE9 o que voc\xEA quer."
-  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: Boa noite filho.
-  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: Boa noite pai.

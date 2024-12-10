@@ -27,6 +27,9 @@ public class EventManager : MonoBehaviour
     /// </summary>
     private RandomManager RandomManager { get; set; }
 
+
+    private BackgroundManager BackgroundManager { get; set; }   
+
     #endregion Managers
 
 
@@ -76,7 +79,7 @@ public class EventManager : MonoBehaviour
         DialogueManager = GetComponent<DialogueManager>();
         ChoiceManager = GetComponent<ChoiceManager>();
         RandomManager = GetComponent<RandomManager>();
-        
+        BackgroundManager =GetComponent<BackgroundManager>();
     }
 
     private void Update()
@@ -98,7 +101,9 @@ public class EventManager : MonoBehaviour
     public void ChangeBackGround(Sprite newBackgroundSprite)
     {
         if (newBackgroundSprite != null)
-            BackgroundImage.sprite = newBackgroundSprite;
+            BackgroundManager.changeBackgound(newBackgroundSprite);
+                
+                // BackgroundImage.sprite = newBackgroundSprite;
            
     }
 

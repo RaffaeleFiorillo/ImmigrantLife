@@ -16,34 +16,42 @@ MonoBehaviour:
   musica: {fileID: 0}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    BackgroundImage: {fileID: -3652899604995583919, guid: 98cabe430b4d8ea4b94d9fc7c4863963, type: 3}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "(Bem\u2026 \xC9 hoje. N\xE3o posso adiar mais.)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: -5448976902791224015, guid: b55c459cad4aeec43a5c4203d9015068, type: 3}
     som: {fileID: 0}
     Sentence: (...)
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "(Ser\xE1 que eles v\xE3o compreender?)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: (...)
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: (...)
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "(Eles t\xEAm que compreender. Vai ser melhor para todos.)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: '*Respira fundo*'
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "(V\xE1 l\xE1 Xavier\u2026 tu j\xE1 pensaste muito sobre isto. Quando
@@ -51,10 +59,12 @@ MonoBehaviour:
       e vou ganhar uma vida melhor para n\xF3s. E est\xE1 tudo tratado, vou no fim
       desse m\xEAs.)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: '*Respira fundo*'
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "*A qualquer momento eles v\xE3o entrar, e eu estarei\u2026!* "

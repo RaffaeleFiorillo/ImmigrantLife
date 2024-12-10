@@ -10,6 +10,9 @@ public class BackgroundManager : BaseNarrativeEventManager
 
     [SerializeField] GameObject currentBackgroundI;
     [SerializeField] Image backgroundToFade;
+
+    Sprite storedSprite;
+    Sprite currentSprite;
     [SerializeField] GameObject imageToInstance;
     [SerializeField] GameObject backgroundPlace;
 
@@ -17,6 +20,8 @@ public class BackgroundManager : BaseNarrativeEventManager
     DialogueEvent currentDialogEvent;
     DialogueEvent lastDialogEvent;
     int lastBIndex;
+
+
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
     { 
     
@@ -25,8 +30,7 @@ public class BackgroundManager : BaseNarrativeEventManager
 
 
 
-    public void changeBackgound(DialogueEvent toChange,int  backgoundIndex) 
-    {
+    public void changeBackgound(Sprite reiceiveBackground)    {
 
         if (changingBackground)
         {
@@ -37,37 +41,35 @@ public class BackgroundManager : BaseNarrativeEventManager
         }
 
 
-        if (currentDialogEvent != null)
+        if (currentBackgroundI.GetComponent<Image>().sprite == null)
         {
-
-        lastDialogEvent = currentDialogEvent;
-            
-        }
-
-
-        if (currentDialogEvent == null)
-        {
-            currentDialogEvent = toChange;
-            justChange(backgoundIndex);
+           // currentDialogEvent = toChange;
+           
+            justChange(reiceiveBackground);
+            storedSprite = reiceiveBackground;
             
             return;
         }
 
 backgroundToFade =  Instantiate(imageToInstance, backgroundPlace.transform).GetComponent<Image>();
 
-        backgroundToFade.sprite = currentBackgroundI.GetComponent<Image>().sprite;
+        backgroundToFade.sprite = storedSprite;
+        storedSprite = reiceiveBackground;
 
-        justChange(backgoundIndex) ;
+     //   currentSprite = reiceiveBackground;
+
+
+        justChange(reiceiveBackground);
 
         changingBackground = true;
 
 
 
     }
-    public void justChange(int backgoundIndex)
+    public void justChange(Sprite newBackground)
     {
-        currentBackgroundI.GetComponent<Image>().sprite = currentDialogEvent.DialogueBlocks[backgoundIndex].BackgroundImage;
-        lastBIndex = backgoundIndex;
+        currentBackgroundI.GetComponent<Image>().sprite = newBackground;
+        
 
 
     }
@@ -75,6 +77,8 @@ backgroundToFade =  Instantiate(imageToInstance, backgroundPlace.transform).GetC
 
     private void Update()
     {
+
+
         if (!changingBackground)
             return;
         Debug.Log("estou aqui");

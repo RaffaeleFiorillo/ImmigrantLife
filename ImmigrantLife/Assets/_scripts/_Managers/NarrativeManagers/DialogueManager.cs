@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class DialogueManager : BaseNarrativeEventManager
 {
@@ -15,7 +16,9 @@ public class DialogueManager : BaseNarrativeEventManager
     /// Nome da Caixa de texto de dialogo. Aparece no UI, em cima do <see cref="DialogueTextBox"/>.
     /// </summary>
     [SerializeField]
-    TextMeshProUGUI DialogueTextBoxName;
+    List< TextMeshProUGUI> DialogueTextBoxName;
+
+
 
     [SerializeField] 
     GameObject DialogBox;
@@ -149,6 +152,11 @@ BackgroundManager backgroundManager { get; set; }
             DialogueTextBox.text = CurrentSentence;
             IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
+
+
+
+            
+
             CurrentSentenceIndex++;
             skipIndicator.SetActive(true);
             return;
@@ -168,18 +176,29 @@ BackgroundManager backgroundManager { get; set; }
         if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som != null)
         {
             
-        soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
+            soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
 
             soundPlayer.Play();
         }
 
         DialogueTextBox.text = "";
-        // EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
-        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceCharacterIndex].BackgroundImage!=null)
-        backgroundManager.changeBackgound(CurrentDialogueEvent, CurrentSentenceIndex);
+      
+        EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
 
+        DialogBox.SetActive(true);
 
-        DialogueTextBoxName.text = CurrentSpeakerName;
+        // Desligar o texto do Speaker anterior
+        if (CurrentSentenceIndex > 0)
+            DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex-1].positionIndex].gameObject.SetActive(false);
+
+        // Mudar o speaker apenas quando o novo speaker não for nulo
+        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker != null)
+        {
+
+            DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].positionIndex].text = CurrentSpeakerName;
+            DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].positionIndex].gameObject.SetActive(true);
+
+        }
         SetCharacterSpeed(true);
         IsWritingSentence = true;
     }

@@ -16,32 +16,39 @@ MonoBehaviour:
   musica: {fileID: 0}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: Ah sabe ano passado, no churrasco de quando o primo Gabriel veio visitar
       a gente?
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "\xC9 foi bom que ele conseguiu vir no brasil ano passado"
   - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "J\xE1 fazia tempo que n\xF3s n\xE3o via ele"
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "E a fam\xEDlia toda reunida, foi muito bom. Mas porqu\xEA?"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "\xC9 que nesse dia eu fiquei falando com ele sobre como estava correndo
       a mudan\xE7a e tal e estava pensando que talvez eu pudesse fazer o mesmo."
   - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "\xC9 isso o que? O que voc\xEA est\xE1 querendo dizer?"
   - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: Ajudar a gente como? O que isso tem a ver com o seu primo?
