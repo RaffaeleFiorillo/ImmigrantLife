@@ -5,6 +5,9 @@ public class BackgroundManager : BaseNarrativeEventManager
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     bool changingBackground;
+    bool changeNextEvent;
+
+
     [SerializeField] float changingTime;
     [SerializeField] float changingSpeed;
 
@@ -16,18 +19,49 @@ public class BackgroundManager : BaseNarrativeEventManager
     [SerializeField] GameObject imageToInstance;
     [SerializeField] GameObject backgroundPlace;
 
+    [SerializeField] GameObject toPass;
 
-    DialogueEvent currentDialogEvent;
-    DialogueEvent lastDialogEvent;
-    int lastBIndex;
-
+    BackgroundEvent backgroundEvent;
+    int backgroundIndex;
 
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
-    { 
-    
+    {
+
+
+        backgroundEvent = (BackgroundEvent)narrativeEvent;
+        toPass.SetActive(true);
+        nextBackGround();
+
+
+
     
     }
 
+    private void GoToNextNarrativeEvent()
+    {
+        backgroundIndex = 0;
+        toPass.SetActive(false); 
+        EventManager.CurrentNarrativeEvent =backgroundEvent.NextEvent;
+        EventManager.CurrentNarrativeEvent.HasBeenManaged = true;
+
+
+    }
+      public  void nextBackGround()
+    {
+
+        if(backgroundIndex == (backgroundEvent.BackgroundBlocks.Count-1)){
+
+            GoToNextNarrativeEvent();
+
+            return;
+        }
+
+        backgroundIndex++;
+
+        changeBackgound(backgroundEvent.BackgroundBlocks[backgroundIndex].Background);
+
+
+    }
 
 
     public void changeBackgound(Sprite reiceiveBackground)    {

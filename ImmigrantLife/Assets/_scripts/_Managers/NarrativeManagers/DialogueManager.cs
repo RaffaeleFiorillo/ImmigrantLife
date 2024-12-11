@@ -79,7 +79,7 @@ public class DialogueManager : BaseNarrativeEventManager
     /// Nome da personagem que diz a frase atualmente sendo escrita.
     /// É atualizado automaticamente ao alterar o <see cref="CurrentSentenceIndex"/>
     /// </summary>
-    private string CurrentSpeakerName { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker.name; }
+    private string CurrentSpeakerName { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker.speakerName; }
 
     #endregion Propriedades
 BackgroundManager backgroundManager { get; set; }
@@ -127,6 +127,13 @@ BackgroundManager backgroundManager { get; set; }
         // O restante das frases é mostrado quando o jogador clicar no devido botão 
 
         DialogBox.SetActive(true);
+        foreach(TextMeshProUGUI namesBox in DialogueTextBoxName)
+        {
+
+            namesBox.gameObject.SetActive(false);
+
+        }
+
 
         GoToNextSentence();
     }
@@ -175,7 +182,7 @@ BackgroundManager backgroundManager { get; set; }
         //implementação do som
         if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som != null)
         {
-            
+             
             soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
 
             soundPlayer.Play();

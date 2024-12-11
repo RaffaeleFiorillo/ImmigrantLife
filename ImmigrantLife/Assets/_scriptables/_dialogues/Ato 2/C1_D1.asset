@@ -17,12 +17,12 @@ MonoBehaviour:
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     positionIndex: 0
-    BackgroundImage: {fileID: 0}
+    BackgroundImage: {fileID: 8138532480268601653, guid: 0331651ccf903eb469ec64367c2900d6, type: 3}
     som: {fileID: 0}
     Sentence: "(Bem\u2026 \xC9 hoje. N\xE3o posso adiar mais.)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     positionIndex: 0
-    BackgroundImage: {fileID: -5448976902791224015, guid: b55c459cad4aeec43a5c4203d9015068, type: 3}
+    BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: (...)
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
@@ -52,7 +52,7 @@ MonoBehaviour:
     Sentence: '*Respira fundo*'
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     positionIndex: 0
-    BackgroundImage: {fileID: 0}
+    BackgroundImage: {fileID: 5120224674601135964, guid: 2e695bb13c2ca3543bd4c17a5c89d965, type: 3}
     som: {fileID: 0}
     Sentence: "(V\xE1 l\xE1 Xavier\u2026 tu j\xE1 pensaste muito sobre isto. Quando
       os pais entrarem tu vais lhe dizer: \u201CEu vou emigrar! Eu vou para fora
@@ -65,6 +65,6 @@ MonoBehaviour:
     Sentence: '*Respira fundo*'
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     positionIndex: 0
-    BackgroundImage: {fileID: 0}
+    BackgroundImage: {fileID: 4986190733806725710, guid: a79ccef59025c12488b313e61cbb68a5, type: 3}
     som: {fileID: 0}
     Sentence: "*A qualquer momento eles v\xE3o entrar, e eu estarei\u2026!* "

@@ -8,7 +8,8 @@ public enum EventType
     Animation,
     Random,
     BranchEvent,
-    Minigame
+    Minigame,
+    Background
 }
 
 public abstract class NarrativeEvent : ScriptableObject
