@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public class DialogueManager : BaseNarrativeEventManager
 {
@@ -15,7 +16,9 @@ public class DialogueManager : BaseNarrativeEventManager
     /// Nome da Caixa de texto de dialogo. Aparece no UI, em cima do <see cref="DialogueTextBox"/>.
     /// </summary>
     [SerializeField]
-    TextMeshProUGUI DialogueTextBoxName;
+    List< TextMeshProUGUI> DialogueTextBoxName;
+
+
 
     [SerializeField] 
     GameObject DialogBox;
@@ -76,10 +79,10 @@ public class DialogueManager : BaseNarrativeEventManager
     /// Nome da personagem que diz a frase atualmente sendo escrita.
     /// É atualizado automaticamente ao alterar o <see cref="CurrentSentenceIndex"/>
     /// </summary>
-    private string CurrentSpeakerName { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker.name; }
+    private string CurrentSpeakerName { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker.speakerName; }
 
     #endregion Propriedades
-
+BackgroundManager backgroundManager { get; set; }
 
     [SerializeField] GameObject skipIndicator;
 
@@ -88,7 +91,7 @@ public class DialogueManager : BaseNarrativeEventManager
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
-        
+        backgroundManager = GetComponent<BackgroundManager>();
     }
 
     private void Update()
@@ -124,6 +127,13 @@ public class DialogueManager : BaseNarrativeEventManager
         // O restante das frases é mostrado quando o jogador clicar no devido botão 
 
         DialogBox.SetActive(true);
+        foreach(TextMeshProUGUI namesBox in DialogueTextBoxName)
+        {
+
+            namesBox.gameObject.SetActive(false);
+
+        }
+
 
         GoToNextSentence();
     }
@@ -133,7 +143,7 @@ public class DialogueManager : BaseNarrativeEventManager
         DialogBox.SetActive(false);
 
         EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        CurrentDialogueEvent.HasBeenManaged = true;
+        EventManager.CurrentNarrativeEvent.HasBeenManaged = true;
     }
 
     public void GoToNextSentence()
@@ -149,6 +159,11 @@ public class DialogueManager : BaseNarrativeEventManager
             DialogueTextBox.text = CurrentSentence;
             IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
+
+
+
+            
+
             CurrentSentenceIndex++;
             skipIndicator.SetActive(true);
             return;
@@ -167,15 +182,30 @@ public class DialogueManager : BaseNarrativeEventManager
         //implementação do som
         if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som != null)
         {
-            
-        soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
+             
+            soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
 
             soundPlayer.Play();
         }
 
         DialogueTextBox.text = "";
+      
         EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
-        DialogueTextBoxName.text = CurrentSpeakerName;
+
+        DialogBox.SetActive(true);
+
+        // Desligar o texto do Speaker anterior
+        if (CurrentSentenceIndex > 0)
+            DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex-1].positionIndex].gameObject.SetActive(false);
+
+        // Mudar o speaker apenas quando o novo speaker não for nulo
+        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker != null)
+        {
+
+            DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].positionIndex].text = CurrentSpeakerName;
+            DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].positionIndex].gameObject.SetActive(true);
+
+        }
         SetCharacterSpeed(true);
         IsWritingSentence = true;
     }

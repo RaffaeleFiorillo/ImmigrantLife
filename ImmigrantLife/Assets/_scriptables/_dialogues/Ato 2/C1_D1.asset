@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: C1_D1
+  m_EditorClassIdentifier: 
+  NextEvent: {fileID: 11400000, guid: ec89fa2d1855ffd4c8fb8777d59a45bd, type: 2}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 8138532480268601653, guid: 0331651ccf903eb469ec64367c2900d6, type: 3}
+    som: {fileID: 0}
+    Sentence: "(Bem\u2026 \xC9 hoje. N\xE3o posso adiar mais.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: (...)
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Ser\xE1 que eles v\xE3o compreender?)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: (...)
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: (...)
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Eles t\xEAm que compreender. Vai ser melhor para todos.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: '*Respira fundo*'
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 5120224674601135964, guid: 2e695bb13c2ca3543bd4c17a5c89d965, type: 3}
+    som: {fileID: 0}
+    Sentence: "(V\xE1 l\xE1 Xavier\u2026 tu j\xE1 pensaste muito sobre isto. Quando
+      os pais entrarem tu vais lhe dizer: \u201CEu vou emigrar! Eu vou para fora
+      e vou ganhar uma vida melhor para n\xF3s. E est\xE1 tudo tratado, vou no fim
+      desse m\xEAs.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: '*Respira fundo*'
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 4986190733806725710, guid: a79ccef59025c12488b313e61cbb68a5, type: 3}
+    som: {fileID: 0}
+    Sentence: "*A qualquer momento eles v\xE3o entrar, e eu estarei\u2026!* "

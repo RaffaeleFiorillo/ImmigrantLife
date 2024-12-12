@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: C1_D2
+  m_EditorClassIdentifier: 
+  NextEvent: {fileID: 11400000, guid: 16c74dbfee25afa4fa794bd8059cb2e6, type: 2}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Porra Jo\xE3o, de novo! Voc\xEA sempre me envergonha quando vamos
+      na casa da minha m\xE3e!\r\n"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Qual \xE9, foi s\xF3 uma piadinha. Seu pai adorou kkk\r\n"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: '*Abre a porta*'
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Mas era realmente necess\xE1rio esconder a dentadura da minha m\xE3e
+      antes de sairmos para o restaurante? A coitada passou m\xF3 vergonha, tadinha."
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9, a v\xE9ia ficou pareceno uma manga chupada. kkkkk\r\n"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: '*Fecha a porta*'
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Voc\xEA \xE9 um idiota! Nem acredito que voc\xEA fez isso cara -\r\n"
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: '*Nota o Xavier sentado na cozinha, vendo-os a entrar*
+
+
+
+'
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: 'Oi Xavinho!
+
+'
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Oi M\xE3e, oi pai!"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Oi filh\xE3o! Como correu o trampo? J\xE1 jantou?"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: '*Arruma as chaves *'
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Correu bem pai, caiu bastante corrida hoje. E sim j\xE1 comi.\r\n"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    positionIndex: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Como correu o jantar com os av\xF3s?"
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9 Jo\xE3o, como correu?\r"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Foi interessante kkkkk
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Tudo para voc\xEA \xE9 uma palha\xE7ada, c\xEA nunca-\r\n"
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: '*Interrompida pelo Xavier*'
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    positionIndex: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Na verdade eu\u2026 estava esperando voc\xEAs."
