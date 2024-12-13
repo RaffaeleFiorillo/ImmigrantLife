@@ -76,3 +76,5 @@ crashlytics-build.properties
 /ImmigrantLife/Logs
 /ImmigrantLife/obj/Debug
 /ImmigrantLife/ProjectSettings
+/ImmigrantLife/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
+/ImmigrantLife/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sm1_sensei_blush_0: -7517343399066209258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

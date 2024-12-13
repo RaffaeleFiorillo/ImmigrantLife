@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sf1_outfit1_normaltalkblush_0: 4043682800667380584
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

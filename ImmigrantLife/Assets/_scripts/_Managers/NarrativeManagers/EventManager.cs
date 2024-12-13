@@ -159,13 +159,11 @@ public class EventManager : MonoBehaviour
                 RandomManager.StartNarrativeEvent(CurrentNarrativeEvent);
                 break;
             }
-
             case EventType.Background:
+            {
                 BackgroundManager.StartNarrativeEvent(CurrentNarrativeEvent);
-
-
-                
                 break;
+            }
         }
     }
 }
