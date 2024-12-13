@@ -75,7 +75,7 @@ public class EventManager : MonoBehaviour
 
     void Start()
     {
-        BaseNarrativeEventManager.GetEventManagerReference(this);
+        BaseNarrativeEventManager.GetEventManagerReference(this,GetComponent<EffectManager>());
         DialogueManager = GetComponent<DialogueManager>();
         ChoiceManager = GetComponent<ChoiceManager>();
         RandomManager = GetComponent<RandomManager>();
@@ -159,13 +159,11 @@ public class EventManager : MonoBehaviour
                 RandomManager.StartNarrativeEvent(CurrentNarrativeEvent);
                 break;
             }
-
             case EventType.Background:
+            {
                 BackgroundManager.StartNarrativeEvent(CurrentNarrativeEvent);
-
-
-                
                 break;
+            }
         }
     }
 }

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sf1_outfit1_cry_0: 8247656329286111997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

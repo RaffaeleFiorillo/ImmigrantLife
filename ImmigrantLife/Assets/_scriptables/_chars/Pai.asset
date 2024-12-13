@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2e26d45d2483c4b988962016bbd2bd, type: 3}
   m_Name: Pai
   m_EditorClassIdentifier: 
-  name: Pai
+  speakerName: 
+  emotionsSprites:
+  - {fileID: -7759997201710839683, guid: 10276ea9f2a9a02448f9bfc1af29f10b, type: 3}
+  - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}

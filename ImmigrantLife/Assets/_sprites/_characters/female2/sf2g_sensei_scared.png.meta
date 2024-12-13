@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sf2g_sensei_scared_0: -1575144028849442142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

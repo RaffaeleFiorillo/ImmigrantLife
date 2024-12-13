@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sf2g_sensei_normaltalk_0: -5261741740324006005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -56,15 +56,13 @@ public class RandomManager : BaseNarrativeEventManager
 
         double randomDouble = Random.Range(0, 100); // Generates a random double between 0.0 and 1.0
 
+        // Caso a probabilidade não estiver dentro do intervalo de funcionamento do evento
         if(randomDouble > CurrentRandomEvent.Probability)
         {
             // Passar ao evento seguinte
-            // EventManager.CurrentNarrativeEvent = CurrentNarrativeEvent.NextEvent;
             EventManager.CurrentNarrativeEvent.HasBeenManaged = true;
             return;
         }
-
-
     }
 
     /// <summary>
@@ -78,11 +76,11 @@ public class RandomManager : BaseNarrativeEventManager
             switch (narrativeEvent.Type)
             {
                 case EventType.Random:
-                        StartRandomEvent(narrativeEvent);
-                        break;
+                    StartRandomEvent(narrativeEvent);
+                    break;
                 case EventType.Choice:
-                        StartBranchEvent(narrativeEvent);
-                        break;
+                    StartBranchEvent(narrativeEvent);
+                    break;
                 default:
                     throw new System.Exception($"Tipo desconhecido: {narrativeEvent.Type}");
             }

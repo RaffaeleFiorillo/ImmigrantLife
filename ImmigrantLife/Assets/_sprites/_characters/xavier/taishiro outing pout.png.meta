@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      taishiro outing pout_0: -4803838003383090596
+      taishiro outing pout_1: -54550769151150304
+      taishiro outing pout_2: -8230918721954747769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

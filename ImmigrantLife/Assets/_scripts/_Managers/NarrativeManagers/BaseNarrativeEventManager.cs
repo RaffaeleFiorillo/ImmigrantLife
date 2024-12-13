@@ -12,15 +12,19 @@ public abstract class BaseNarrativeEventManager : MonoBehaviour
     /// Não é disponível para outras classes.
     /// </summary>
     protected static EventManager EventManager { get; private set; }
-
+    protected static EffectManager EffectManager { get; private set; }
     /// <summary>
     /// Este método oferece uma forma de atribuir a referência ao EventManager.
     /// </summary>
     /// <param name="eventManager">Instância de EventManager ao qual se quer estabelecer uma referência.</param>
-    public static void GetEventManagerReference(EventManager eventManager)
+    public static void GetEventManagerReference(EventManager eventManager,EffectManager effectManager)
     {
         EventManager = eventManager;
+        EffectManager = effectManager;
+
     }
+
+    
 
     /// <summary>
     /// Este método vai implementar o tratamento de um evento narrativo.

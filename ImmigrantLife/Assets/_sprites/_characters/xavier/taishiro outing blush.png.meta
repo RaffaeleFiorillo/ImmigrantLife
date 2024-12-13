@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      taishiro outing blush_0: 5230063409440968737
+      taishiro outing blush_1: 517031428589608596
+      taishiro outing blush_2: 2388060211845356921
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

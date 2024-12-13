@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sm1_sensei_smile_0: -8681960059122463079
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

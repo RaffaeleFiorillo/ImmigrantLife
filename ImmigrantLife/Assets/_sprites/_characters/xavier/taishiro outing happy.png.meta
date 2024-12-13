@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      taishiro outing happy_0: 1205164826383155298
+      taishiro outing happy_1: 862577634555738339
+      taishiro outing happy_2: -7437954399779390087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

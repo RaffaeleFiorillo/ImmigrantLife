@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sf2g_sensei_tears_0: 3367601113003642094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

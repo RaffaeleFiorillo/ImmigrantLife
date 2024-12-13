@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class DialogueManager : BaseNarrativeEventManager
 {
     #region Campos Serializados
-
+  
     /// <summary>
     /// Parte do UI onde é mostrado o texto dos dialogos.
     /// </summary>
@@ -16,7 +16,7 @@ public class DialogueManager : BaseNarrativeEventManager
     /// Nome da Caixa de texto de dialogo. Aparece no UI, em cima do <see cref="DialogueTextBox"/>.
     /// </summary>
     [SerializeField]
-    List< TextMeshProUGUI> DialogueTextBoxName;
+    List<TextMeshProUGUI> DialogueTextBoxName;
 
 
 
@@ -70,28 +70,35 @@ public class DialogueManager : BaseNarrativeEventManager
     private DialogueEvent CurrentDialogueEvent { get; set; }
 
     /// <summary>
+    /// Bloco de dialogo atualmente a ser tratado
+    /// </summary>
+    private DialogueBlock CurrentDialogueBlock { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex]; }
+
+    /// <summary>
     /// Frase atual a ser dita do diálogo.
     /// É atualizado automaticamente ao alterar o <see cref="CurrentSentenceIndex"/>
     /// </summary>
-    private string CurrentSentence { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Sentence;  }
+    private string CurrentSentence { get => CurrentDialogueBlock.Sentence;  }
 
     /// <summary>
     /// Nome da personagem que diz a frase atualmente sendo escrita.
     /// É atualizado automaticamente ao alterar o <see cref="CurrentSentenceIndex"/>
     /// </summary>
-    private string CurrentSpeakerName { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker.speakerName; }
+    private string CurrentSpeakerName { get => CurrentDialogueBlock.Speaker.speakerName; }
 
     #endregion Propriedades
-BackgroundManager backgroundManager { get; set; }
 
-    [SerializeField] GameObject skipIndicator;
+    [SerializeField] 
+    GameObject skipIndicator;
 
     //onde irá haver o output dos sons
     [SerializeField] AudioSource soundPlayer;
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
-        backgroundManager = GetComponent<BackgroundManager>();
+
+
+        
     }
 
     private void Update()
@@ -129,11 +136,8 @@ BackgroundManager backgroundManager { get; set; }
         DialogBox.SetActive(true);
         foreach(TextMeshProUGUI namesBox in DialogueTextBoxName)
         {
-
             namesBox.gameObject.SetActive(false);
-
         }
-
 
         GoToNextSentence();
     }
@@ -160,10 +164,6 @@ BackgroundManager backgroundManager { get; set; }
             IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
 
-
-
-            
-
             CurrentSentenceIndex++;
             skipIndicator.SetActive(true);
             return;
@@ -180,17 +180,19 @@ BackgroundManager backgroundManager { get; set; }
 
 
         //implementação do som
-        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som != null)
-        {
-             
-            soundPlayer.resource = CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].som;
+        if (CurrentDialogueBlock.som != null)
+        {      
+            soundPlayer.resource = CurrentDialogueBlock.som;
 
             soundPlayer.Play();
         }
 
+        EffectManager.reiceiveCharacter(CurrentDialogueBlock.Speaker, CurrentDialogueBlock.positionIndex, CurrentDialogueBlock.emotionIndex);
+
+
         DialogueTextBox.text = "";
       
-        EventManager.ChangeBackGround(CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].BackgroundImage);
+        EventManager.ChangeBackGround(CurrentDialogueBlock.BackgroundImage);
 
         DialogBox.SetActive(true);
 
@@ -199,11 +201,11 @@ BackgroundManager backgroundManager { get; set; }
             DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex-1].positionIndex].gameObject.SetActive(false);
 
         // Mudar o speaker apenas quando o novo speaker não for nulo
-        if (CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].Speaker != null)
+        if (CurrentDialogueBlock.Speaker != null)
         {
 
-            DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].positionIndex].text = CurrentSpeakerName;
-            DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex].positionIndex].gameObject.SetActive(true);
+            DialogueTextBoxName[CurrentDialogueBlock.positionIndex].text = CurrentSpeakerName;
+            DialogueTextBoxName[CurrentDialogueBlock.positionIndex].gameObject.SetActive(true);
 
         }
         SetCharacterSpeed(true);
