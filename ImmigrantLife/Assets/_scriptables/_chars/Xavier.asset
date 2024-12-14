@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Xavier
   m_EditorClassIdentifier: 
   speakerName: Xavier
-  emotionsSprites: []
+  emotionsSprites:
+  - {fileID: 7768336579786255824, guid: 63082a697cadab140a2146f4508c2530, type: 3}
+  - {fileID: 5230063409440968737, guid: 78b8f84f2fd5abf4099d9496e70d88bd, type: 3}

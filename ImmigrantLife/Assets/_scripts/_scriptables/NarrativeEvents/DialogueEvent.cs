@@ -30,7 +30,7 @@ public class DialogueBlock
     /// Personagem que representa o emissor da Frase ao qual este Bloco se refere.
     /// </summary>
     public CharacterScriptable Speaker;
-
+    public int emotionIndex;
     
     public int positionIndex;
     /// <summary>

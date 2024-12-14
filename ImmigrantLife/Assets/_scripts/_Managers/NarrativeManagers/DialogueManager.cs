@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class DialogueManager : BaseNarrativeEventManager
 {
     #region Campos Serializados
-
+  
     /// <summary>
     /// Parte do UI onde é mostrado o texto dos dialogos.
     /// </summary>
@@ -96,6 +96,9 @@ public class DialogueManager : BaseNarrativeEventManager
     void Start()
     {
         SetCharacterSpeed(setToNormalSpeed:true);
+
+
+        
     }
 
     private void Update()
@@ -183,6 +186,9 @@ public class DialogueManager : BaseNarrativeEventManager
 
             soundPlayer.Play();
         }
+
+        EffectManager.reiceiveCharacter(CurrentDialogueBlock.Speaker, CurrentDialogueBlock.positionIndex, CurrentDialogueBlock.emotionIndex);
+
 
         DialogueTextBox.text = "";
       
