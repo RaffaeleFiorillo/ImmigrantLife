@@ -16,7 +16,7 @@ public class DialogueManager : BaseNarrativeEventManager
     /// Nome da Caixa de texto de dialogo. Aparece no UI, em cima do <see cref="DialogueTextBox"/>.
     /// </summary>
     [SerializeField]
-    List<TextMeshProUGUI> DialogueTextBoxName;
+    TextMeshProUGUI DialogueTextBoxName;
 
 
 
@@ -134,11 +134,7 @@ public class DialogueManager : BaseNarrativeEventManager
         // O restante das frases é mostrado quando o jogador clicar no devido botão 
 
         DialogBox.SetActive(true);
-        foreach(TextMeshProUGUI namesBox in DialogueTextBoxName)
-        {
-            namesBox.gameObject.SetActive(false);
-        }
-
+    
         GoToNextSentence();
     }
 
@@ -197,17 +193,12 @@ public class DialogueManager : BaseNarrativeEventManager
         DialogBox.SetActive(true);
 
         // Desligar o texto do Speaker anterior
-        if (CurrentSentenceIndex > 0)
-            DialogueTextBoxName[CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex-1].positionIndex].gameObject.SetActive(false);
+       
 
-        // Mudar o speaker apenas quando o novo speaker não for nulo
-        if (CurrentDialogueBlock.Speaker != null)
-        {
+            DialogueTextBoxName.text = CurrentSpeakerName;
+      
 
-            DialogueTextBoxName[CurrentDialogueBlock.positionIndex].text = CurrentSpeakerName;
-            DialogueTextBoxName[CurrentDialogueBlock.positionIndex].gameObject.SetActive(true);
-
-        }
+        
         SetCharacterSpeed(true);
         IsWritingSentence = true;
     }
