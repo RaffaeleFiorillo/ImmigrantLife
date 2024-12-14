@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2e26d45d2483c4b988962016bbd2bd, type: 3}
   m_Name: "M\xE3e"
   m_EditorClassIdentifier: 
-  name: "M\xE3e"
+  speakerName: "M\xE3e"
+  emotionsSprites:
+  - {fileID: 1456487451234203433, guid: e3ac48d8abf63ce4c941a8a5bf08e5c9, type: 3}
+  - {fileID: 8247656329286111997, guid: 08329183e90af7b4caebed827190ac15, type: 3}

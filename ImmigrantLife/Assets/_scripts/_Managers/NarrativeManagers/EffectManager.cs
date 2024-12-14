@@ -45,8 +45,8 @@ public class EffectManager: BaseNarrativeEventManager
 
     private void Update()
     {
-        UpdateCharacterImage(ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited, CharacterTimeToWait, ref charImageLeft, speakerLeft, charLeft, emotionIndex);
-        UpdateCharacterImage(ref ShouldUpdateRightCharacter, ref RightCharacterTimeWaited, CharacterTimeToWait, ref charImageRight, speakerRight, charRight, emotionIndex);
+        UpdateCharacterImage(ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited, ref charImageLeft, speakerLeft, charLeft, emotionIndex);
+        UpdateCharacterImage(ref ShouldUpdateRightCharacter, ref RightCharacterTimeWaited, ref charImageRight, speakerRight, charRight, emotionIndex);
     }
 
     public void reiceiveCharacter(CharacterScriptable currentChar,int charPosition,int receiveEmotion)
@@ -54,17 +54,31 @@ public class EffectManager: BaseNarrativeEventManager
         switch (charPosition)
         {
             case 0:
+
+
                 UpdateCharacter(ref speakerLeft, ref charImageLeft, ref charLeft, currentChar, receiveEmotion, ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited);
+
+
                 break;
 
             case 1:
+
+                
                 UpdateCharacter(ref speakerRight, ref charImageRight, ref charRight, currentChar, receiveEmotion, ref ShouldUpdateRightCharacter, ref LeftCharacterTimeWaited);
                 break;
 
             default:
                 Debug.LogWarning("Posição de personagem errada: " + charPosition);
                 break;
+
+
+
         }
+
+
+
+        charLeft.SetBool("GoToFront", charPosition==0);
+        charRight.SetBool("GoToFront", charPosition == 1);
     }
 
 
@@ -72,11 +86,17 @@ public class EffectManager: BaseNarrativeEventManager
 
     private void UpdateCharacter(ref CharacterScriptable speaker, ref Image charImage, ref Animator charAnimator, CharacterScriptable currentChar, int receiveEmotion, ref bool shouldUpdateCharacter, ref float timeWaited)
     {
+
+
+
+
         if (speaker == null)
         {
             speaker = currentChar;
             charImage.sprite = currentChar.emotionsSprites[receiveEmotion];
             charAnimator.SetBool("AppearingBool", true);
+
+
             return;
         }
 
@@ -91,19 +111,22 @@ public class EffectManager: BaseNarrativeEventManager
         if (speaker != currentChar || shouldUpdateCharacter)
         {
             speaker = currentChar;
-            charImage.sprite = currentChar.emotionsSprites[receiveEmotion];
-            charAnimator.SetBool("AppearingBool", true);
+           // charImage.sprite = currentChar.emotionsSprites[receiveEmotion];
+           
+
+
+            charAnimator.SetBool("AppearingBool", false);
             shouldUpdateCharacter = !shouldUpdateCharacter;
             timeWaited = 0;
         }
     }
 
-    private void UpdateCharacterImage(ref bool shouldUpdateCharacter, ref float timeWaited, float timerToWait, ref Image charImage, CharacterScriptable speaker, Animator charAnimator, int emotionIndex)
+    private void UpdateCharacterImage(ref bool shouldUpdateCharacter, ref float timeWaited, ref Image charImage, CharacterScriptable speaker, Animator charAnimator, int emotionIndex)
     {
         if (shouldUpdateCharacter)
         {
             timeWaited += Time.deltaTime;
-            if (timeWaited >= timerToWait)
+            if (timeWaited >= CharacterTimeToWait)
             {
                 timeWaited = 0;
                 charImage.sprite = speaker.emotionsSprites[emotionIndex];
