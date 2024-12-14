@@ -95,10 +95,7 @@ public class DialogueManager : BaseNarrativeEventManager
     [SerializeField] AudioSource soundPlayer;
     void Start()
     {
-        SetCharacterSpeed(setToNormalSpeed:true);
-
-
-        
+        SetCharacterSpeed(setToNormalSpeed:true);     
     }
 
     private void Update()
@@ -119,7 +116,11 @@ public class DialogueManager : BaseNarrativeEventManager
         if( TimeWaited >= CharacterDelaySpeed)
         {
             TimeWaited = 0;
-            DialogueTextBox.text += CurrentSentence[CurrentSentenceCharacterIndex];
+
+            char[] textArray = DialogueTextBox.text.ToCharArray();
+            textArray[CurrentSentenceCharacterIndex] = CurrentSentence[CurrentSentenceCharacterIndex];
+            DialogueTextBox.text = new string(textArray);
+
             CurrentSentenceCharacterIndex++;
         }
     }
@@ -165,6 +166,7 @@ public class DialogueManager : BaseNarrativeEventManager
             CurrentSentenceCharacterIndex = 0;
 
             CurrentSentenceIndex++;
+            DialogueTextBox.text = new string(' ', CurrentSentence.Length); // Calcular o tamanho total para nao reajustar
             skipIndicator.SetActive(true);
             return;
         }
