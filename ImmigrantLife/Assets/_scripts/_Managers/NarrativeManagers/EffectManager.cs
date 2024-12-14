@@ -17,21 +17,18 @@ public class EffectManager: BaseNarrativeEventManager
     [SerializeField] Animator charLeft;
     [SerializeField] Animator charRight;
 
-  //  DialogueEvent currentEvent;
-
     CharacterScriptable speakerLeft;
     CharacterScriptable speakerRight;
 
-
     [SerializeField] Image charImageLeft;
-    [SerializeField]Image charImageRight;
+    [SerializeField] Image charImageRight;
 
 
-    private bool ShouldUpdateLeftCharacter { get; set; }
+    private bool ShouldUpdateLeftCharacter;
 
-    bool ShouldUpdateRightCharacter;
+    private bool ShouldUpdateRightCharacter;
 
-    [SerializeField] float TimerToWait;
+    [SerializeField] float CharacterTimeToWait;
 
     float LeftCharacterTimeWaited;
     float RightCharacterTimeWaited;
@@ -46,101 +43,22 @@ public class EffectManager: BaseNarrativeEventManager
         throw new NotImplementedException("O EffectManager não gere eventos narrativos.");
     }
 
-    private void Start()
-    {
-     
-    }
-
-    /*
-    public void ApplyEffect(Effect effect)
-    {
-        if (effect == null) Debug.Log("Tentativa de utilizar um efeito nulo!");
-
-        // Gerir o evento narrativo de acordo com a sua tipologia
-        switch (effect.Type)
-        {
-            case EffectType.Visual:
-            {
-                var visualEffect = (VisualEffect)effect;
-                ApplyVisualEffect(visualEffect);
-
-                break;
-            }
-            case EffectType.Sound:
-            {
-                var soundEffect = (SoundEffect)effect;
-                ApplySoundEffect(soundEffect);
-
-                break;
-            }
-            default:
-                throw new Exception($"Efeito de tipo desconhecido: {effect.Type}");
-        }
-    }
-
-    #region Métodos :: Efeitos Visuais
-
-    public void ApplyVisualEffect(VisualEffect effect)
-    {
-    }
-
-    #endregion Métodos :: Efeitos Visuais
-
-
-    #region Métodos :: Efeitos Sonoros
-
-    public void ApplySoundEffect(SoundEffect effect)
-    {
-
-    }
-
-    #endregion Métodos :: Efeitos Visuais
-
-    #region Métodos :: Efeitos Visuais
-
-    public void ApplyCharacterEffect(CharacterEffect effect)
-    {
-
-        switch (effect.Action)
-        {
-            case CaracterActionType.Add:
-
-                AddCharacter(effect);
-
-                break;
-
-
-
-        }
-
-        // Colocar a imagem do personagem na frente do seu agrupamento
-        // Remover a imagem do personagem, de dentro do seu grupo
-        // Alterar a imagem de um personagem de acordo com o mood/tipologia (irritado, nervoso, com medo, ...)
-
-
-
-    }
-   
-    
-
-    #endregion Métodos :: Efeitos Visuais */
-
     private void Update()
     {
-        UpdateCharacterTimer(ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited, TimerToWait, ref charImageLeft, speakerLeft, charLeft, emotionIndex);
-        UpdateCharacterTimer(ref ShouldUpdateRightCharacter, ref RightCharacterTimeWaited, TimerToWait, ref charImageRight, speakerRight, charRight, emotionIndex);
+        UpdateCharacterImage(ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited, CharacterTimeToWait, ref charImageLeft, speakerLeft, charLeft, emotionIndex);
+        UpdateCharacterImage(ref ShouldUpdateRightCharacter, ref RightCharacterTimeWaited, CharacterTimeToWait, ref charImageRight, speakerRight, charRight, emotionIndex);
     }
 
-    public void reiceiveCharacter(CharacterScriptable currentChar,int charPosition,int reiceiveEmotion)
+    public void reiceiveCharacter(CharacterScriptable currentChar,int charPosition,int receiveEmotion)
     {
         switch (charPosition)
         {
             case 0:
-                UpdateCharacter(charPosition, ref speakerLeft, ref charImageLeft, ref charLeft, currentChar, receiveEmotion, ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited);
+                UpdateCharacter(ref speakerLeft, ref charImageLeft, ref charLeft, currentChar, receiveEmotion, ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited);
                 break;
 
             case 1:
-                UpdateCharacter(charPosition, ref speakerRight, ref charImageRight, ref charRight, currentChar, receiveEmotion, ref ShouldUpdateRightCharacter, ref LeftCharacterTimeWaited);
+                UpdateCharacter(ref speakerRight, ref charImageRight, ref charRight, currentChar, receiveEmotion, ref ShouldUpdateRightCharacter, ref LeftCharacterTimeWaited);
                 break;
 
             default:
@@ -149,9 +67,10 @@ public class EffectManager: BaseNarrativeEventManager
         }
     }
 
+
     #region Métodos :: Auxiliares
 
-    private void UpdateCharacter(int charPosition, ref GameObject speaker, ref SpriteRenderer charImage, ref Animator charAnimator, Character currentChar, int receiveEmotion, ref bool shouldUpdateCharacter, ref float timeWaited)
+    private void UpdateCharacter(ref CharacterScriptable speaker, ref Image charImage, ref Animator charAnimator, CharacterScriptable currentChar, int receiveEmotion, ref bool shouldUpdateCharacter, ref float timeWaited)
     {
         if (speaker == null)
         {
@@ -179,7 +98,7 @@ public class EffectManager: BaseNarrativeEventManager
         }
     }
 
-    private void UpdateCharacterImage(ref bool shouldUpdateCharacter, ref float timeWaited, float timerToWait, ref SpriteRenderer charImage, GameObject speaker, Animator charAnimator, int emotionIndex)
+    private void UpdateCharacterImage(ref bool shouldUpdateCharacter, ref float timeWaited, float timerToWait, ref Image charImage, CharacterScriptable speaker, Animator charAnimator, int emotionIndex)
     {
         if (shouldUpdateCharacter)
         {
@@ -196,3 +115,77 @@ public class EffectManager: BaseNarrativeEventManager
 
     #endregion Métodos :: Auxiliares
 }
+
+/*
+public void ApplyEffect(Effect effect)
+{
+    if (effect == null) Debug.Log("Tentativa de utilizar um efeito nulo!");
+
+    // Gerir o evento narrativo de acordo com a sua tipologia
+    switch (effect.Type)
+    {
+        case EffectType.Visual:
+        {
+            var visualEffect = (VisualEffect)effect;
+            ApplyVisualEffect(visualEffect);
+
+            break;
+        }
+        case EffectType.Sound:
+        {
+            var soundEffect = (SoundEffect)effect;
+            ApplySoundEffect(soundEffect);
+
+            break;
+        }
+        default:
+            throw new Exception($"Efeito de tipo desconhecido: {effect.Type}");
+    }
+}
+
+#region Métodos :: Efeitos Visuais
+
+public void ApplyVisualEffect(VisualEffect effect)
+{
+}
+
+#endregion Métodos :: Efeitos Visuais
+
+
+#region Métodos :: Efeitos Sonoros
+
+public void ApplySoundEffect(SoundEffect effect)
+{
+
+}
+
+#endregion Métodos :: Efeitos Visuais
+
+#region Métodos :: Efeitos Visuais
+
+public void ApplyCharacterEffect(CharacterEffect effect)
+{
+
+    switch (effect.Action)
+    {
+        case CaracterActionType.Add:
+
+            AddCharacter(effect);
+
+            break;
+
+
+
+    }
+
+    // Colocar a imagem do personagem na frente do seu agrupamento
+    // Remover a imagem do personagem, de dentro do seu grupo
+    // Alterar a imagem de um personagem de acordo com o mood/tipologia (irritado, nervoso, com medo, ...)
+
+
+
+}
+
+
+
+#endregion Métodos :: Efeitos Visuais */
