@@ -33,6 +33,9 @@ public class DialogueBlock
     public int emotionIndex;
     
     public int positionIndex;
+
+
+    public bool CharacterIsAlone;
     /// <summary>
     /// Imagem que aparece no Background quando este bloco de diálogo é apresentado.
     /// </summary>

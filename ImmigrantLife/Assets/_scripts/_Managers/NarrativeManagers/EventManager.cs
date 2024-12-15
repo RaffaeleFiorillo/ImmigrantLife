@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -28,11 +29,11 @@ public class EventManager : MonoBehaviour
     private RandomManager RandomManager { get; set; }
 
 
-    private BackgroundManager BackgroundManager { get; set; }   
-
+    private BackgroundManager BackgroundManager { get; set; }
+   private EffectManager effectManager { get; set; }
     #endregion Managers
 
-
+    public bool fadding;
     
     #region Propriedades
 
@@ -75,23 +76,57 @@ public class EventManager : MonoBehaviour
 
     void Start()
     {
+        effectManager = GetComponent<EffectManager>();
         BaseNarrativeEventManager.GetEventManagerReference(this,GetComponent<EffectManager>());
         DialogueManager = GetComponent<DialogueManager>();
         ChoiceManager = GetComponent<ChoiceManager>();
         RandomManager = GetComponent<RandomManager>();
         BackgroundManager =GetComponent<BackgroundManager>();
+
+        effectManager.FadeTimeWaited = 0f;
     }
 
     private void Update()
     {
+
+
         if (!CurrentEventHasBeenManaged)
             return;
-        CurrentNarrativeEvent.HasBeenManaged = false;
         
-        
-        ManageCurrentEvent();
-    }
 
+
+
+        if (effectManager.FadeTimeWaited >= 1 && fadding==false || effectManager.FadeTimeWaited <= 0 &&fadding == false)
+        {
+
+
+            ManageCurrentEvent();
+
+            effectManager.FaddingIn = false;
+            CurrentNarrativeEvent.HasBeenManaged = false;
+        }
+       
+    }
+    
+    public void FHasBeenManaged()
+    {
+        if (CurrentNarrativeEvent.FadeAfter)
+        {
+
+            effectManager.FaddingIn = true;
+            fadding = true;
+           // Debug.Log("primeiro");
+
+        }
+
+            CurrentNarrativeEvent = CurrentNarrativeEvent.NextEvent;
+        CurrentNarrativeEvent.HasBeenManaged = true;
+
+
+
+    }
+    
+    
     #endregion Métodos Unity
 
     /// <summary>

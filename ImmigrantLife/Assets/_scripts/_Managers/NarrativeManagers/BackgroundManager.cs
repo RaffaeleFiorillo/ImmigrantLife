@@ -115,7 +115,7 @@ backgroundToFade =  Instantiate(imageToInstance, backgroundPlace.transform).GetC
 
         if (!changingBackground)
             return;
-        Debug.Log("estou aqui");
+       // Debug.Log("estou aqui");
        changingTime = changingSpeed * Time.deltaTime;
 
         if (backgroundToFade.color.a <= 0)

@@ -115,12 +115,9 @@ public class DialogueManager : BaseNarrativeEventManager
         TimeWaited += Time.deltaTime;
         if( TimeWaited >= CharacterDelaySpeed)
         {
+           
             TimeWaited = 0;
-
-            char[] textArray = DialogueTextBox.text.ToCharArray();
-            textArray[CurrentSentenceCharacterIndex] = CurrentSentence[CurrentSentenceCharacterIndex];
-            DialogueTextBox.text = new string(textArray);
-
+            DialogueTextBox.maxVisibleCharacters = CurrentSentenceCharacterIndex+1;
             CurrentSentenceCharacterIndex++;
         }
     }
@@ -143,8 +140,16 @@ public class DialogueManager : BaseNarrativeEventManager
     {     
         DialogBox.SetActive(false);
 
-        EventManager.CurrentNarrativeEvent = CurrentDialogueEvent.NextEvent;
-        EventManager.CurrentNarrativeEvent.HasBeenManaged = true;
+
+        if (CurrentDialogueEvent.NextEvent == null)
+            return ;
+
+        EventManager.FHasBeenManaged();
+
+        
+
+
+
     }
 
     public void GoToNextSentence()
@@ -156,13 +161,12 @@ public class DialogueManager : BaseNarrativeEventManager
         if (IsWritingSentence)
         {
             // SetCharacterSpeed(setToNormalSpeed:false);
-            DialogueTextBox.text = ""; // Clear the text box initially
-            DialogueTextBox.text = CurrentSentence;
-            IsWritingSentence = false;
+            DialogueTextBox.maxVisibleCharacters = CurrentSentence.Length + 1;
+                IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
 
             CurrentSentenceIndex++;
-            DialogueTextBox.text = new string(' ', CurrentSentence.Length); // Calcular o tamanho total para nao reajustar
+          
             skipIndicator.SetActive(true);
             return;
         }
@@ -187,8 +191,11 @@ public class DialogueManager : BaseNarrativeEventManager
 
         EffectManager.reiceiveCharacter(CurrentDialogueBlock.Speaker, CurrentDialogueBlock.positionIndex, CurrentDialogueBlock.emotionIndex);
 
+        if (CurrentDialogueBlock.CharacterIsAlone)
+            EffectManager.RemoveCharacter();
 
-        DialogueTextBox.text = "";
+
+            DialogueTextBox.text = "";
       
         EventManager.ChangeBackGround(CurrentDialogueBlock.BackgroundImage);
 
@@ -202,6 +209,14 @@ public class DialogueManager : BaseNarrativeEventManager
 
         
         SetCharacterSpeed(true);
+
+
+
+        DialogueTextBox.text = CurrentSentence;
+        DialogueTextBox.maxVisibleCharacters = 0;
+        
+
+
         IsWritingSentence = true;
     }
 

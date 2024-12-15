@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using TMPro;
 using System;
-
-
+using UnityEngine.Rendering.Universal;
 
 /// <summary>
 /// Classe que gere todos os tipos de efeitos (visuais, sonoros,...) que ocorrem durante o jogo.
@@ -14,6 +14,8 @@ public class EffectManager: BaseNarrativeEventManager
 {
     #region Propriedades
 
+    [Header("Character Properties")]
+
     [SerializeField] Animator charLeft;
     [SerializeField] Animator charRight;
 
@@ -22,7 +24,7 @@ public class EffectManager: BaseNarrativeEventManager
 
     [SerializeField] Image charImageLeft;
     [SerializeField] Image charImageRight;
-
+    [SerializeField] 
 
     private bool ShouldUpdateLeftCharacter;
 
@@ -36,8 +38,19 @@ public class EffectManager: BaseNarrativeEventManager
 
     int emotionIndex;
 
-    #endregion Propriedades
 
+
+    [Header("Fade Properties")]
+    [SerializeField] float FadeSpeed;
+
+   public float FadeTimeWaited;
+
+
+   public bool FaddingIn;
+    [SerializeField]Volume volumeEffect;
+
+    #endregion Propriedades
+    
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
     {
         throw new NotImplementedException("O EffectManager não gere eventos narrativos.");
@@ -47,8 +60,29 @@ public class EffectManager: BaseNarrativeEventManager
     {
         UpdateCharacterImage(ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited, ref charImageLeft, speakerLeft, charLeft, emotionIndex);
         UpdateCharacterImage(ref ShouldUpdateRightCharacter, ref RightCharacterTimeWaited, ref charImageRight, speakerRight, charRight, emotionIndex);
-    }
 
+switch (FaddingIn)
+        {
+
+            case false:
+                FadeOut();
+
+              //  Debug.Log("Segundo");
+
+
+                break;
+
+
+            case true:
+                FadeIn();
+                break;
+
+
+        }
+
+
+    }
+    #region characterEffects
     public void reiceiveCharacter(CharacterScriptable currentChar,int charPosition,int receiveEmotion)
     {
         switch (charPosition)
@@ -136,9 +170,103 @@ public class EffectManager: BaseNarrativeEventManager
         }
     }
 
-    #endregion Métodos :: Auxiliares
-}
 
+    public void RemoveCharacter()
+    {
+
+        charRight.SetBool("AppearingBool", false);
+
+
+        charRight.SetBool("GoToFront", false);
+    }
+
+
+    #endregion Métodos :: Auxiliares
+
+    #endregion characterEffects
+
+
+
+    public void FadeIn()
+    {
+      //  Debug.Log("im here");
+        if (FadeTimeWaited <=0)
+            return;
+
+            FadeTimeWaited -= FadeSpeed * Time.deltaTime;
+
+        
+
+        VolumeProfile profile = volumeEffect.sharedProfile;
+
+        if (profile.TryGet<ColorAdjustments>(out var colorAj))
+        {
+
+            Color color = Color.HSVToRGB(0, 0, FadeTimeWaited);
+
+            colorAj.colorFilter.Override(color);
+        }
+
+        if (FadeTimeWaited <= 0)
+            EventManager.fadding = false;
+
+    }
+
+    public void FadeOut()
+    {
+        if (FadeTimeWaited >= 1)
+            return;
+
+
+        FadeTimeWaited += FadeSpeed * Time.deltaTime;
+
+
+        VolumeProfile profile = volumeEffect.sharedProfile;
+
+        if (profile.TryGet<ColorAdjustments>(out var colorAj))
+        {
+         
+            Color color = Color.HSVToRGB(0, 0, FadeTimeWaited);
+
+            colorAj.colorFilter.Override( color);
+        }
+       
+
+        
+        
+      
+
+
+
+    }
+    void FadingTimer()
+{
+        /*
+        FadeTimeWaited += Time.deltaTime;
+
+
+        if (FadeTimeWaited < FadeTimeToWait)
+            return;
+
+        FadeTimeWaited = 0;
+
+
+
+        isFadding = false;
+        EventManager.fadding = false;
+        */
+
+
+
+        
+
+        
+
+
+
+
+}
+}
 /*
 public void ApplyEffect(Effect effect)
 {
