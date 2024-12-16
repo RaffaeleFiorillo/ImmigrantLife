@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: C1_Apogeu_Mon1
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 1
+  NextEvent: {fileID: 11400000, guid: f0a2704a47673704dbe6e60546ef6247, type: 2}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 8138532480268601653, guid: 0331651ccf903eb469ec64367c2900d6, type: 3}
+    som: {fileID: 0}
+    Sentence: "(O tempo passa... E nada muda. Parece que minha vida ficou presa aqui,
+      como se eu estivesse correndo em c\xEDrculo.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Eu tento... Tento muito. Mas \xE9 como nadar contra a correnteza.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Tantas vezes minha m\xE3e tentou me convencer de que as coisas iam
+      melhorar. \u201CTenha f\xE9, filho. Deus vai abrir um caminho.\u201D)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "( Eu queria acreditar. Queria mesmo. Mas a f\xE9 n\xE3o paga as contas,
+      n\xE3o enche a barriga da minha fam\xEDlia, n\xE3o d\xE1 um futuro pra minha
+      irm\xE3zinha Lara.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Eu vejo meu pai acordando antes do sol, voltando pra casa cheirando
+      a farinha, com as m\xE3os mais calejadas a cada dia.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\r(Minha m\xE3e... Ela finge que t\xE1 tudo bem, mas aquele sorriso
+      dela esconde um cansa\xE7o que nem a gente consegue ignorar.)\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\r(E Lara... T\xE3o cheia de sonhos, t\xE3o parecida comigo quando
+      tinha a idade dela.)\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\r(Eu queria proteger esses sonhos. N\xE3o deixar que eles morram
+      como os meus.)\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Ser\xE1 que vale a pena tentar? Arriscar tudo para come\xE7ar do
+      zero em um lugar que eu nem conhe\xE7o? \xC9 um salto no escuro. Mas ficar
+      aqui... Ficar aqui \xE9 certeza de que nada vai mudar.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Eu me lembro do que o Gabriel disse naquela visita... Ele parecia
+      t\xE3o confiante, t\xE3o certo de que tinha feito a escolha certa. Talvez ele
+      esteja certo. Talvez exista mesmo algo melhor l\xE1 fora.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Mas e se eu falhar?
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: ...

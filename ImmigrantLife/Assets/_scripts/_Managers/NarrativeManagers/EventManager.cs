@@ -33,7 +33,7 @@ public class EventManager : MonoBehaviour
    private EffectManager effectManager { get; set; }
     #endregion Managers
 
-    public bool fadding;
+   [HideInInspector] public bool fadding;
     
     #region Propriedades
 
@@ -83,7 +83,7 @@ public class EventManager : MonoBehaviour
         RandomManager = GetComponent<RandomManager>();
         BackgroundManager =GetComponent<BackgroundManager>();
 
-        effectManager.FadeTimeWaited = 0f;
+        effectManager.FadeTime = 0f;
     }
 
     private void Update()
@@ -96,12 +96,20 @@ public class EventManager : MonoBehaviour
 
 
 
-        if (effectManager.FadeTimeWaited >= 1 && fadding==false || effectManager.FadeTimeWaited <= 0 &&fadding == false)
+        if (effectManager.FadeTime >= 1 && fadding==false || effectManager.FadeTime <= 0 &&fadding == false)
         {
-
-
+           
+            switch (CurrentNarrativeEvent.IsMemory)
+            {
+                case true:
+                    effectManager.ChangeToMemory();
+                    break;
+                    case false:
+                    effectManager.ChangeToNormal();
+                    break;
+            }
             ManageCurrentEvent();
-
+            if(effectManager.FaddingIn ==true)
             effectManager.FaddingIn = false;
             CurrentNarrativeEvent.HasBeenManaged = false;
         }
@@ -173,6 +181,11 @@ public class EventManager : MonoBehaviour
         // Caso não houver uma música, mantém-se a música antiga
         if (CurrentNarrativeEvent.musica != null)
             ChangeMusic(CurrentNarrativeEvent.musica);
+
+
+        //fazer characters desaparecer pós fade
+        effectManager.RemoveAllCharacters();
+
 
         // Debug.Log($"Event Type: {CurrentNarrativeEvent.GetType()}");
 

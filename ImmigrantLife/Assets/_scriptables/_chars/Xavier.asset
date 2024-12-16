@@ -14,5 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Xavier
   emotionsSprites:
-  - {fileID: 7768336579786255824, guid: 63082a697cadab140a2146f4508c2530, type: 3}
-  - {fileID: 5230063409440968737, guid: 78b8f84f2fd5abf4099d9496e70d88bd, type: 3}
+  - {fileID: 0}
+  - {fileID: 5998375405470949259, guid: af434837c0f715549a146bb33a4b16f6, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 2572339141017303900, guid: bbbed234505b1744e891baba3277cd58, type: 3}
+  - {fileID: 0}
+  - {fileID: -3657451323599180835, guid: 3e1d26836f4b803459d807a88216052a, type: 3}
+  - {fileID: -7913446442417508358, guid: 8507b067101c1a14ea728f12ae211de2, type: 3}
+  - {fileID: -4957371205300141654, guid: e36f32b71dbda5645afd14f6ffcd4b9b, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

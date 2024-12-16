@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadding: 0
-  CurrentNarrativeEvent: {fileID: 11400000, guid: aca296dcc6210b14094e47cc259ed236, type: 2}
+  CurrentNarrativeEvent: {fileID: 11400000, guid: f9998f68e45af9041b1ca48a86543754, type: 2}
   musicPlayer: {fileID: 0}
   BackgroundImage: {fileID: 0}
 --- !u!4 &1484428688
@@ -1863,9 +1863,14 @@ MonoBehaviour:
   ShouldUpdateLeftCharacter: 0
   CharacterTimeToWait: 0.25
   FadeSpeed: 0.5
+  TimeToWaitFade: 0.1
+  FadeTime: 0
   FadeTimeWaited: 0
   FaddingIn: 0
   volumeEffect: {fileID: 519420033}
+  MemoryColor: {r: 1, g: 0.9922684, b: 0.5424528, a: 0}
+  ChangeContrast: 0
+  ChangeSaturation: 0
 --- !u!1 &1788025760
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2e26d45d2483c4b988962016bbd2bd, type: 3}
+  m_Name: TioJulio
+  m_EditorClassIdentifier: 
+  speakerName: Tio Julio
+  emotionsSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 7063958822861655384, guid: 23bbad77e134e494ba7072a42c271324, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -3311437303685029570, guid: 61937d79d59051d409f2040ee16d7daa, type: 3}
+  - {fileID: 0}
+  - {fileID: -1583826593024039651, guid: 856861f106258ca448819e658596dd49, type: 3}
+  - {fileID: -8479432724323621700, guid: 9cebd765efad9b24bac3544344dade07, type: 3}
+  - {fileID: -8912040399952009541, guid: 80731943bd669124581ccee7fcaa7122, type: 3}
+  - {fileID: 6280273872345611626, guid: 8a4f4cf0ea6007c41a9416481882c5b1, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 45555582409107800, guid: ae1ebe9ec20afd64bb5b600c1df3a52b, type: 3}
+  - {fileID: 7005066358653797933, guid: da3db2c87385d1c4da0f55444c7e7121, type: 3}

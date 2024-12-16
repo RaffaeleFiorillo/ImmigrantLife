@@ -29,8 +29,12 @@ public class DialogueBlock
     /// <summary>
     /// Personagem que representa o emissor da Frase ao qual este Bloco se refere.
     /// </summary>
-    public CharacterScriptable Speaker;
-    public int emotionIndex;
+    /// 
+   
+        public CharacterScriptable Speaker;
+    
+    public int emotionIndex =1;
+    //public int emotionIndex =1;
     
     public int positionIndex;
 
@@ -46,4 +50,6 @@ public class DialogueBlock
     /// </summary>
     [TextArea(2, 20)]
     public string Sentence;
+
+
 }

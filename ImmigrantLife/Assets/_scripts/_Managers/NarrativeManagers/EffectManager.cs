@@ -10,7 +10,7 @@ using UnityEngine.Rendering.Universal;
 /// Classe que gere todos os tipos de efeitos (visuais, sonoros,...) que ocorrem durante o jogo.
 /// </summary>
 /// 
-public class EffectManager: BaseNarrativeEventManager
+public class EffectManager : BaseNarrativeEventManager
 {
     #region Propriedades
 
@@ -24,7 +24,7 @@ public class EffectManager: BaseNarrativeEventManager
 
     [SerializeField] Image charImageLeft;
     [SerializeField] Image charImageRight;
-    [SerializeField] 
+    [SerializeField]
 
     private bool ShouldUpdateLeftCharacter;
 
@@ -32,8 +32,8 @@ public class EffectManager: BaseNarrativeEventManager
 
     [SerializeField] float CharacterTimeToWait;
 
-    float LeftCharacterTimeWaited;
-    float RightCharacterTimeWaited;
+   
+    float TimeWaited;
 
 
     int emotionIndex;
@@ -42,15 +42,25 @@ public class EffectManager: BaseNarrativeEventManager
 
     [Header("Fade Properties")]
     [SerializeField] float FadeSpeed;
+    [SerializeField] float TimeToWaitFade;
 
-   public float FadeTimeWaited;
+   public float FadeTime;
+  [HideInInspector]  public float FadeTimeWaited;
 
 
-   public bool FaddingIn;
-    [SerializeField]Volume volumeEffect;
+    public bool FaddingIn;
+    [SerializeField] Volume volumeEffect;
+
+
+    [Header("Propriedades memórias")]
+    [SerializeField] Color MemoryColor;
+    [SerializeField] float ChangeContrast;
+    [SerializeField] float ChangeSaturation;
+
+
 
     #endregion Propriedades
-    
+
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
     {
         throw new NotImplementedException("O EffectManager não gere eventos narrativos.");
@@ -58,16 +68,16 @@ public class EffectManager: BaseNarrativeEventManager
 
     private void Update()
     {
-        UpdateCharacterImage(ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited, ref charImageLeft, speakerLeft, charLeft, emotionIndex);
-        UpdateCharacterImage(ref ShouldUpdateRightCharacter, ref RightCharacterTimeWaited, ref charImageRight, speakerRight, charRight, emotionIndex);
+        UpdateCharacterImage(ref ShouldUpdateLeftCharacter, ref charImageLeft, speakerLeft, charLeft, emotionIndex);
+        UpdateCharacterImage(ref ShouldUpdateRightCharacter, ref charImageRight, speakerRight, charRight, emotionIndex);
 
-switch (FaddingIn)
+        switch (FaddingIn)
         {
 
             case false:
                 FadeOut();
 
-              //  Debug.Log("Segundo");
+                //  Debug.Log("Segundo");
 
 
                 break;
@@ -83,22 +93,22 @@ switch (FaddingIn)
 
     }
     #region characterEffects
-    public void reiceiveCharacter(CharacterScriptable currentChar,int charPosition,int receiveEmotion)
+    public void reiceiveCharacter(CharacterScriptable currentChar, int charPosition, int receiveEmotion)
     {
         switch (charPosition)
         {
             case 0:
 
 
-                UpdateCharacter(ref speakerLeft, ref charImageLeft, ref charLeft, currentChar, receiveEmotion, ref ShouldUpdateLeftCharacter, ref LeftCharacterTimeWaited);
+                UpdateCharacter(ref speakerLeft, ref charImageLeft, ref charLeft, currentChar, receiveEmotion, ref ShouldUpdateLeftCharacter);
 
 
                 break;
 
             case 1:
 
-                
-                UpdateCharacter(ref speakerRight, ref charImageRight, ref charRight, currentChar, receiveEmotion, ref ShouldUpdateRightCharacter, ref LeftCharacterTimeWaited);
+
+                UpdateCharacter(ref speakerRight, ref charImageRight, ref charRight, currentChar, receiveEmotion, ref ShouldUpdateRightCharacter);
                 break;
 
             default:
@@ -111,14 +121,14 @@ switch (FaddingIn)
 
 
 
-        charLeft.SetBool("GoToFront", charPosition==0);
+        charLeft.SetBool("GoToFront", charPosition == 0);
         charRight.SetBool("GoToFront", charPosition == 1);
     }
 
 
     #region Métodos :: Auxiliares
 
-    private void UpdateCharacter(ref CharacterScriptable speaker, ref Image charImage, ref Animator charAnimator, CharacterScriptable currentChar, int receiveEmotion, ref bool shouldUpdateCharacter, ref float timeWaited)
+    private void UpdateCharacter(ref CharacterScriptable speaker, ref Image charImage, ref Animator charAnimator, CharacterScriptable currentChar, int receiveEmotion, ref bool shouldUpdateCharacter)
     {
 
 
@@ -128,8 +138,8 @@ switch (FaddingIn)
         {
             speaker = currentChar;
             charImage.sprite = currentChar.emotionsSprites[receiveEmotion];
-            charAnimator.SetBool("AppearingBool", true);
-
+         
+            charAnimator.SetTrigger("Appear");
 
             return;
         }
@@ -145,26 +155,29 @@ switch (FaddingIn)
         if (speaker != currentChar || shouldUpdateCharacter)
         {
             speaker = currentChar;
-           // charImage.sprite = currentChar.emotionsSprites[receiveEmotion];
-           
+            // charImage.sprite = currentChar.emotionsSprites[receiveEmotion];
 
 
-            charAnimator.SetBool("AppearingBool", false);
+
+            charAnimator.SetTrigger("Disappear");
+            emotionIndex = receiveEmotion;
             shouldUpdateCharacter = !shouldUpdateCharacter;
-            timeWaited = 0;
+            TimeWaited = 0;
         }
     }
 
-    private void UpdateCharacterImage(ref bool shouldUpdateCharacter, ref float timeWaited, ref Image charImage, CharacterScriptable speaker, Animator charAnimator, int emotionIndex)
+    private void UpdateCharacterImage(ref bool shouldUpdateCharacter, ref Image charImage, CharacterScriptable speaker, Animator charAnimator, int emotionIndex)
     {
         if (shouldUpdateCharacter)
         {
-            timeWaited += Time.deltaTime;
-            if (timeWaited >= CharacterTimeToWait)
+            Debug.Log(emotionIndex);
+            TimeWaited += Time.deltaTime;
+            if (TimeWaited >= CharacterTimeToWait)
             {
-                timeWaited = 0;
+                TimeWaited = 0;
                 charImage.sprite = speaker.emotionsSprites[emotionIndex];
-                charAnimator.SetBool("AppearingBool", true);
+              //  charAnimator.SetBool("AppearingBool", true);
+                charAnimator.SetTrigger("Appear");
                 shouldUpdateCharacter = false;
             }
         }
@@ -174,169 +187,168 @@ switch (FaddingIn)
     public void RemoveCharacter()
     {
 
-        charRight.SetBool("AppearingBool", false);
-
+       // charRight.SetBool("AppearingBool", false);
+        charRight.SetTrigger("Disappear");
+        speakerRight = null;
 
         charRight.SetBool("GoToFront", false);
     }
+    public void RemoveAllCharacters()
+    {
 
+      //  charRight.SetBool("AppearingBool", true);
+       //charRight.SetTrigger("Appear");
+        charRight.SetTrigger("GoBack");
+        speakerRight = null;
+
+
+       // charLeft.SetBool("AppearingBool", true);
+       // charLeft.SetTrigger("Appear", true);
+        charLeft.SetTrigger("GoBack");
+        speakerLeft = null;
+
+
+
+    }
+    public void makeCharsDisappear()
+    {
+
+
+
+    }
 
     #endregion Métodos :: Auxiliares
 
     #endregion characterEffects
 
 
-
+    #region fadeMetods
     public void FadeIn()
     {
-      //  Debug.Log("im here");
-        if (FadeTimeWaited <=0)
+        //  Debug.Log("im here");
+        if (FadeTime <= 0)
             return;
 
-            FadeTimeWaited -= FadeSpeed * Time.deltaTime;
+        FadeTime -= FadeSpeed * Time.deltaTime;
 
-        
+
 
         VolumeProfile profile = volumeEffect.sharedProfile;
 
         if (profile.TryGet<ColorAdjustments>(out var colorAj))
         {
+            Color color = ((Color)colorAj.colorFilter);
 
-            Color color = Color.HSVToRGB(0, 0, FadeTimeWaited);
+             Color.RGBToHSV(color,out float colorH,out float colorS,out float colorV);
+
+            color = Color.HSVToRGB(colorH, colorS, FadeTime);
 
             colorAj.colorFilter.Override(color);
         }
 
-        if (FadeTimeWaited <= 0)
-            EventManager.fadding = false;
+        if (FadeTime <= 0)
+            MaintainFade();
+           
+
+    }
+    void MaintainFade()
+    {
+   
+        FadeTimeWaited += Time.deltaTime;
+        if (TimeToWaitFade >= FadeTimeWaited)
+        {
+
+
+
+        EventManager.fadding = false;
+        }
+
 
     }
 
     public void FadeOut()
     {
-        if (FadeTimeWaited >= 1)
+        if (FadeTime >= 1)
             return;
 
 
-        FadeTimeWaited += FadeSpeed * Time.deltaTime;
+        FadeTime += FadeSpeed * Time.deltaTime;
 
 
         VolumeProfile profile = volumeEffect.sharedProfile;
 
         if (profile.TryGet<ColorAdjustments>(out var colorAj))
         {
-         
-            Color color = Color.HSVToRGB(0, 0, FadeTimeWaited);
 
-            colorAj.colorFilter.Override( color);
+            Color color = ((Color)colorAj.colorFilter);
+
+            Color.RGBToHSV(color, out float colorH, out float colorS, out float colorV);
+
+            color = Color.HSVToRGB(colorH, colorS, FadeTime);
+
+            colorAj.colorFilter.Override(color);
         }
+
+
+
+
+
+
+
+
+    }
+#endregion fadeMetods
+
+
+    #region MemoryEffectRegion
+
+
+    //altera os para os tons visuais de memoria
+    public void ChangeToMemory()
+    {
+        //procura o profile visual
+        VolumeProfile profile = volumeEffect.sharedProfile;
+        //n sei bem explicar para que serve
+        if (profile.TryGet<ColorAdjustments>(out var colorAj))
+        {
+            //altera a saturação
+            colorAj.saturation.value = ChangeSaturation;
+            //altera o contraste
+            colorAj.contrast.value = ChangeContrast;
+
+            //altera a cor
+            colorAj.colorFilter.Override(MemoryColor);
+        }
+
+
+    }
+
+
+    //altera os para os tons visuais normais
+    //igual ao anterior mas mete as properties normais
+    public void ChangeToNormal()
+    {
        
+        VolumeProfile profile = volumeEffect.sharedProfile;
 
         
-        
-      
-
-
-
-    }
-    void FadingTimer()
-{
-        /*
-        FadeTimeWaited += Time.deltaTime;
-
-
-        if (FadeTimeWaited < FadeTimeToWait)
-            return;
-
-        FadeTimeWaited = 0;
-
-
-
-        isFadding = false;
-        EventManager.fadding = false;
-        */
-
-
-
-        
-
-        
-
-
-
-
-}
-}
-/*
-public void ApplyEffect(Effect effect)
-{
-    if (effect == null) Debug.Log("Tentativa de utilizar um efeito nulo!");
-
-    // Gerir o evento narrativo de acordo com a sua tipologia
-    switch (effect.Type)
-    {
-        case EffectType.Visual:
+        if (profile.TryGet<ColorAdjustments>(out var colorAj))
         {
-            var visualEffect = (VisualEffect)effect;
-            ApplyVisualEffect(visualEffect);
+            colorAj.saturation.value =
 
-            break;
+          colorAj.contrast.value = 0;
+            
+            Color normalColor = Color.HSVToRGB(0, 0, 100);
+
+
+            colorAj.colorFilter.Override(normalColor);
         }
-        case EffectType.Sound:
-        {
-            var soundEffect = (SoundEffect)effect;
-            ApplySoundEffect(soundEffect);
-
-            break;
-        }
-        default:
-            throw new Exception($"Efeito de tipo desconhecido: {effect.Type}");
-    }
-}
-
-#region Métodos :: Efeitos Visuais
-
-public void ApplyVisualEffect(VisualEffect effect)
-{
-}
-
-#endregion Métodos :: Efeitos Visuais
-
-
-#region Métodos :: Efeitos Sonoros
-
-public void ApplySoundEffect(SoundEffect effect)
-{
-
-}
-
-#endregion Métodos :: Efeitos Visuais
-
-#region Métodos :: Efeitos Visuais
-
-public void ApplyCharacterEffect(CharacterEffect effect)
-{
-
-    switch (effect.Action)
-    {
-        case CaracterActionType.Add:
-
-            AddCharacter(effect);
-
-            break;
 
 
 
     }
 
-    // Colocar a imagem do personagem na frente do seu agrupamento
-    // Remover a imagem do personagem, de dentro do seu grupo
-    // Alterar a imagem de um personagem de acordo com o mood/tipologia (irritado, nervoso, com medo, ...)
-
+    #endregion MemoryEffectRegion
 
 
 }
-
-
-
-#endregion Métodos :: Efeitos Visuais */

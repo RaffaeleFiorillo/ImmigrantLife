@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: Cena2_D1
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 0
+  NextEvent: {fileID: 11400000, guid: f2e9c0fdf292103418d45a32616544cf, type: 2}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 5131126315314523879, guid: 38440cd1c073b6b40860f4d9bc4e80ba, type: 3}
+    som: {fileID: 0}
+    Sentence: "(Bem... \xC9 hoje. N\xE3o posso adiar mais.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Ser\xE1 que eles v\xE3o entender?)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: (Respira fundo, Xavier)
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: (Eles precisam entender. Vai ser melhor para todos.)
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Ok, Xavier, voc\xEA j\xE1 pensou bastante nisso. Quando eles entrarem,
+      voc\xEA vai dizer: \u201CEu vou emigrar. Vou para Portugal no final do m\xEAs,
+      e j\xE1 est\xE1 tudo planejado.\u201D)"
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Jo\xE3o, eu n\xE3o acredito que voc\xEA fez aquilo de novo! Voc\xEA
+      sempre me faz passar vergonha na casa da minha m\xE3e!"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ah, foi s\xF3 uma brincadeira. Seu pai achou engra\xE7ado."
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Esconder a dentadura da minha m\xE3e antes de sairmos? Ela ficou morrendo
+      de vergonha no restaurante!"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ah, ela ficou com uma cara de c\xE3o chupando manga!"
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Jo\xE3o, pelo amor de Deus!"
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Oi, filho! Como voc\xEA t\xE1?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Oi, m\xE3e. Oi, pai."
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Oi, filh\xE3o! Como foi o trabalho hoje? J\xE1 jantou?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Foi bom, pai. Hoje teve bastante corrida. E sim, j\xE1 comi. E voc\xEAs,
+      como foi o jantar na casa da v\xF3?"
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 8
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Pois \xE9, Jo\xE3o, como foi?"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Foi... interessante.
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 10
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Voc\xEA nunca leva nada a s\xE9rio..."
