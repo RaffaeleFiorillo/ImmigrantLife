@@ -30,10 +30,10 @@ public class EventManager : MonoBehaviour
 
 
     private BackgroundManager BackgroundManager { get; set; }
-   private EffectManager effectManager { get; set; }
-    #endregion Managers
 
-    public bool fadding;
+    private EffectManager EffectManager { get; set; }
+
+    #endregion Managers
     
     #region Propriedades
 
@@ -70,64 +70,51 @@ public class EventManager : MonoBehaviour
     }
     private bool _IsFirstEvent = true;
 
+    public bool Fading;
+
     #endregion Propriedades
 
     #region Métodos Unity
 
     void Start()
     {
-        effectManager = GetComponent<EffectManager>();
-        BaseNarrativeEventManager.GetEventManagerReference(this,GetComponent<EffectManager>());
+        EffectManager = GetComponent<EffectManager>();
+        BaseNarrativeEventManager.GetManagersReference(this, EffectManager);
         DialogueManager = GetComponent<DialogueManager>();
         ChoiceManager = GetComponent<ChoiceManager>();
         RandomManager = GetComponent<RandomManager>();
         BackgroundManager =GetComponent<BackgroundManager>();
 
-        effectManager.FadeTimeWaited = 0f;
+        EffectManager.FadeTimeWaited = 0f;
     }
 
     private void Update()
     {
-
-
         if (!CurrentEventHasBeenManaged)
             return;
-        
 
-
-
-        if (effectManager.FadeTimeWaited >= 1 && fadding==false || effectManager.FadeTimeWaited <= 0 &&fadding == false)
+        if (!Fading && (EffectManager.FadeTimeWaited >= 1 || EffectManager.FadeTimeWaited <= 0))
         {
-
-
             ManageCurrentEvent();
 
-            effectManager.FaddingIn = false;
+            EffectManager.FaddingIn = false;
             CurrentNarrativeEvent.HasBeenManaged = false;
-        }
-       
+        }    
     }
-    
+
+    #endregion Métodos Unity
+
     public void FHasBeenManaged()
     {
         if (CurrentNarrativeEvent.FadeAfter)
         {
-
-            effectManager.FaddingIn = true;
-            fadding = true;
-           // Debug.Log("primeiro");
-
+            EffectManager.FaddingIn = true;
+            Fading = true;
         }
 
-            CurrentNarrativeEvent = CurrentNarrativeEvent.NextEvent;
+        CurrentNarrativeEvent = CurrentNarrativeEvent.NextEvent;
         CurrentNarrativeEvent.HasBeenManaged = true;
-
-
-
     }
-    
-    
-    #endregion Métodos Unity
 
     /// <summary>
     /// Alterar a imagem de background apresentada no jogo.

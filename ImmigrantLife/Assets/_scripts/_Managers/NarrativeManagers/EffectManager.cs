@@ -208,7 +208,7 @@ switch (FaddingIn)
         }
 
         if (FadeTimeWaited <= 0)
-            EventManager.fadding = false;
+            EventManager.Fading = false;
 
     }
 

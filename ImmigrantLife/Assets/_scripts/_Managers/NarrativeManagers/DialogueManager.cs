@@ -146,10 +146,6 @@ public class DialogueManager : BaseNarrativeEventManager
 
         EventManager.FHasBeenManaged();
 
-        
-
-
-
     }
 
     public void GoToNextSentence()
@@ -162,7 +158,7 @@ public class DialogueManager : BaseNarrativeEventManager
         {
             // SetCharacterSpeed(setToNormalSpeed:false);
             DialogueTextBox.maxVisibleCharacters = CurrentSentence.Length + 1;
-                IsWritingSentence = false;
+            IsWritingSentence = false;
             CurrentSentenceCharacterIndex = 0;
 
             CurrentSentenceIndex++;
