@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: Cena2_D2
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 1
+  NextEvent: {fileID: 0}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "No final deste m\xEAs, eu vou para Portugal. J\xE1 comprei a passagem
+      e consegui um visto tempor\xE1rio."
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 12
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Como assim voc\xEA vai para Portugal?"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    emotionIndex: 9
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "E como voc\xEA acha que vai conseguir se manter l\xE1?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Tenho juntado dinheiro desde o ano passado, desde quando conversei
+      com o primo Gabriel.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Ele me contou como conseguiu boas oportunidades na Europa, e isso me
+      inspirou.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Eu quero tentar uma vida melhor, n\xE3o s\xF3 pra mim, mas pra poder
+      ajudar voc\xEAs tamb\xE9m."
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 6
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Mas, filho, voc\xEA n\xE3o \xE9 feliz aqui? Alguma vez te deixamos
+      faltar alguma coisa?"
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    emotionIndex: 9
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Xavier, voc\xEA tem 23 anos. Voc\xEA j\xE1 \xE9 um homem. N\xF3s sempre
+      trabalhamos duro pra manter essa casa, mas a decis\xE3o \xE9 sua."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "No final deste m\xEAs, eu vou para Portugal. J\xE1 comprei a passagem
+      e consegui um visto tempor\xE1rio."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Eu sei, pai. Eu sei do sacrif\xEDcio de voc\xEAs, e agrade\xE7o muito
+      por isso. Mas eu quero arriscar algo novo. Preciso tentar um futuro melhor."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "No final deste m\xEAs, eu vou para Portugal. J\xE1 comprei a passagem
+      e consegui um visto tempor\xE1rio."
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 6
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "E por que n\xE3o nos contou antes?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Eu tinha medo de como voc\xEAs iam reagir... Mas agora eu j\xE1 me
+      decidi. O voo \xE9 no dia 1\xBA de outubro. Tenho mais um m\xEAs aqui."
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    emotionIndex: 9
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "E j\xE1 tem onde ficar? J\xE1 sabe o que vai fazer l\xE1?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Sim, falei com um senhor que est\xE1 alugando um quarto. \xC9 compartilhado,
+      mas \xE9 um come\xE7o."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Sobre trabalho\u2026 bom, eu ainda estou pesquisando, mas juntei 1600
+      euros, d\xE1 uns sete sal\xE1rios m\xEDnimos em reais."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Espero que seja o suficiente pra me manter por um tempo at\xE9 encontrar
+      algo."
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 6
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Se voc\xEA tem tanta certeza disso... N\xF3s s\xF3 podemos te desejar
+      boa sorte."
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    emotionIndex: 9
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Filho, a decis\xE3o \xE9 sua, mas pense bem. Se \xE9 isso que voc\xEA
+      quer, estaremos aqui pra te apoiar."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "No final deste m\xEAs, eu vou para Portugal. J\xE1 comprei a passagem
+      e consegui um visto tempor\xE1rio."
+  - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
+    emotionIndex: 6
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Boa noite, Xavier. Que Deus te aben\xE7oe."
+  - Speaker: {fileID: 11400000, guid: 51ab4ad4c9453a24787033199c030b7c, type: 2}
+    emotionIndex: 9
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Boa noite, filho. Deus te aben\xE7oe."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 1
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Boa noite, m\xE3e. Boa noite, pai. Am\xE9m\u2026"

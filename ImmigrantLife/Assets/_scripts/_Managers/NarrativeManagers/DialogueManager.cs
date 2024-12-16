@@ -72,19 +72,19 @@ public class DialogueManager : BaseNarrativeEventManager
     /// <summary>
     /// Bloco de dialogo atualmente a ser tratado
     /// </summary>
-    private DialogueBlock CurrentDialogueBlock { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex]; }
+    private DialogueBlock effect { get => CurrentDialogueEvent.DialogueBlocks[CurrentSentenceIndex]; }
 
     /// <summary>
     /// Frase atual a ser dita do diálogo.
     /// É atualizado automaticamente ao alterar o <see cref="CurrentSentenceIndex"/>
     /// </summary>
-    private string CurrentSentence { get => CurrentDialogueBlock.Sentence;  }
+    private string CurrentSentence { get => effect.Sentence;  }
 
     /// <summary>
     /// Nome da personagem que diz a frase atualmente sendo escrita.
     /// É atualizado automaticamente ao alterar o <see cref="CurrentSentenceIndex"/>
     /// </summary>
-    private string CurrentSpeakerName { get => CurrentDialogueBlock.Speaker.speakerName; }
+    private string CurrentSpeakerName { get => effect.Speaker.speakerName; }
 
     #endregion Propriedades
 
@@ -140,12 +140,10 @@ public class DialogueManager : BaseNarrativeEventManager
     {     
         DialogBox.SetActive(false);
 
-
         if (CurrentDialogueEvent.NextEvent == null)
             return ;
 
         EventManager.FHasBeenManaged();
-
     }
 
     public void GoToNextSentence()
@@ -176,43 +174,36 @@ public class DialogueManager : BaseNarrativeEventManager
         //altera o background(eu sei que aqui n é o melhor sitio mas ya )
         skipIndicator.SetActive(false);
 
-
         //implementação do som
-        if (CurrentDialogueBlock.som != null)
+        if (effect.som != null)
         {      
-            soundPlayer.resource = CurrentDialogueBlock.som;
-
+            soundPlayer.resource = effect.som;
             soundPlayer.Play();
         }
 
-        EffectManager.reiceiveCharacter(CurrentDialogueBlock.Speaker, CurrentDialogueBlock.positionIndex, CurrentDialogueBlock.emotionIndex);
-
-        if (CurrentDialogueBlock.CharacterIsAlone)
+        if (effect.CharacterIsAlone)
             EffectManager.RemoveCharacter();
 
-
-            DialogueTextBox.text = "";
+        DialogueTextBox.text = "";
       
-        EventManager.ChangeBackGround(CurrentDialogueBlock.BackgroundImage);
+        EventManager.ChangeBackGround(effect.BackgroundImage);
 
         DialogBox.SetActive(true);
 
+        //   Debug.Log(CurrentDialogueBlock.Speaker + "" + CurrentDialogueBlock.positionIndex + "" + CurrentDialogueBlock.emotionIndex);
+        if (effect.emotionIndex != 0)
+            EffectManager.reiceiveCharacter(effect.Speaker, effect.positionIndex, effect.emotionIndex);
+        else
+            EffectManager.RemoveAllCharacters();
         // Desligar o texto do Speaker anterior
        
-
-            DialogueTextBoxName.text = CurrentSpeakerName;
-      
-
+        DialogueTextBoxName.text = CurrentSpeakerName;
         
         SetCharacterSpeed(true);
-
-
 
         DialogueTextBox.text = CurrentSentence;
         DialogueTextBox.maxVisibleCharacters = 0;
         
-
-
         IsWritingSentence = true;
     }
 

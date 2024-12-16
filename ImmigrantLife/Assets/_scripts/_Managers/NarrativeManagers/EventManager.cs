@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -95,9 +94,14 @@ public class EventManager : MonoBehaviour
 
         if (!Fading && (EffectManager.FadeTimeWaited >= 1 || EffectManager.FadeTimeWaited <= 0))
         {
+            if (CurrentNarrativeEvent.IsMemory) 
+                EffectManager.ChangeToMemory(); 
+            else
+                EffectManager.ChangeToNormal();
+
             ManageCurrentEvent();
 
-            EffectManager.FaddingIn = false;
+            EffectManager.FaddingIn = !(EffectManager.FaddingIn == true);
             CurrentNarrativeEvent.HasBeenManaged = false;
         }    
     }
@@ -125,8 +129,7 @@ public class EventManager : MonoBehaviour
         if (newBackgroundSprite != null)
             BackgroundManager.changeBackgound(newBackgroundSprite);
                 
-                // BackgroundImage.sprite = newBackgroundSprite;
-           
+        // BackgroundImage.sprite = newBackgroundSprite;        
     }
 
     /// <summary>
@@ -161,31 +164,29 @@ public class EventManager : MonoBehaviour
         if (CurrentNarrativeEvent.musica != null)
             ChangeMusic(CurrentNarrativeEvent.musica);
 
+        //fazer characters desaparecer pós fade
+        EffectManager.RemoveAllCharacters();
+
         // Debug.Log($"Event Type: {CurrentNarrativeEvent.GetType()}");
 
         // Gerir o evento narrativo de acordo com a sua tipologia
         switch (CurrentNarrativeEvent.Type)
         {
             case EventType.Dialogue:
-            {
                 DialogueManager.StartNarrativeEvent(CurrentNarrativeEvent);
                 break;
-            }
+
             case EventType.Choice:
-            {
                 ChoiceManager.StartNarrativeEvent(CurrentNarrativeEvent);
                 break;
-            }
+
             case EventType.Random: case EventType.BranchEvent:
-            {
                 RandomManager.StartNarrativeEvent(CurrentNarrativeEvent);
                 break;
-            }
+
             case EventType.Background:
-            {
                 BackgroundManager.StartNarrativeEvent(CurrentNarrativeEvent);
                 break;
-            }
         }
     }
 }

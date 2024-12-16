@@ -12,7 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2e26d45d2483c4b988962016bbd2bd, type: 3}
   m_Name: Pai
   m_EditorClassIdentifier: 
-  speakerName: 
+  speakerName: Pai
   emotionsSprites:
   - {fileID: -7759997201710839683, guid: 10276ea9f2a9a02448f9bfc1af29f10b, type: 3}
+  - {fileID: 6838312903428049822, guid: 8ff8d2d6bfcd8e94b87e8e45cb49b670, type: 3}
+  - {fileID: 0}
   - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}
+  - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}
+  - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}
+  - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}
+  - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}
+  - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}
+  - {fileID: -4931947723103184626, guid: 299b6c5aa8d654347be2eacef0db3488, type: 3}
+  - {fileID: -3892805514073011660, guid: c2f36906a22a55b4e80bd2d5210c8d32, type: 3}
+  - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}
+  - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}
+  - {fileID: 3229848351062332063, guid: a0bfcc0453568a64ba440a5960317f34, type: 3}
+  - {fileID: 5839567628317753508, guid: 492d2b364b1762848894f6cb088a4503, type: 3}

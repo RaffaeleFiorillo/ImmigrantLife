@@ -30,17 +30,20 @@ public class DialogueBlock
     /// Personagem que representa o emissor da Frase ao qual este Bloco se refere.
     /// </summary>
     public CharacterScriptable Speaker;
-    public int emotionIndex;
+    
+    public int emotionIndex =1;
     
     public int positionIndex;
 
-
     public bool CharacterIsAlone;
+
     /// <summary>
     /// Imagem que aparece no Background quando este bloco de diálogo é apresentado.
     /// </summary>
     public Sprite BackgroundImage;
+
     public AudioResource som;
+
     /// <summary>
     /// A Frase (texto) que é dita neste Bloco.
     /// </summary>

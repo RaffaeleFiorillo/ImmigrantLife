@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: C1_Memory1_D1
+  m_EditorClassIdentifier: 
+  IsMemory: 1
+  FadeAfter: 1
+  NextEvent: {fileID: 11400000, guid: d408e3cd03bdceb4bbd329dd64b2ee17, type: 2}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 4
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Finalmente, hein, Gabriel? Quatro anos sem dar as caras por aqui!
+      O que aconteceu? Conheceu algu\xE9m especial e resolveu esquecer da gente?\r"
+  - Speaker: {fileID: 11400000, guid: e411841ac494e9147b8c5fa86f87c854, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Ih, aposto que foi isso mesmo!\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Nada disso, tio! Voc\xEAs j\xE1 t\xE3o inventando hist\xF3ria."
+  - Speaker: {fileID: 11400000, guid: e411841ac494e9147b8c5fa86f87c854, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Ent\xE3o n\xE3o conheceu?\r\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "N\xE3o, tio, n\xE3o conheci\u2026\r"
+  - Speaker: {fileID: 11400000, guid: e411841ac494e9147b8c5fa86f87c854, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Sabia!\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 4
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Relaxa, Gabriel, ele s\xF3 t\xE1 te zoando.\r\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 10
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Ah, mas voc\xEA tamb\xE9m t\xE1 rindo, n\xE9?\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 4
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "T\xE1 bom, t\xE1 bom. Desculpa a\xED! Mas falando s\xE9rio, por que
+      tanto tempo pra voltar? Como est\xE3o as coisas na Holanda?\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Olha, t\xE1 tudo bem. Trabalhar l\xE1 \xE9 puxado, mas compensa. Nunca
+      imaginei que ia conseguir o que t\xF4 conquistando l\xE1. Tenho um emprego
+      est\xE1vel, j\xE1 comecei a financiar uma casa... Nem parece real \xE0s vezes.\r\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 4
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Que incr\xEDvel, cara!\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "\xC9, d\xE1 pra juntar um dinheiro, viver com dignidade e ainda mandar
+      uma ajuda pra casa. N\xE3o \xE9 f\xE1cil, mas no fim das contas, vale a pena.\r\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "N\xE3o \xE9 s\xF3 \"valer a pena\", n\xE9? Pelo que voc\xEA t\xE1
+      contando, t\xE1 vivendo o sonho!\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Pode at\xE9 ser... Mas tamb\xE9m tem os perrengues, sabe? Ficar longe
+      da fam\xEDlia, dos amigos... \xC0s vezes bate uma solid\xE3o. Mas eu n\xE3o
+      me arrependo. Se tivesse que fazer tudo de novo, faria sem pensar duas vezes.\r\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "D\xE1 pra entender. Mas pelo jeito, os ganhos compensam, n\xE9?\r\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "\xC9 uma quest\xE3o de se adaptar. Passei esses quatro anos trabalhando
+      muito, economizando, dividindo casa com gente que nem conhecia. \r\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Mas agora t\xF4 mais estabilizado. D\xE1 pra ver que o esfor\xE7o
+      valeu a pena quando consigo sentar aqui, com voc\xEAs, compartilhar uma boa
+      carne e dar risada. Isso n\xE3o tem pre\xE7o.\r\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 4
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Com certeza.\r\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 4
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "...\r\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 4
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "(Ser\xE1 que eu tamb\xE9m conseguiria?)\r\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 7
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "E a\xED, Biel, voc\xEA pretende ficar por l\xE1 pra sempre ou pensa
+      em voltar pro Brasil?\r\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Cara, o plano sempre foi voltar, mas n\xE3o sei mais... L\xE1 eu tenho
+      tranquilidade, poder de compra, oportunidades que nunca teria aqui. \r\r"
+  - Speaker: {fileID: 11400000, guid: 5ed736c7bb15654489001c6f715f43ac, type: 2}
+    emotionIndex: 2
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Claro, tem o lado dif\xEDcil, mas comparando com como a vida seria
+      no Brasil, acho que fiz a escolha certa.\r\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
+    som: {fileID: 0}
+    Sentence: "Por enquanto, vou vivendo um dia de cada vez. O futuro, a gente descobre
+      quando chegar l\xE1.\r\r"
