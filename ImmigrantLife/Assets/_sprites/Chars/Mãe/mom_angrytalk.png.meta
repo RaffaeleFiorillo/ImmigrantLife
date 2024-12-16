@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mom_angrytalk_0: -5725796646809716584
+      mom_angrytalk_1: 3551114398485966821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TioJulio_pout_0: -1583826593024039651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

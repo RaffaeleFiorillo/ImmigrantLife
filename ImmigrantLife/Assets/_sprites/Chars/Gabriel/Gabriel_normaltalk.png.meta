@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gabriel_normaltalk_0: -2900066961411067399
+      Gabriel_normaltalk_1: -410266225363050558
+      Gabriel_normaltalk_2: -2529950711043289434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

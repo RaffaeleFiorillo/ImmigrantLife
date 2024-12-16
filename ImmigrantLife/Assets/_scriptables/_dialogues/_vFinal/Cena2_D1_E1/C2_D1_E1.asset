@@ -16,7 +16,7 @@ MonoBehaviour:
   FadeAfter: 0
   NextEvent: {fileID: 0}
   musica: {fileID: 0}
-  Question: 
+  Question: "N\xE2o sei o que dizer"
   Choices:
   - Money: 0
     Anxiety: 0

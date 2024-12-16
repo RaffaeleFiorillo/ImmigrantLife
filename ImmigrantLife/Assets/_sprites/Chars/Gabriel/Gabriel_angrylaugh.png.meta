@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gabriel_angrylaugh_0: 3584770203563717310
+      Gabriel_angrylaugh_1: 6986926115904939003
+      Gabriel_angrylaugh_2: 2810767606095637928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

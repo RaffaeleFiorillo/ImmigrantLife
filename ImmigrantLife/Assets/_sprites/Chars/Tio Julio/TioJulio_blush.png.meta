@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TioJulio_blush_0: 45555582409107800
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

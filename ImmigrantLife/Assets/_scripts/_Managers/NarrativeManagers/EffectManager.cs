@@ -54,6 +54,8 @@ public class EffectManager : BaseNarrativeEventManager
 
     [Header("Propriedades memórias")]
     [SerializeField] Color MemoryColor;
+    [SerializeField] Color  NormalColor;
+
     [SerializeField] float ChangeContrast;
     [SerializeField] float ChangeSaturation;
 
@@ -328,20 +330,26 @@ public class EffectManager : BaseNarrativeEventManager
     //igual ao anterior mas mete as properties normais
     public void ChangeToNormal()
     {
+       // return;
        
         VolumeProfile profile = volumeEffect.sharedProfile;
 
         
         if (profile.TryGet<ColorAdjustments>(out var colorAj))
         {
-            colorAj.saturation.value =
+
+
+
+
+            colorAj.saturation.value = 0;
 
           colorAj.contrast.value = 0;
+
+            //  Color normalColor = Color.HSVToRGB(0, 0, 100,false);
+
+            // normalColor.
+            colorAj.colorFilter.value = NormalColor;
             
-            Color normalColor = Color.HSVToRGB(0, 0, 100);
-
-
-            colorAj.colorFilter.Override(normalColor);
         }
 
 

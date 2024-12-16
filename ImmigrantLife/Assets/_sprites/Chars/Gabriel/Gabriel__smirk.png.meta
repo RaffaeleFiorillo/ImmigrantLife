@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gabriel__smirk_0: 4497140747576451215
+      Gabriel__smirk_1: 6479739944003215752
+      Gabriel__smirk_2: -4700494596742586975
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

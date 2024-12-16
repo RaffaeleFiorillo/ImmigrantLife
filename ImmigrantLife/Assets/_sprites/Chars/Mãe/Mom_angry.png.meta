@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mom_angry_0: -1139705521813036375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

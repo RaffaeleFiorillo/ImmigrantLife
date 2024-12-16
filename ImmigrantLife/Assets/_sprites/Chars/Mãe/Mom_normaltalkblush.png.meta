@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mom_normaltalkblush_0: -8953509928915615217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

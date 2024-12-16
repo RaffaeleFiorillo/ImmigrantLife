@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Xavier_pout_0: -4957371205300141654
+      Xavier_pout_1: -8700546160936060751
+      Xavier_pout_2: -9217857898099987850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

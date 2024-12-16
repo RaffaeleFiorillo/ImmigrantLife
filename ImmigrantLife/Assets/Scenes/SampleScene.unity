@@ -1077,9 +1077,9 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 91
-    m_Top: 128
-    m_Bottom: 0
-  m_ChildAlignment: 2
+    m_Top: 100
+    m_Bottom: 224
+  m_ChildAlignment: 8
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 380.36, y: 61.7}
@@ -1792,7 +1792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonBox: {fileID: 666163949}
-  ChoicePrefab: {fileID: 3913778210232306545, guid: 19c587ce070444d469836d1f38d899e0, type: 3}
+  ChoicePrefab: {fileID: 1891022536078730911, guid: 605276e8b0e33e648859e3d5b64972cd, type: 3}
   questionBox: {fileID: 146085254}
 --- !u!114 &1484428687
 MonoBehaviour:
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadding: 0
-  CurrentNarrativeEvent: {fileID: 11400000, guid: f9998f68e45af9041b1ca48a86543754, type: 2}
+  CurrentNarrativeEvent: {fileID: 11400000, guid: d408e3cd03bdceb4bbd329dd64b2ee17, type: 2}
   musicPlayer: {fileID: 0}
   BackgroundImage: {fileID: 0}
 --- !u!4 &1484428688
@@ -1869,8 +1869,9 @@ MonoBehaviour:
   FaddingIn: 0
   volumeEffect: {fileID: 519420033}
   MemoryColor: {r: 1, g: 0.9922684, b: 0.5424528, a: 0}
-  ChangeContrast: 0
-  ChangeSaturation: 0
+  NormalColor: {r: 1, g: 1, b: 1, a: 0}
+  ChangeContrast: -20
+  ChangeSaturation: -50
 --- !u!1 &1788025760
 GameObject:
   m_ObjectHideFlags: 0

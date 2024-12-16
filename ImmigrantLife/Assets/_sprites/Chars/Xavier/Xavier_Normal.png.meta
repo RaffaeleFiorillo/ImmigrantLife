@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Xavier_Normal_0: 5998375405470949259
+      Xavier_Normal_1: 3934889903043087165
+      Xavier_Normal_2: 5738648175465513343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

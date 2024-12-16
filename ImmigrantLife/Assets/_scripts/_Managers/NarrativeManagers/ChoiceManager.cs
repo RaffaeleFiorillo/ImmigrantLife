@@ -7,13 +7,13 @@ public class ChoiceManager : BaseNarrativeEventManager
 {
     private ChoiceEvent CurrentChoiceEvent { get; set; }
 
-    [SerializeField] 
+    [SerializeField]
     GameObject ButtonBox;
 
-    [SerializeField] 
+    [SerializeField]
     GameObject ChoicePrefab;
 
-    [SerializeField] 
+    [SerializeField]
     GameObject questionBox;
 
     TextMeshProUGUI questionText;
@@ -44,8 +44,8 @@ public class ChoiceManager : BaseNarrativeEventManager
         questionBox.SetActive(true);
         questionText.text = CurrentChoiceEvent.Question;
 
-  
-        for(int i = 0; i<CurrentChoiceEvent.Choices.Count; i++)
+
+        for (int i = 0; i < CurrentChoiceEvent.Choices.Count; i++)
         {
             int cIndex = i; // atribuição necessária para que o valor do índice seja o correto quando for usado na lambda function.
 
@@ -54,15 +54,15 @@ public class ChoiceManager : BaseNarrativeEventManager
             ChoiceButtons.Add(choiceButton);
 
             // Set up the button's functionality and text
-            Button buttonComponent = choiceButton.GetComponent<Button>();
+            Button buttonComponent = choiceButton.transform.GetChild(0).GetComponent<Button>();
             buttonComponent.onClick.AddListener(() => ApplyChoiceEffects(cIndex)); // Funcionamento do botão
-            TextMeshProUGUI buttonText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
+            TextMeshProUGUI buttonText = choiceButton.transform.GetChild(0).GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = CurrentChoiceEvent.Choices[cIndex].Description; // adicionar o texto do botão
 
             // Adjust the button size based on the text length
-            RectTransform buttonRectTransform = choiceButton.GetComponent<RectTransform>();
-            Vector2 preferredSize = GetTextPreferredSize(buttonText);
-            buttonRectTransform.sizeDelta = new Vector2(preferredSize.x + 20f, buttonRectTransform.sizeDelta.y); // Add padding to width
+            //RectTransform buttonRectTransform = choiceButton.GetComponent<RectTransform>();
+            //Vector2 preferredSize = GetTextPreferredSize(buttonText);
+            //buttonRectTransform.sizeDelta = new Vector2(preferredSize.x + 20f, buttonRectTransform.sizeDelta.y); // Add padding to width
         }
     }
 

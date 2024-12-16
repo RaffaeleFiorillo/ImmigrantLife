@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gabriel__straight_0: 1600530652372493511
+      Gabriel__straight_1: 8066948703078363066
+      Gabriel__straight_2: -7567291805501675957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
