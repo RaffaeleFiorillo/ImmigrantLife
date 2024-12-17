@@ -45,6 +45,13 @@ MonoBehaviour:
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: (Eles precisam entender. Vai ser melhor para todos.)
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Olha para o rel\xF3gio e inspira fundo novamente."
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 1
     positionIndex: 0
@@ -54,6 +61,14 @@ MonoBehaviour:
     Sentence: "(Ok, Xavier, voc\xEA j\xE1 pensou bastante nisso. Quando eles entrarem,
       voc\xEA vai dizer: \u201CEu vou emigrar. Vou para Portugal no final do m\xEAs,
       e j\xE1 est\xE1 tudo planejado.\u201D)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Nesse momento, ouve-se a porta de entrada se abrindo. As vozes dos
+      pais interrompem os pensamentos de Xavier.
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
     emotionIndex: 0
     positionIndex: 0
@@ -91,6 +106,13 @@ MonoBehaviour:
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Jo\xE3o, pelo amor de Deus!"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Eles entram na cozinha e notam Xavier sentado \xE0 mesa."
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
     emotionIndex: 2
     positionIndex: 1
@@ -141,3 +163,11 @@ MonoBehaviour:
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "Voc\xEA nunca leva nada a s\xE9rio..."
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Os pais se entreolham e se sentam \xE0 mesa, aguardando em sil\xEAncio
+      enquanto Xavier respira fundo para come\xE7ar.\r\n\r\n"

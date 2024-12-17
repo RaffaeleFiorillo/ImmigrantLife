@@ -20,9 +20,9 @@ MonoBehaviour:
   Choices:
   - Money: 0
     Anxiety: 0
-    Description: Ser Direto
+    Description: Eu vou emigrar.
     NextEvent: {fileID: 11400000, guid: eefa25612cb56f1478c214dc81290fb9, type: 2}
   - Money: 0
     Anxiety: 0
-    Description: Ser Indireto
+    Description: Lembram do churrasco
     NextEvent: {fileID: 11400000, guid: 5ab914c9c4f6431469c06deddb005318, type: 2}

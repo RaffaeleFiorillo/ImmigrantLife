@@ -52,7 +52,7 @@ MonoBehaviour:
     CharacterIsAlone: 0
     BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
     som: {fileID: 0}
-    Sentence: "N\xE3o, tio, n\xE3o conheci\u2026\r"
+    Sentence: "N\xE3o, tio, n\xE3o conheci\u2026[Gabriel desvia o olhar.]\r"
   - Speaker: {fileID: 11400000, guid: e411841ac494e9147b8c5fa86f87c854, type: 2}
     emotionIndex: 2
     positionIndex: 1
@@ -153,14 +153,7 @@ MonoBehaviour:
     CharacterIsAlone: 0
     BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
     som: {fileID: 0}
-    Sentence: "Com certeza.\r\r"
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 4
-    positionIndex: 0
-    CharacterIsAlone: 0
-    BackgroundImage: {fileID: -6747031408805090771, guid: cf47b9104ea63f24fa606a983cc70447, type: 3}
-    som: {fileID: 0}
-    Sentence: "...\r\r"
+    Sentence: "Com certeza.[Pausa. Olha para Gabriel pensativo.]\r\r"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 4
     positionIndex: 0

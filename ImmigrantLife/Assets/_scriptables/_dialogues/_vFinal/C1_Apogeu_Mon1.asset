@@ -25,6 +25,14 @@ MonoBehaviour:
     som: {fileID: 0}
     Sentence: "(O tempo passa... E nada muda. Parece que minha vida ficou presa aqui,
       como se eu estivesse correndo em c\xEDrculo.)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 8138532480268601653, guid: 0331651ccf903eb469ec64367c2900d6, type: 3}
+    som: {fileID: 0}
+    Sentence: "<i>Ele levanta a cabe\xE7a e olha para as m\xE3os, calejadas pelo
+      trabalho"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
@@ -32,6 +40,14 @@ MonoBehaviour:
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "(Eu tento... Tento muito. Mas \xE9 como nadar contra a correnteza.)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Ele olha ao redor do quarto, os m\xF3veis antigos, a tinta descascando
+      na parede. Uma pilha de contas repousa na pequena mesa ao lado da cama."
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
@@ -40,15 +56,27 @@ MonoBehaviour:
     som: {fileID: 0}
     Sentence: "(Tantas vezes minha m\xE3e tentou me convencer de que as coisas iam
       melhorar. \u201CTenha f\xE9, filho. Deus vai abrir um caminho.\u201D)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Ele suspira, balan\xE7ando a cabe\xE7a."
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: "( Eu queria acreditar. Queria mesmo. Mas a f\xE9 n\xE3o paga as contas,
-      n\xE3o enche a barriga da minha fam\xEDlia, n\xE3o d\xE1 um futuro pra minha
-      irm\xE3zinha Lara.)"
+    Sentence: "( Ser\xE1 que eu t\xF4 errado em querer mais?)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Ele fecha os olhos por um momento.
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
@@ -57,6 +85,14 @@ MonoBehaviour:
     som: {fileID: 0}
     Sentence: "(Eu vejo meu pai acordando antes do sol, voltando pra casa cheirando
       a farinha, com as m\xE3os mais calejadas a cada dia.)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: '<i>[O rosto de seu pai, Jorge, exausto mas determinado, passa brevemente
+      por sua mente.]'
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
@@ -81,6 +117,29 @@ MonoBehaviour:
     som: {fileID: 0}
     Sentence: "\r(Eu queria proteger esses sonhos. N\xE3o deixar que eles morram
       como os meus.)\r"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Xavier esfrega o rosto com as m\xE3os, tentando organizar os pensamentos.\r"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(E eu? Onde \xE9 que eu entro nisso tudo? S\xF3 vou continuar aqui,
+      fingindo que t\xE1 tudo bem?.)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Ele olha para a mesa, onde um envelope guarda um panfleto sobre
+      imigra\xE7\xE3o, que j\xE1 est\xE1 amassado de tanto ser dobrado e desdobrado.\r"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
@@ -90,6 +149,14 @@ MonoBehaviour:
     Sentence: "(Ser\xE1 que vale a pena tentar? Arriscar tudo para come\xE7ar do
       zero em um lugar que eu nem conhe\xE7o? \xC9 um salto no escuro. Mas ficar
       aqui... Ficar aqui \xE9 certeza de que nada vai mudar.)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Ele se levanta da cama e vai at\xE9 a janela. L\xE1 fora, as luzes
+      da rua tremulam, e o barulho distante de uma moto preenche o sil\xEAncio.\r"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
@@ -105,11 +172,12 @@ MonoBehaviour:
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: Mas e se eu falhar?
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 6
+    Sentence: (Mas e se eu falhar?)
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: ...
+    Sentence: '<i>[Ele olha para as luzes fracas da rua, como se buscasse uma resposta
+      no horizonte.]'
