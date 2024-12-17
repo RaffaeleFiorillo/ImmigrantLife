@@ -45,7 +45,9 @@ public class EventManager : MonoBehaviour
 
     //onde irá haver o output da musica
     [SerializeField]  
-    AudioSource musicPlayer;
+    AudioSource musicPlayer; 
+    [SerializeField]  
+    AudioSource backgroundNoisePlayer;
 
     /// <summary>
     /// Imagem apresentada no Background durante o jogo.
@@ -154,11 +156,26 @@ public class EventManager : MonoBehaviour
     /// Alterar a música que está sendo reproduzida (em loop).
     /// </summary>
     /// <param name="music"></param>
-    public void ChangeMusic(AudioResource music)
+    public void ChangeMusic(AudioResource music, AudioResource noise)
     {
-        musicPlayer.Stop();
+        if(musicPlayer.resource!=music)
+            musicPlayer.Stop();
+        if(backgroundNoisePlayer.resource!=noise)
+        backgroundNoisePlayer.Stop();
+        if (music != null)
+        {
+
         musicPlayer.resource = music;
         musicPlayer.Play();
+        }
+        if (noise == null)
+            return;
+
+        backgroundNoisePlayer.resource = noise;
+        backgroundNoisePlayer.Play();
+        
+
+
     }
 
     /// <summary>
@@ -179,8 +196,8 @@ public class EventManager : MonoBehaviour
 
         // Se o Novo evento define uma música, esta é reproduzida
         // Caso não houver uma música, mantém-se a música antiga
-        if (CurrentNarrativeEvent.musica != null)
-            ChangeMusic(CurrentNarrativeEvent.musica);
+        
+            ChangeMusic(CurrentNarrativeEvent.musica,CurrentNarrativeEvent.backgroundNoice);
 
 
         //fazer characters desaparecer pós fade

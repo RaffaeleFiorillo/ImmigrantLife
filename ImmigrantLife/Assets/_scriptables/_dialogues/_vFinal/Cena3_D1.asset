@@ -23,15 +23,15 @@ MonoBehaviour:
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 8138532480268601653, guid: 0331651ccf903eb469ec64367c2900d6, type: 3}
     som: {fileID: 0}
-    Sentence: "A m\xE3e estava estranha\u2026 Nem comentou nada sobre o que eu disse.
-      Ser\xE1 que ela n\xE3o tem mesmo nada a dizer?"
+    Sentence: "(A m\xE3e estava estranha\u2026 Nem comentou nada sobre o que eu disse.
+      Ser\xE1 que ela n\xE3o tem mesmo nada a dizer?)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: "Ser\xE1 que fiz bem em contar agora?"
+    Sentence: "(Ser\xE1 que fiz bem em contar agora?)"
   - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
     emotionIndex: 0
     positionIndex: 0
@@ -45,9 +45,9 @@ MonoBehaviour:
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: "Eu achava que contar seria a parte mais dif\xEDcil\u2026"
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 6
+    Sentence: "(Eu achava que contar seria a parte mais dif\xEDcil\u2026)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
@@ -59,10 +59,10 @@ MonoBehaviour:
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: "Mas o pai tinha raz\xE3o\u2026 Eles sempre fizeram o que podiam para
-      eu ter uma vida digna. Mesmo sem luxo, nunca me deixaram faltar nada."
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 6
+    Sentence: "(Mas o pai tinha raz\xE3o\u2026 Eles sempre fizeram o que podiam para
+      eu ter uma vida digna. Mesmo sem luxo, nunca me deixaram faltar nada.)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
@@ -75,18 +75,10 @@ MonoBehaviour:
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: <i>Xavier fica sem pensar em nada por um longo tempo, com um olhar
-      distante.
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 6
-    positionIndex: 0
-    CharacterIsAlone: 0
-    BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
-    Sentence: "Ser\xE1 que estou sendo injusto com eles? No fundo, isso tamb\xE9m
-      \xE9 por eles\u2026"
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 6
+    Sentence: "(Ser\xE1 que estou sendo injusto com eles? No fundo, isso tamb\xE9m
+      \xE9 por eles\u2026)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
@@ -98,22 +90,22 @@ MonoBehaviour:
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: "N\xE3o consigo relaxar! Eu devia ter falado mais cedo?"
+    Sentence: "(N\xE3o consigo relaxar! Eu devia ter falado mais cedo?)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Senta-se na cama, inquieto.
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: <i>Fecha os olhos, mas rapidamente os abre de novo, agitado.
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 6
-    positionIndex: 0
-    CharacterIsAlone: 0
-    BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
-    Sentence: "N\xE3o\u2026 S\xF3 ia preocup\xE1-los ainda mais. E eu j\xE1 decidi!
-      Se tivesse contado antes, eles teriam tentado me convencer a ficar\u2026"
+    Sentence: "(N\xE3o\u2026 S\xF3 ia preocup\xE1-los ainda mais. E eu j\xE1 decidi!
+      Se tivesse contado antes, eles teriam tentado me convencer a ficar\u2026)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 10
     positionIndex: 0
@@ -121,8 +113,8 @@ MonoBehaviour:
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: "AH! QUE \xD3DIO!!"
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 10
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
@@ -134,17 +126,17 @@ MonoBehaviour:
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: "Eu amo os meus pais. Ser\xE1 que a m\xE3e acha que estou indo embora
-      porque n\xE3o sou feliz aqui? Ou porque n\xE3o gosto mais deles?"
+    Sentence: "(Eu amo os meus pais. Ser\xE1 que a m\xE3e acha que estou indo embora
+      porque n\xE3o sou feliz aqui? Ou porque n\xE3o gosto mais deles?)"
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
-    Sentence: "Espero que eu esteja fazendo a escolha certa\u2026"
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 6
+    Sentence: "(Espero que eu esteja fazendo a escolha certa\u2026)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}

@@ -37,4 +37,5 @@ public abstract class NarrativeEvent : ScriptableObject
     /// Audio a ser reproduzido quanto o evento for gerido.
     /// </summary>
     public AudioResource musica;
+    public AudioResource backgroundNoice;
 }

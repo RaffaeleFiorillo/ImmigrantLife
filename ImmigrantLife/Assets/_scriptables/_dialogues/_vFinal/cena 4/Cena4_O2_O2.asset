@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: Cena4_O2_O2
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 0
+  NextEvent: {fileID: 0}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Minha moto deu problema essa semana.\r"
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Oxe, s\xE9rio? O que foi?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ah\u2026 *limpa a garganta*"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Parece que foi um problema no motor. T\xE1 na oficina."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Mas como voc\xEA t\xE1 fazendo suas corridas? T\xE1 conseguindo trabalhar?
+      Quer que eu empreste a minha moto?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "T\xE1 tranquilo, Marcos. Valeu. O mec\xE2nico disse que deve ficar
+      resolvido semana que vem."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Isso que tava te distraindo ontem?
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9\u2026 *bebe um gole do chopp*. \xC9 isso mesmo."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Melhor eles n\xE3o saberem ainda... N\xE3o quero estragar a noite.)"
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Bom, se s\xE3o s\xF3 uns dias, de boa. Qualquer coisa, d\xE1 um toque."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Valeu, cara, t\xE1 de boa mesmo. Vou buscar a pr\xF3xima rodada."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "N\xE3o esquece de p\xF4r na conta do Marcos."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Qual \xE9\u2026"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "N\xE3o vou esquecer!"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Xavier se levanta e vai buscar a pr\xF3xima rodada."

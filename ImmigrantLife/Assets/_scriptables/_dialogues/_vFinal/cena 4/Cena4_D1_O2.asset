@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: Cena4_D1_O2
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 0
+  NextEvent: {fileID: 11400000, guid: bc0089e540b0e7e449473dad85499ca6, type: 2}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 5131126315314523879, guid: 38440cd1c073b6b40860f4d9bc4e80ba, type: 3}
+    som: {fileID: 0}
+    Sentence: "Eu sabia que tinha algo. Aposto que \xE9 mulher."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 5131126315314523879, guid: 38440cd1c073b6b40860f4d9bc4e80ba, type: 3}
+    som: {fileID: 0}
+    Sentence: "Certeza! S\xF3 pode ser."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 8
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 5131126315314523879, guid: 38440cd1c073b6b40860f4d9bc4e80ba, type: 3}
+    som: {fileID: 0}
+    Sentence: "Nada a ver, parem de palha\xE7ada."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 5131126315314523879, guid: 38440cd1c073b6b40860f4d9bc4e80ba, type: 3}
+    som: {fileID: 0}
+    Sentence: Foi o vaso? Caraca, Xavier, que cagad-
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 8
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 5131126315314523879, guid: 38440cd1c073b6b40860f4d9bc4e80ba, type: 3}
+    som: {fileID: 0}
+    Sentence: Que vaso, doido? Deixa de besteira!
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 5131126315314523879, guid: 38440cd1c073b6b40860f4d9bc4e80ba, type: 3}
+    som: {fileID: 0}
+    Sentence: "Ent\xE3o conta, u\xE9. T\xE1 enrolando o qu\xEA?"

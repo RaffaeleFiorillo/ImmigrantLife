@@ -1,0 +1,344 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: Cena4_D1_O1
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 0
+  NextEvent: {fileID: 0}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Caraca! Que legal, cara! Certeza que voc\xEA vai gostar. Vai ficar
+      quanto tempo? Ali\xE1s, quando s\xE3o suas f\xE9rias?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "N\xE3o \xE9 isso, cara\u2026 Eu vou pra Portugal mesmo."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Eu vou emigrar.
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Que? Do nada? Tem que juntar uma grana, ein. Euro n\xE3o \xE9 barato"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Na verdade, eu tomei essa decis\xE3o j\xE1 faz um tempo\u2026"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Por isso que n\xE3o tenho sa\xEDdo tanto. T\xF2 juntando faz um tempo,
+      j\xE1. Vou na virada deste m\xEAs, dia primeiro de outubro."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "E n\xE3o falou nada antes por qu\xEA?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ah\u2026 n\xE3o queria preocupar ningu\xE9m antes do tempo. N\xE3o
+      sabia como poderiam reagir\u2026"
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Preocupar a gente? Voc\xEA devia ter contado logo, cara!"
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9 isso, voc\xEA devia ter dito. Ter\xEDamos pego mais leve contigo
+      quando n\xE3o aceitava sair."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Foi mal, galera. N\xE3o sei, foi uma escolha dif\xEDcil."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Mas voc\xEA j\xE1 tem certeza dessa decis\xE3o? E seus pais?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Sim. E meus pais, bom, nem eles sabiam. S\xF3 contei ontem. Fiquei
+      meio ocupado com isso."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "J\xE1 arrumei o visto, juntei alguma grana e achei um lugar para ficar
+      temporariamente."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Mas, por que voc\xEA resolveu isso do nada?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Para tentar uma vida melhor\u2026 Eu tenho 26 e sinto que n\xE3o estou
+      evoluindo aqui. Eu AMO estar aqui, mas vivo de sal\xE1rio m\xEDnimo."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Quero ajudar meus pais, dar uma vida mais f\xE1cil para minha irm\xE3\u2026
+      E acho que talvez consiga isso na Europa."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Mas j\xE1 tem trabalho l\xE1?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Vou dar meus pulos. Tenho f\xE9 que consigo algo."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Sei l\xE1, cara. Toma cuidado com isso. Tem algu\xE9m l\xE1 para te
+      dar uma ajuda?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Na verdade, n\xE3o. Mas, acho que consigo me manter por um tempo."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Devia ter falado com a gente antes\u2026 n\xE3o precisava ter tanto
+      receio."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "N\xE3o era isso. Era\u2026 n\xE3o sei. S\xF3 queria ter certeza que
+      ia mesmo."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Cara, te desejo a maior das sortes! Voc\xEA vai conseguir!"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Obrigado.
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9, cara. Deus te aben\xE7oe. Mas, nada de gracinha, ein? Se precisar,
+      fala com a gente!"
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9, p\xF4! Somos amigos de inf\xE2ncia!"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Foi mal, galera. Desculpa mesmo.\r"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Xavier olha para o copo, girando-o entre os dedos.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Que clima merda que ficou agora, n\xE9? Desculpa de verdade, galera."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Deixa disso! [D\xE1 um tapa leve no ombro de Xavier]. Isso quer dizer
+      que hoje \xE9 nossa \xFAltima sa\xEDda antes de voc\xEA ir, n\xE9?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9\u2026 \xE9 sim."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "E o voo? Quando \xE9?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Dia 1, \xE0s 10h da manh\xE3."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Beleza. Estaremos l\xE1 pra nos despedirmos de voc\xEA. N\xE3o \xE9,
+      Marcos? [Cutuca Marcos com o cotovelo]."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Com certeza! N\xE3o vamos deixar voc\xEA escapar sem um abra\xE7o
+      de despedida."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Obrigado, caras. S\xE9rio."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "[Levantando da mesa com entusiasmo] Se \xE9 a \xFAltima sa\xEDda,
+      vamos fazer valer. Vou AGOOORA buscar as pr\xF3ximas duas rodadas."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9 assim que eu gosto!"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Bora!
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Xavier, pensativo, observa os amigos bebendo, conversando e curtindo
+      o ambiente do bar.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Que al\xEDvio\u2026 mais um peso tirado de cima\u2026)"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Ele suspira e abaixa o olhar.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 6
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Queria que com meus pais tivesse sido assim t\xE3o f\xE1cil.)"

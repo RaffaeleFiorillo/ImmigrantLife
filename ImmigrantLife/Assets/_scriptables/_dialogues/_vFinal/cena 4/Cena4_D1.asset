@@ -1,0 +1,289 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: Cena4_D1
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 0
+  NextEvent: {fileID: 11400000, guid: 190c09649a5b595458863b4bee33e356, type: 2}
+  musica: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 5131126315314523879, guid: 38440cd1c073b6b40860f4d9bc4e80ba, type: 3}
+    som: {fileID: 0}
+    Sentence: "<I>Xavier entra no bar e se aproxima da mesa onde os amigos est\xE3o
+      sentados."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "E a\xED, galera, firmeza?"
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Fala, Xav\xE3o! Finalmente chegou, cara."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Beleza, irm\xE3o?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Tudo tranquilo. Qual o plano pra hoje?
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Tava falando com o Marcos aqui. Sabendo que voc\xEA n\xE3o curte lugares
+      muito cheios, pensei que a gente podia ficar at\xE9 o limite aqui, encher a
+      cara, e depois partir pra minha casa"
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Exatamente. Inclusive, j\xE1 fiz umas compras. A gente continua por
+      l\xE1, bate um FIFA e o resto \xE9 hist\xF3ria. Qu\xEA acha?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Parece bom! Mas n\xE3o precisam mudar tudo por minha causa. N\xE3o
+      curto muito, mas tamb\xE9m n\xE3o \xE9 todo dia."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Relaxa, cara. O bar vai continuar aqui. A gente volta outra vez, se
+      quiser. Hoje o foco \xE9 curtir."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "E, s\xF3 avisando, aprendi umas manobras novas. Algu\xE9m vai levar
+      um 7 a 1."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "S\xF3 se for voc\xEA, irm\xE3o!"
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Mas falando s\xE9rio, minha casa \xE9 logo ali. Sem press\xE3o, Xavier."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ali\xE1s, a primeira rodada \xE9 por conta do Marcos!"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Igor se levanta e segue para buscar as bebidas.
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ow, Igor!! Por qu\xEA eu?"
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: 'Ei, por que ele decidiu que sou eu quem paga? [Diz dirigindo-se para
+      Xavier]'
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Voc\xEA n\xE3o vai me defender, n\xE3o?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Eu concordo com ele.
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Dois contra um? E eu achando que estava saindo com amigos\u2026"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Somos os que voc\xEA tem."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Minha m\xE3e avisou pra tomar cuidado com as companhias\u2026 [Diz
+      Marcos enquanto cutuca Xavier no ombro]."
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Xavier e Marcos riem despreocupadamente.
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Mas s\xE9rio, com o que voc\xEA tava ocupado ontem? Sumiu o dia inteiro."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ah\u2026 nada demais."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Sei. Vai guardar segredo agora?
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "N\xE3o \xE9 isso, s\xF3... deixa pra l\xE1. Olha, l\xE1 vem o Igor."
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Igor volta com tr\xEAs canecos de chopp."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "A\xED, galera, chopp geladinho na m\xE3o!"
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Quando foi que eu aceitei pagar essa rodada mesmo?
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Desde que voc\xEA me deve noventa reais, t\xE1 decidido."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Cara, voc\xEA t\xE1 jogando baixo."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Baixo foi voc\xEA sumir sem pagar aquele dia."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ganhou no argumento. Alguma obje\xE7\xE3o, Marcos? [Xavier faz uma
+      cara s\xE9ria como se fosse um juiz em um julgamento]."
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: '*Resmunga*'
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Me passa logo essa porcaria.
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Igor e Xavier riem da situa\xE7\xE3o, enquanto tomam um gole do
+      chopp."
+  - Speaker: {fileID: 11400000, guid: 07358bb534a02d541a949adc38d30605, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Mas, e  a\xED, novidades?"

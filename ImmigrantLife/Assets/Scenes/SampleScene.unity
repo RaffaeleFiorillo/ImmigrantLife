@@ -1752,6 +1752,7 @@ GameObject:
   - component: {fileID: 1484428685}
   - component: {fileID: 1484428686}
   - component: {fileID: 1484428689}
+  - component: {fileID: 1484428691}
   - component: {fileID: 1484428690}
   m_Layer: 0
   m_Name: GameManager
@@ -1807,7 +1808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadding: 0
-  CurrentNarrativeEvent: {fileID: 11400000, guid: f9998f68e45af9041b1ca48a86543754, type: 2}
+  CurrentNarrativeEvent: {fileID: 11400000, guid: 190c09649a5b595458863b4bee33e356, type: 2}
   musicPlayer: {fileID: 0}
   BackgroundImage: {fileID: 0}
 --- !u!4 &1484428688
@@ -1872,6 +1873,18 @@ MonoBehaviour:
   NormalColor: {r: 1, g: 1, b: 1, a: 0}
   ChangeContrast: -20
   ChangeSaturation: -50
+--- !u!114 &1484428691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484428684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4ce0b56b67e524facdb27566f5ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788025760
 GameObject:
   m_ObjectHideFlags: 0

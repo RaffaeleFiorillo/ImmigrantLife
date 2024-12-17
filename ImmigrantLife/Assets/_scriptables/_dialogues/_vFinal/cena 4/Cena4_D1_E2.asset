@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2e26d45d2483c4b988962016bbd2bd, type: 3}
-  m_Name: Marcos
+  m_Script: {fileID: 11500000, guid: 1d20f8241cbdac24cb0b714ece6aa097, type: 3}
+  m_Name: Cena4_D1_E2
   m_EditorClassIdentifier: 
-  speakerName: Marcos
-  emotionsSprites:
-  - {fileID: 0}
-  - {fileID: 0}
+  IsMemory: 0
+  FadeAfter: 0
+  NextEvent: {fileID: 0}
+  musica: {fileID: 0}
+  Question: 
+  Choices: []

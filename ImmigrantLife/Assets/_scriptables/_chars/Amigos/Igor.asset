@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Igor
   m_EditorClassIdentifier: 
   speakerName: Igor
-  emotionsSprites: []
+  emotionsSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
