@@ -183,7 +183,8 @@ public class DialogueManager : BaseNarrativeEventManager
 
         //implementação do som
         if (effect.som != null)
-        {      
+        {
+            soundPlayer.Stop();
             soundPlayer.resource = effect.som;
 
             soundPlayer.Play();

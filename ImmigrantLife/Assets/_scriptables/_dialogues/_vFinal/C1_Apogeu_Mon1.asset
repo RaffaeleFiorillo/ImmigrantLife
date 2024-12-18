@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: C1_Apogeu_Mon1
   m_EditorClassIdentifier: 
   IsMemory: 0
-  FadeAfter: 1
-  NextEvent: {fileID: 11400000, guid: f0a2704a47673704dbe6e60546ef6247, type: 2}
+  FadeAfter: 0
+  NextEvent: {fileID: 11400000, guid: cb84261b73d25bd4199ee935f6125105, type: 2}
   musica: {fileID: 0}
+  backgroundNoice: {fileID: 0}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 6
@@ -149,35 +150,3 @@ MonoBehaviour:
     Sentence: "(Ser\xE1 que vale a pena tentar? Arriscar tudo para come\xE7ar do
       zero em um lugar que eu nem conhe\xE7o? \xC9 um salto no escuro. Mas ficar
       aqui... Ficar aqui \xE9 certeza de que nada vai mudar.)"
-  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
-    emotionIndex: 0
-    positionIndex: 0
-    CharacterIsAlone: 0
-    BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
-    Sentence: "<i>Ele se levanta da cama e vai at\xE9 a janela. L\xE1 fora, as luzes
-      da rua tremulam, e o barulho distante de uma moto preenche o sil\xEAncio.\r"
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 6
-    positionIndex: 0
-    CharacterIsAlone: 0
-    BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
-    Sentence: "(Eu me lembro do que o Gabriel disse naquela visita... Ele parecia
-      t\xE3o confiante, t\xE3o certo de que tinha feito a escolha certa. Talvez ele
-      esteja certo. Talvez exista mesmo algo melhor l\xE1 fora.)"
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
-    emotionIndex: 6
-    positionIndex: 0
-    CharacterIsAlone: 0
-    BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
-    Sentence: (Mas e se eu falhar?)
-  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
-    emotionIndex: 0
-    positionIndex: 0
-    CharacterIsAlone: 0
-    BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
-    Sentence: '<i>[Ele olha para as luzes fracas da rua, como se buscasse uma resposta
-      no horizonte.]'

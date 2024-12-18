@@ -30,6 +30,7 @@ public class BackgroundManager : BaseNarrativeEventManager
 
         backgroundEvent = (BackgroundEvent)narrativeEvent;
         toPass.SetActive(true);
+        Debug.Log(toPass.active);
         nextBackGround();
 
 
@@ -49,17 +50,17 @@ public class BackgroundManager : BaseNarrativeEventManager
       public  void nextBackGround()
     {
 
-        if(backgroundIndex == (backgroundEvent.BackgroundBlocks.Count-1)){
+        if(backgroundIndex == (backgroundEvent.BackgroundBlocks.Count)){
 
             GoToNextNarrativeEvent();
 
             return;
         }
 
-        backgroundIndex++;
-
+       
+        if (backgroundEvent.BackgroundBlocks[backgroundIndex] != null) 
         changeBackgound(backgroundEvent.BackgroundBlocks[backgroundIndex].Background);
-
+        backgroundIndex++;
 
     }
 

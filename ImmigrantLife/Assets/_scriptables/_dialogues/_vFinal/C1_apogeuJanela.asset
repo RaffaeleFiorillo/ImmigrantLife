@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3035e35bfdd69fa4e991b8850451923a, type: 3}
+  m_Name: C1_apogeuJanela
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 0
+  NextEvent: {fileID: 11400000, guid: 77de0039eba7e2e4b937bdd0e45c1d85, type: 2}
+  musica: {fileID: 0}
+  backgroundNoice: {fileID: 0}
+  BackgroundBlocks:
+  - Background: {fileID: 0}
+    Som: {fileID: 8300000, guid: 5fd098fd4fb846248946f974497f09b8, type: 3}

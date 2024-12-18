@@ -16,5 +16,6 @@ MonoBehaviour:
   FadeAfter: 0
   NextEvent: {fileID: 0}
   musica: {fileID: 0}
+  backgroundNoice: {fileID: 8300000, guid: 369b4c13f41fdc04cb0e90f6dc764ed7, type: 3}
   Question: 
   Choices: []

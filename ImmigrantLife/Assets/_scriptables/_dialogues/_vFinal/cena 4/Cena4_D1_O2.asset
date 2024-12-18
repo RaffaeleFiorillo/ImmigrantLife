@@ -16,6 +16,7 @@ MonoBehaviour:
   FadeAfter: 0
   NextEvent: {fileID: 11400000, guid: bc0089e540b0e7e449473dad85499ca6, type: 2}
   musica: {fileID: 0}
+  backgroundNoice: {fileID: 8300000, guid: 369b4c13f41fdc04cb0e90f6dc764ed7, type: 3}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
     emotionIndex: 1

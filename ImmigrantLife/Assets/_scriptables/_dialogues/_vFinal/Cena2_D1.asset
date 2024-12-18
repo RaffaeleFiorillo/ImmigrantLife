@@ -16,6 +16,7 @@ MonoBehaviour:
   FadeAfter: 0
   NextEvent: {fileID: 11400000, guid: f2e9c0fdf292103418d45a32616544cf, type: 2}
   musica: {fileID: 0}
+  backgroundNoice: {fileID: 0}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
     emotionIndex: 1
@@ -66,7 +67,7 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: 590ab603ac9b3a241b5d20c33f392049, type: 3}
     Sentence: <i>Nesse momento, ouve-se a porta de entrada se abrindo. As vozes dos
       pais interrompem os pensamentos de Xavier.
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
@@ -82,7 +83,7 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: 3b8b6c7272fb67846afb26999a8c6a44, type: 3}
     Sentence: "Ah, foi s\xF3 uma brincadeira. Seu pai achou engra\xE7ado."
   - Speaker: {fileID: 11400000, guid: 5b228f419df487c45818a7f4b5896dd0, type: 2}
     emotionIndex: 0
@@ -168,6 +169,6 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d4cf613aa97e0584c9c9ed50c2f98fd4, type: 3}
     Sentence: "<i>Os pais se entreolham e se sentam \xE0 mesa, aguardando em sil\xEAncio
       enquanto Xavier respira fundo para come\xE7ar.\r\n\r\n"

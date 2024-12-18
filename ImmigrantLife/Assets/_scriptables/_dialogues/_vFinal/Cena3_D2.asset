@@ -16,13 +16,14 @@ MonoBehaviour:
   FadeAfter: 1
   NextEvent: {fileID: 11400000, guid: deb3b293291bf0f4ebaa7bfe8b8f66b0, type: 2}
   musica: {fileID: 0}
+  backgroundNoice: {fileID: 0}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Igor Santos - Galera, novidade! Abriu um barzinho novo aqui pertinho
       de casa. Minha prima falou que \xE9 tranquilo e o chopp t\xE1 metade do pre\xE7o
       essa semana. Funciona das 18h \xE0s 23h. 22:46"
@@ -39,42 +40,42 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Igor Santos - Boa! E a\xED, Xav\xE3o? 22:47"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: Marcos Souza - Quando vamos? 22:53
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Igor Santos - Bora amanh\xE3? Sextou \\u5661 22:54"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Marcos Souza - Fechou! O after \xE9 l\xE1 em casa. 22:55"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Igor Santos - J\xE1 \xE9. E a\xED, Xav\xE3o? Vamos ou n\xE3o? 22:56"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Marcos Souza - Ele n\xE3o t\xE1 dormindo, n\xE9? Pera a\xED, vou ligar
       pra ele. 22:57"
   - Speaker: {fileID: 11400000, guid: 3c4f9fcf3e82cf34497f79e84030395c, type: 2}
@@ -96,7 +97,7 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Marcos Souza - \xC9\u2026 Ele n\xE3o atende mesmo \\u9542. 23:00"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
@@ -146,14 +147,14 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Marcos Souza - Ah, resolveu aparecer! Fechad\xE3o, ent\xE3o! 23:06"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Igor Santos - V\xEA se n\xE3o \u201Cesquece\u201D a carteira dessa
       vez, Marcos. 23:06"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
@@ -161,14 +162,14 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Marcos Souza - J\xE1 pedi desculpa, cara! 23:07"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Igor Santos - Sei bem\u2026 23:08"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
@@ -190,7 +191,7 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Igor Santos - T\xE1 me devendo at\xE9 hoje, viu? \u201CApenas\u201D
       90 reais, nunca mais vou esquecer. 23:10"
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
@@ -214,14 +215,14 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: Igor Santos - Mhmmm, Xavinho ocupado essas horas? Tem companhia? 23:12
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: Marcos Souza - Entupiu o vaso, certeza. 23:13
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
@@ -236,14 +237,14 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: "Marcos Souza - N\xE3o negou nenhuma das op\xE7\xF5es, hein! 23:14  "
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d0712d72ee493d24494bfa121e9207a2, type: 3}
     Sentence: 'Igor Santos - Kkkkkkk. 23:14  '
   - Speaker: {fileID: 11400000, guid: 4a1a8c318723ebc4db556e8bdcde2f08, type: 2}
     emotionIndex: 0

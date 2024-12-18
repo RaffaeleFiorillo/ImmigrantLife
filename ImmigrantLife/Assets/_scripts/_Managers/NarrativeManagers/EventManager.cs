@@ -46,6 +46,7 @@ public class EventManager : MonoBehaviour
     //onde irá haver o output da musica
     [SerializeField]  
     AudioSource musicPlayer; 
+
     [SerializeField]  
     AudioSource backgroundNoisePlayer;
 

@@ -16,6 +16,7 @@ MonoBehaviour:
   FadeAfter: 0
   NextEvent: {fileID: 11400000, guid: 190c09649a5b595458863b4bee33e356, type: 2}
   musica: {fileID: 0}
+  backgroundNoice: {fileID: 8300000, guid: 369b4c13f41fdc04cb0e90f6dc764ed7, type: 3}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
     emotionIndex: 0
@@ -120,7 +121,7 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: d4cf613aa97e0584c9c9ed50c2f98fd4, type: 3}
     Sentence: <i>Igor se levanta e segue para buscar as bebidas.
   - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
     emotionIndex: 1
@@ -201,9 +202,9 @@ MonoBehaviour:
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
     Sentence: Sei. Vai guardar segredo agora?
-  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+  - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
     emotionIndex: 1
-    positionIndex: 0
+    positionIndex: 1
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
     som: {fileID: 0}
@@ -220,7 +221,7 @@ MonoBehaviour:
     positionIndex: 0
     CharacterIsAlone: 0
     BackgroundImage: {fileID: 0}
-    som: {fileID: 0}
+    som: {fileID: 8300000, guid: ebfc094dad0182a4b90d1892b6f8d640, type: 3}
     Sentence: "A\xED, galera, chopp geladinho na m\xE3o!"
   - Speaker: {fileID: 11400000, guid: 250335a9430e5974c8ed6f704714b138, type: 2}
     emotionIndex: 1
