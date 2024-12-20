@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class DialogueManager : BaseNarrativeEventManager
 {
@@ -87,7 +88,7 @@ public class DialogueManager : BaseNarrativeEventManager
     private string CurrentSpeakerName { get => effect.Speaker.speakerName; }
 
     #endregion Propriedades
-
+    [SerializeField] List<scriptableColor> dialogBoxColor = new List<scriptableColor>();
     [SerializeField] 
     GameObject skipIndicator;
 
@@ -127,6 +128,10 @@ public class DialogueManager : BaseNarrativeEventManager
         CurrentDialogueEvent = (DialogueEvent)narrativeEvent;  // atribuiri o evento narrativo de diálogo a ser tratado.
         CurrentSentenceIndex = 0; // indicar que deve-se iniciar da primeira frase.
         CurrentSentenceCharacterIndex = 0;
+        Debug.Log((int)CurrentDialogueEvent.DialogueBoxColorIndex);
+        DialogBox.GetComponent<Image>().color = dialogBoxColor[(int)CurrentDialogueEvent.DialogueBoxColorIndex].DialogBoxColor;
+        DialogueTextBoxName.transform.parent.GetComponent<Image>().color = dialogBoxColor[(int)CurrentDialogueEvent.DialogueBoxColorIndex].DialogNameColor;
+
 
         // Iniciar automaticamente o tratamento da primeira frases do díalogo
         // O restante das frases é mostrado quando o jogador clicar no devido botão 

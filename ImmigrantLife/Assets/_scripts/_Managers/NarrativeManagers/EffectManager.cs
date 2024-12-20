@@ -353,7 +353,7 @@ public class EffectManager : BaseNarrativeEventManager
             case TypeOfFade.MemoryFade:
                 if (profile.TryGet<LiftGammaGain>(out var colorLift))
                 {
-                    Debug.Log(colorLift.lift);
+                   // Debug.Log(colorLift.lift);
                     float addFadeTime = 1f - FadeTime;
 
                     colorLift.lift.overrideState = true;

@@ -265,7 +265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &146085255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1918,6 +1918,9 @@ MonoBehaviour:
   DialogBox: {fileID: 479408457}
   NormalCharacterDisplaySpeed: 4
   FastCharacterDisplaySpeed: 1
+  dialogBoxColor:
+  - {fileID: 11400000, guid: a8d32ce3f332ec641b5b3b4fa0ce923a, type: 2}
+  - {fileID: 11400000, guid: d07f10768467fa14a82edbc84c0cff94, type: 2}
   skipIndicator: {fileID: 1190968619}
   soundPlayer: {fileID: 601138737}
 --- !u!114 &1484428686
@@ -2440,6 +2443,7 @@ MonoBehaviour:
   DialogBox: {fileID: 0}
   NormalCharacterDisplaySpeed: 0
   FastCharacterDisplaySpeed: 0
+  dialogBoxColor: []
   skipIndicator: {fileID: 0}
   soundPlayer: {fileID: 0}
 --- !u!1001 &938482354037223143

@@ -9,3 +9,13 @@ public enum TypeOfFade
 
 
 }
+
+public enum ChooseColorEnum:uint
+{
+    Purple =0,
+    Green=1
+
+
+
+
+}

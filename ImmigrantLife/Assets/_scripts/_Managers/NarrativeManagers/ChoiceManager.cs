@@ -20,7 +20,7 @@ public class ChoiceManager : BaseNarrativeEventManager
 
     List<GameObject> ChoiceButtons = new List<GameObject>();
 
-
+  
     private void Start()
     {
         questionText = questionBox.GetComponentInChildren<TextMeshProUGUI>();

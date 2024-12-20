@@ -13,6 +13,10 @@ public class DialogueEvent : NarrativeEvent
     /// <summary>
     /// Lista de componentes (Bloco) do diálogo. Cada bloco contém: - A frase a ser dita; - A personagem que diz a frase;
     /// </summary>
+
+    public ChooseColorEnum DialogueBoxColorIndex;
+    
+
     public List<DialogueBlock> DialogueBlocks;
 
     public override EventType Type { get => EventType.Dialogue; }

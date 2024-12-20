@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Thumbs-Up-Emoji_0: 5010418809250103676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
