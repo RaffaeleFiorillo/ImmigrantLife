@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d20f8241cbdac24cb0b714ece6aa097, type: 3}
+  m_Name: Cena5_m1_E1
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 0
+  NextEvent: {fileID: 0}
+  musica: {fileID: 0}
+  backgroundNoice: {fileID: 0}
+  Question: 
+  Choices:
+  - Money: 0
+    Anxiety: 0
+    Description: "Sim, m\xE3e, estou pronto!"
+    NextEvent: {fileID: 11400000, guid: 5d7c6f5e9628c24418db6e6982868d00, type: 2}
+  - Money: 0
+    Anxiety: 0
+    Description: 
+    NextEvent: {fileID: 11400000, guid: 6f933a8e0a0792946ae8fe38d2185e83, type: 2}

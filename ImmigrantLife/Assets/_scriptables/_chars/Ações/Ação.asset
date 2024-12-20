@@ -15,3 +15,4 @@ MonoBehaviour:
   speakerName: 
   emotionsSprites:
   - {fileID: 0}
+  - {fileID: 0}

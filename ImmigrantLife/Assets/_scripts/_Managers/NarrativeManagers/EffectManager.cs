@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine.Rendering.Universal;
+using Unity.VisualScripting;
 
 /// <summary>
 /// Classe que gere todos os tipos de efeitos (visuais, sonoros,...) que ocorrem durante o jogo.
@@ -32,7 +33,7 @@ public class EffectManager : BaseNarrativeEventManager
 
     [SerializeField] float CharacterTimeToWait;
 
-   
+
     float TimeWaited;
 
 
@@ -44,8 +45,8 @@ public class EffectManager : BaseNarrativeEventManager
     [SerializeField] float FadeSpeed;
     [SerializeField] float TimeToWaitFade;
 
-   public float FadeTime;
-  [HideInInspector]  public float FadeTimeWaited;
+    public float FadeTime;
+    [HideInInspector] public float FadeTimeWaited;
 
 
     public bool FaddingIn;
@@ -54,15 +55,19 @@ public class EffectManager : BaseNarrativeEventManager
 
     [Header("Propriedades memórias")]
     [SerializeField] Color MemoryColor;
-    [SerializeField] Color  NormalColor;
+    [SerializeField] Color NormalColor;
 
     [SerializeField] float ChangeContrast;
     [SerializeField] float ChangeSaturation;
 
-
+    public TypeOfFade currentFade;
 
     #endregion Propriedades
+    private void Start()
+    {
 
+        resetFadeProperties();
+    }
     public override void StartNarrativeEvent(NarrativeEvent narrativeEvent)
     {
         throw new NotImplementedException("O EffectManager não gere eventos narrativos.");
@@ -140,7 +145,7 @@ public class EffectManager : BaseNarrativeEventManager
         {
             speaker = currentChar;
             charImage.sprite = currentChar.emotionsSprites[receiveEmotion];
-         
+
             charAnimator.SetTrigger("Appear");
 
             return;
@@ -178,7 +183,7 @@ public class EffectManager : BaseNarrativeEventManager
             {
                 TimeWaited = 0;
                 charImage.sprite = speaker.emotionsSprites[emotionIndex];
-              //  charAnimator.SetBool("AppearingBool", true);
+                //  charAnimator.SetBool("AppearingBool", true);
                 charAnimator.SetTrigger("Appear");
                 shouldUpdateCharacter = false;
             }
@@ -189,7 +194,7 @@ public class EffectManager : BaseNarrativeEventManager
     public void RemoveCharacter()
     {
 
-       // charRight.SetBool("AppearingBool", false);
+        // charRight.SetBool("AppearingBool", false);
         charRight.SetTrigger("Disappear");
         speakerRight = null;
 
@@ -198,14 +203,14 @@ public class EffectManager : BaseNarrativeEventManager
     public void RemoveAllCharacters()
     {
 
-      //  charRight.SetBool("AppearingBool", true);
-       //charRight.SetTrigger("Appear");
+        //  charRight.SetBool("AppearingBool", true);
+        //charRight.SetTrigger("Appear");
         charRight.SetTrigger("GoBack");
         speakerRight = null;
 
 
-       // charLeft.SetBool("AppearingBool", true);
-       // charLeft.SetTrigger("Appear", true);
+        // charLeft.SetBool("AppearingBool", true);
+        // charLeft.SetTrigger("Appear", true);
         charLeft.SetTrigger("GoBack");
         speakerLeft = null;
 
@@ -224,45 +229,93 @@ public class EffectManager : BaseNarrativeEventManager
     #endregion characterEffects
 
 
+
     #region fadeMetods
+
+    void resetFadeProperties()
+    {
+
+        VolumeProfile profile = volumeEffect.sharedProfile;
+
+        if (profile.TryGet<ColorAdjustments>(out var colorAj))
+        {
+            Color resetFadeColor = Color.white;
+            colorAj.colorFilter.value = resetFadeColor;
+
+           
+
+            FadeTime = 0;
+
+
+        }
+
+        if (profile.TryGet<LiftGammaGain>(out var colorLift))
+        {
+            
+
+            colorLift.lift.value = new Vector4(0f, 0f, 0f,0f);
+        }
+    }
+
     public void FadeIn()
     {
         //  Debug.Log("im here");
         if (FadeTime <= 0)
             return;
 
+
+
         FadeTime -= FadeSpeed * Time.deltaTime;
 
-
-
         VolumeProfile profile = volumeEffect.sharedProfile;
-
-        if (profile.TryGet<ColorAdjustments>(out var colorAj))
+        switch (currentFade)
         {
-            Color color = ((Color)colorAj.colorFilter);
+            case TypeOfFade.NormalFade:
+                if (profile.TryGet<ColorAdjustments>(out var colorAj))
+                {
 
-             Color.RGBToHSV(color,out float colorH,out float colorS,out float colorV);
 
-            color = Color.HSVToRGB(colorH, colorS, FadeTime);
+                    Color color = ((Color)colorAj.colorFilter);
 
-            colorAj.colorFilter.Override(color);
+                    Color.RGBToHSV(color, out float colorH, out float colorS, out float colorV);
+
+                    color = Color.HSVToRGB(colorH, colorS, FadeTime);
+
+                    colorAj.colorFilter.Override(color);
+
+
+
+                }
+                break;
+
+            case TypeOfFade.MemoryFade:
+                if (profile.TryGet<LiftGammaGain>(out var colorLift))
+                {
+                    Debug.Log("changin1");
+                   float addFadeTime = 1f- FadeTime;
+                    colorLift.lift.overrideState = true;
+                    colorLift.lift.Override(new Vector4(1f,1f,1f, addFadeTime));
+                }
+
+                break;
+
         }
 
         if (FadeTime <= 0)
             MaintainFade();
-           
+
 
     }
     void MaintainFade()
     {
-   
+
         FadeTimeWaited += Time.deltaTime;
         if (TimeToWaitFade >= FadeTimeWaited)
         {
 
 
 
-        EventManager.fadding = false;
+            EventManager.fadding = false;
         }
 
 
@@ -278,17 +331,36 @@ public class EffectManager : BaseNarrativeEventManager
 
 
         VolumeProfile profile = volumeEffect.sharedProfile;
-
-        if (profile.TryGet<ColorAdjustments>(out var colorAj))
+        switch (currentFade)
         {
+            case TypeOfFade.NormalFade:
+                if (profile.TryGet<ColorAdjustments>(out var colorAj))
+                {
 
-            Color color = ((Color)colorAj.colorFilter);
 
-            Color.RGBToHSV(color, out float colorH, out float colorS, out float colorV);
+                    Color color = ((Color)colorAj.colorFilter);
 
-            color = Color.HSVToRGB(colorH, colorS, FadeTime);
+                    Color.RGBToHSV(color, out float colorH, out float colorS, out float colorV);
 
-            colorAj.colorFilter.Override(color);
+                    color = Color.HSVToRGB(colorH, colorS, FadeTime);
+
+                    colorAj.colorFilter.Override(color);
+
+
+
+                }
+                break;
+            case TypeOfFade.MemoryFade:
+                if (profile.TryGet<LiftGammaGain>(out var colorLift))
+                {
+                    Debug.Log(colorLift.lift);
+                    float addFadeTime = 1f - FadeTime;
+
+                    colorLift.lift.overrideState = true;
+                    colorLift.lift.Override(new Vector4(1f, 1f,1f, addFadeTime));
+                }
+
+                break;
         }
 
 
@@ -299,7 +371,7 @@ public class EffectManager : BaseNarrativeEventManager
 
 
     }
-#endregion fadeMetods
+    #endregion fadeMetods
 
 
     #region MemoryEffectRegion
@@ -330,11 +402,11 @@ public class EffectManager : BaseNarrativeEventManager
     //igual ao anterior mas mete as properties normais
     public void ChangeToNormal()
     {
-       // return;
-       
+        // return;
+
         VolumeProfile profile = volumeEffect.sharedProfile;
 
-        
+
         if (profile.TryGet<ColorAdjustments>(out var colorAj))
         {
 
@@ -343,13 +415,13 @@ public class EffectManager : BaseNarrativeEventManager
 
             colorAj.saturation.value = 0;
 
-          colorAj.contrast.value = 0;
+            colorAj.contrast.value = 0;
 
             //  Color normalColor = Color.HSVToRGB(0, 0, 100,false);
 
             // normalColor.
             colorAj.colorFilter.value = NormalColor;
-            
+
         }
 
 

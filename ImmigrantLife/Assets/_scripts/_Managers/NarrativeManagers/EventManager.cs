@@ -86,7 +86,7 @@ public class EventManager : MonoBehaviour
         RandomManager = GetComponent<RandomManager>();
         BackgroundManager =GetComponent<BackgroundManager>();
 
-        effectManager.FadeTime = 0f;
+     //   effectManager.FadeTime = 0f;
     }
 
     private void Update()
@@ -121,9 +121,9 @@ public class EventManager : MonoBehaviour
     
     public void FHasBeenManaged()
     {
-        if (CurrentNarrativeEvent.FadeAfter)
+        if (CurrentNarrativeEvent.FadeAfter !=TypeOfFade.nullFade)
         {
-
+            effectManager.currentFade = CurrentNarrativeEvent.FadeAfter;
             effectManager.FaddingIn = true;
             fadding = true;
            // Debug.Log("primeiro");
@@ -159,21 +159,31 @@ public class EventManager : MonoBehaviour
     /// <param name="music"></param>
     public void ChangeMusic(AudioResource music, AudioResource noise)
     {
-        if(musicPlayer.resource!=music)
+        if (musicPlayer.resource != music)
+        {
+
             musicPlayer.Stop();
-        if(backgroundNoisePlayer.resource!=noise)
-        backgroundNoisePlayer.Stop();
+
+      
+        
         if (music != null)
         {
 
         musicPlayer.resource = music;
         musicPlayer.Play();
         }
+        }
+
+        if (backgroundNoisePlayer.resource != noise)
+        {
+
+            backgroundNoisePlayer.Stop();
         if (noise == null)
             return;
 
         backgroundNoisePlayer.resource = noise;
         backgroundNoisePlayer.Play();
+        }
         
 
 

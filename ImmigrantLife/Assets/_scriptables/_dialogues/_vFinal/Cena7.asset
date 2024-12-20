@@ -1,0 +1,408 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afce3a6399db004bb87347e745a839e, type: 3}
+  m_Name: Cena7
+  m_EditorClassIdentifier: 
+  IsMemory: 0
+  FadeAfter: 1
+  NextEvent: {fileID: 0}
+  musica: {fileID: 0}
+  backgroundNoice: {fileID: 0}
+  DialogueBlocks:
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Xavier respira fundo, tentando se animar apesar do cansa\xE7o.</i>"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Nossa! Nunca achei que uma viagem de quase 10 horas pudesse ser t\xE3o
+      ruim! Minhas costas est\xE3o me matando. Preciso me alongar!"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Ele se estica, soltando um suspiro de al\xEDvio."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Mal posso esperar pra tirar um cochilo decente... Mas, primeiro,
+      \xE9 s\xF3 pegar minhas malas.)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(O dono do quarto j\xE1 deve estar me esperando. Falei que chegava
+      hoje. Vou pegar um t\xE1xi e ir direto pra l\xE1. Ser\xE1 que \xE9 longe?)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: (Como era o nome dele mesmo? Acho que era Sr. Joaquim.)
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Ap\xF3s pegar as malas, Xavier segue para a \xE1rea externa e se
+      aproxima da fila de t\xE1xis."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Boa noite, amigo! Est\xE1 livre?"
+  - Speaker: {fileID: 11400000, guid: 436810b908740cc42a6b02e486f30641, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Ora, boas noites. Estou sim, deixe que o ajudo com as malas. Pra onde
+      quer ir?
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Xavier fica surpreso com o sotaque e o ritmo das palavras do taxista,
+      mas logo se recomp\xF5e."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Nossa, o portugu\xEAs daqui \xE9 bem diferente. Quase nem entendi
+      direito)."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xC9\u2026 sim! Obrigado! Eu tenho o endere\xE7o aqui no celular,
+      s\xF3 um minuto."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Aqui! Rua da Florbela Espanca, Pontinha. D\xE1 pra me levar at\xE9
+      l\xE1?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Que endere\xE7o esquisito, sinceramente\u2026 \u2018Espanca\u2019?
+      [Xavier ri internamente])"
+  - Speaker: {fileID: 11400000, guid: 436810b908740cc42a6b02e486f30641, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Claro.
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>A viagem come\xE7a. Xavier observa atentamente pela janela: a arquitetura,
+      as vitrines iluminadas, os jardins bem cuidados. Tudo \xE9 novo e fascinante."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Que diferente! A Europa \xE9 bonita mesmo. Acho que amanh\xE3 vou
+      tentar conhecer um pouco de Lisboa."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Pouco tempo depois, chegam ao destino.
+  - Speaker: {fileID: 11400000, guid: 436810b908740cc42a6b02e486f30641, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Aqui est\xE1, amigo. Cheg\xE1mos."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Obrigado, senhor! Quanto fica?
+  - Speaker: {fileID: 11400000, guid: 436810b908740cc42a6b02e486f30641, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "S\xE3o 20 euros."
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Xavier olha para o valor, surpreso, fazendo as contas mentalmente.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(Quase 130 reais?! T\xE1xi n\xE3o vai ser uma op\xE7\xE3o daqui pra
+      frente, com certeza!)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Nossa... Haha, certo. Aqui est\xE1. Obrigado!"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>O taxista ajuda Xavier a tirar as malas. Depois de uma breve despedida,
+      Xavier segue para o pr\xE9dio e toca a campainha."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Opa, Sr. Joaquim? \xC9 o Xavier, do quarto"
+  - Speaker: {fileID: 11400000, guid: dfdfca507630607418efe998ea9dcc06, type: 2}
+    emotionIndex: 0
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ah, sim! Um segundo! Vou j\xE1 descer!"
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Logo, Joaquim aparece e cumprimenta Xavier com um sorriso caloroso.
+  - Speaker: {fileID: 11400000, guid: dfdfca507630607418efe998ea9dcc06, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ol\xE1! Como est\xE1? A viagem foi boa?"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Foi... cansativa! Mas correu tudo bem.
+  - Speaker: {fileID: 11400000, guid: dfdfca507630607418efe998ea9dcc06, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Muito bem! Ent\xE3o, deixe-me mostrar-lhe a casa. Como j\xE1 sabe,
+      \xE9 partilhada com outros inquilinos, e voc\xEA ficar\xE1 em um quarto compartilhado."
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Joaquim guia Xavier pela casa, mostrando a sala, a cozinha, o banheiro,
+      e finalmente o quarto.
+  - Speaker: {fileID: 11400000, guid: dfdfca507630607418efe998ea9dcc06, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "E aqui \xE9 o seu quarto! \xC9 bastante acolhedor, tenha s\xF3 em
+      considera\xE7\xE3o o espa\xE7o do seu colega."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Ah, vou conhecer ele?
+  - Speaker: {fileID: 11400000, guid: dfdfca507630607418efe998ea9dcc06, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Ent\xE3o, de momento ele est\xE1 a trabalhar e s\xF3 costuma chegar
+      um pouco mais tarde. Durante o dia a casa est\xE1 meio vazia, pois a maioria
+      s\xF3 volta para dormir praticamente."
+  - Speaker: {fileID: 11400000, guid: dfdfca507630607418efe998ea9dcc06, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "\xE3o 5, a contar consigo. O seu colega chama-se Rafael, tamb\xE9m
+      \xE9 imigrante. \xC9 italiano, mas fala portugu\xEAs.  Acredito que se v\xE3o
+      dar bem.\r\n"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Legal, espero que sim.
+  - Speaker: {fileID: 11400000, guid: dfdfca507630607418efe998ea9dcc06, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "J\xE1 sabe. Como fal\xE1mos ao longo destas \xFAltimas semanas,  o
+      valor \xE9 baixo e por isso, no seu caso, n\xE3o tem contrato"
+  - Speaker: {fileID: 11400000, guid: dfdfca507630607418efe998ea9dcc06, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "J\xE1 me adiantou o m\xEAs, mas espero que cumpra a sua parte, at\xE9
+      ao dia 08 de cada m\xEAs. Aqui tem a sua chave."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Obrigado! Foi dif\xEDcil encontrar um lugar pra ficar, voc\xEA j\xE1
+      me ajudou muito."
+  - Speaker: {fileID: 11400000, guid: dfdfca507630607418efe998ea9dcc06, type: 2}
+    emotionIndex: 1
+    positionIndex: 1
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "N\xE3o se preocupe! Guarde o meu contacto, se precisar de alguma coisa
+      basta ligar. Vou deix\xE1-lo \xE0 vontade."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Obrigado, Sr. Joaquim!
+  - Speaker: {fileID: 11400000, guid: bf512d3ec3cc4a34591f93c22fdb3c81, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Depois de se despedirem, Xavier se senta na cama e suspira.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "Estou exausto\u2026 Acho que vou deixar pra arrumar minhas coisas
+      amanh\xE3. Bom que assim pergunto ao Rafael onde posso colocar tudo."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: <i>Ele se deita na cama, mas logo se levanta, tremendo de frio.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Que casa fria da porra. Melhor colocar um casaco antes de dormir, isso
+      sim.
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Depois de se agasalhar, Xavier se deita novamente. Apesar do cansa\xE7o,
+      est\xE1 euf\xF3rico."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "(O in\xEDcio da minha nova vida em Portugal come\xE7a hoje! Estou
+      t\xE3o ansioso! O que ser\xE1 que visito primeiro? Ser\xE1 que vou gostar da
+      comida?)"
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Ele sorri, os pensamentos misturados entre anima\xE7\xE3o e nervosismo."
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: Uma nova aventura me espera! Que loucura! AHHHHH!
+  - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}
+    emotionIndex: 1
+    positionIndex: 0
+    CharacterIsAlone: 0
+    BackgroundImage: {fileID: 0}
+    som: {fileID: 0}
+    Sentence: "<i>Xavier continua euf\xF3rico por alguns minutos, mas, eventualmente,
+      o cansa\xE7o vence. Ele adormece, e sua nova jornada est\xE1 apenas come\xE7ando."

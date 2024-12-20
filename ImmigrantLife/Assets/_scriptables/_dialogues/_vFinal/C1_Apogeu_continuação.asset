@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: "C1_Apogeu_continua\xE7\xE3o"
   m_EditorClassIdentifier: 
   IsMemory: 0
-  FadeAfter: 0
-  NextEvent: {fileID: 11400000, guid: cb84261b73d25bd4199ee935f6125105, type: 2}
-  musica: {fileID: 0}
+  FadeAfter: 2
+  NextEvent: {fileID: 11400000, guid: f0a2704a47673704dbe6e60546ef6247, type: 2}
+  musica: {fileID: 8300000, guid: 844b4d60aff33e0408c08b44b0e500b7, type: 3}
   backgroundNoice: {fileID: 0}
   DialogueBlocks:
   - Speaker: {fileID: 11400000, guid: b38197c803d5e9147b49d0857df75d94, type: 2}

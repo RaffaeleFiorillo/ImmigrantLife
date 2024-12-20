@@ -12,4 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2e26d45d2483c4b988962016bbd2bd, type: 3}
   m_Name: "Irm\xE3"
   m_EditorClassIdentifier: 
-  name: Lara
+  speakerName: "Irm\xE3"
+  emotionsSprites:
+  - {fileID: 0}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}
+  - {fileID: 4089186998913019370, guid: f4dd85053439f9b44ad95add6fbe8617, type: 3}

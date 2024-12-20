@@ -21,6 +21,8 @@ public class BackgroundManager : BaseNarrativeEventManager
 
     [SerializeField] GameObject toPass;
 
+    [SerializeField] AudioSource backgroundsAudio; 
+
     BackgroundEvent backgroundEvent;
     int backgroundIndex;
 
@@ -30,7 +32,7 @@ public class BackgroundManager : BaseNarrativeEventManager
 
         backgroundEvent = (BackgroundEvent)narrativeEvent;
         toPass.SetActive(true);
-        Debug.Log(toPass.active);
+      //  Debug.Log(toPass.active);
         nextBackGround();
 
 
@@ -53,6 +55,12 @@ public class BackgroundManager : BaseNarrativeEventManager
         if(backgroundIndex == (backgroundEvent.BackgroundBlocks.Count)){
 
             GoToNextNarrativeEvent();
+
+            backgroundsAudio.Stop();
+            backgroundsAudio.resource = backgroundEvent.BackgroundBlocks[backgroundIndex].Som;
+            backgroundsAudio.Play();
+
+
 
             return;
         }

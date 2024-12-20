@@ -25,7 +25,7 @@ public abstract class NarrativeEvent : ScriptableObject
     public bool HasBeenManaged { get => _hasBeenManaged; set { _hasBeenManaged = value; } }
     protected bool _hasBeenManaged = false;
     public bool IsMemory;
-    public bool FadeAfter;
+    public TypeOfFade FadeAfter;
 
     /// <summary>
     /// O Evento Narrativo que vem a seguir deste.

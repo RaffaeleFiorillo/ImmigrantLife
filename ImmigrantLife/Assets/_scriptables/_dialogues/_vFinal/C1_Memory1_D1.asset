@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C1_Memory1_D1
   m_EditorClassIdentifier: 
   IsMemory: 1
-  FadeAfter: 1
+  FadeAfter: 2
   NextEvent: {fileID: 11400000, guid: d408e3cd03bdceb4bbd329dd64b2ee17, type: 2}
   musica: {fileID: 0}
   backgroundNoice: {fileID: 8300000, guid: 88482db1d67df7841816e83a08f208bc, type: 3}

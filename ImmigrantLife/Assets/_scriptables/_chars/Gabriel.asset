@@ -15,20 +15,22 @@ MonoBehaviour:
   speakerName: Gabriel
   emotionsSprites:
   - {fileID: 0}
-  - {fileID: 7200745889952894470, guid: 444b081e266ca894689ed27fc43a4690, type: 3}
-  - {fileID: -2900066961411067399, guid: 688370ff5b1d4c8438e7b899172df84f, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 8271887585290689052, guid: 25f203234153236498f1401a744fa8e3, type: 3}
-  - {fileID: 6489465123898388619, guid: 8c90dc0292a411641a6878dfb1f98253, type: 3}
-  - {fileID: 3584770203563717310, guid: da04dcc636f822e48b0a67e389e46d5b, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 4497140747576451215, guid: 352d5d6eaf7270242baa0db8f0716018, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}
+  - {fileID: -853400927020847330, guid: fbf66d5b6c7392a4f869749f2814fef6, type: 3}

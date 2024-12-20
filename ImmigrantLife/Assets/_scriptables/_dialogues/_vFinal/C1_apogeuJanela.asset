@@ -15,8 +15,8 @@ MonoBehaviour:
   IsMemory: 0
   FadeAfter: 0
   NextEvent: {fileID: 11400000, guid: 77de0039eba7e2e4b937bdd0e45c1d85, type: 2}
-  musica: {fileID: 0}
+  musica: {fileID: 8300000, guid: 844b4d60aff33e0408c08b44b0e500b7, type: 3}
   backgroundNoice: {fileID: 0}
   BackgroundBlocks:
   - Background: {fileID: 0}
-    Som: {fileID: 8300000, guid: 5fd098fd4fb846248946f974497f09b8, type: 3}
+    Som: {fileID: 8300000, guid: f59ca60a3b4682a4bba2f817b22da06c, type: 3}
